@@ -2,101 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/Modals/modal_upload.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/0204f10ef8b092d413c3b1aeec58401b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/05beef9c11ab3046affb2378a506b790.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/0af33b59a8541926c8726081164de028.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/0c43bc75fa9dbc6b014196caf81469dd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/0f37926bc1352699ad9e280377b4a49b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/120a3a287ad638fede6c1e4c57ebc020.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/15b9e4ee1b6c8850ac27277d72ecefaa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/1a57e576f04cc72832eab149b80d88db.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/1a7726f0a05f73e808103f82d99359a4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/1af6e7545168152e8c143fded43a0ed7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/204390c1af9b859c80a3469e0e4590fa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/206c86a00b3797f436699571e0331298.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/222dd9e7f0beb23453cf8326640d3743.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/2559cf1e8818d4119f7e154a165956ed.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/3016b2b799d42f9dd6e8e7f5e0e122d7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/34e535ade10f9aef488442f33d2468a0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/3a2afcb5432246980b30afaeac8d50b3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/3bb554ec45510711fac681cea3187b20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/445ed2fc615c2f46aede22db537ab5b7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/467ceacc9efa5770893fcfddd2025126.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/468a36c22e42744109ac29fccc63b4ed.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/476d75c277f723b807038a868ac43764.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/48a16beeafc14f4594484e78aef171db.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/4c12dd8142e7cad398346d9c25bf9907.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/4c4664e13bae1e0b3da8689a631a4f58.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/500a5b668e5fc7e7acde3fda864af553.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/59f0969b32d4d72b58080490ef3fe8ed.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/6100f804a58c44ca3c79e556298e6710.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/617296b717c582cd8522e4a42a35e7cf.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/6e61dd0c441895b9752dcd330142478b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/70c2daa2407c354d869299956ee6f39f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/716576ae9974b4a24530206735e6aa89.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/75602c59c465f8b65fd2edd9463c8d39.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/76f2164a3ce5d2d8d8f293f2fdb6a9c6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/7b4c50ced918f124d15c82981b0c983c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/7f486a09215878102fcb96b7f602f8f0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/8076750ae24bab4f92b54781ff79890a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/80f39988cb8236b0b55229b29eeb5452.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/8231fdb718de7bb063f7ac091359a584.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/868fd3d75711e297fd237a4c19d4a111.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/8744824224571c521341d3c1790d7865.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/890d4162474784b5fcc8d7577c66cfa0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/8b97a508ba51b0a54fe2d350940c3005.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/940e7fabdcd3ccec1de705cb21a4eb19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/94437509744cb02ef7e960735d595900.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/9591a0b2df6b1ac2c96324b11e0142ae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/9a84e678dc6da753b77191a652ca0037.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/9fd4baa6cc69de50af70a5a455934980.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/a1f131e62bef8babcc5799863eb6d9f3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/a20bded99c4ff5cce2083c6cf93c0664.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/a30db193ddfe4915ab9c37cfe3d390d5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/a381902ffb9ec66c5337910480197fe5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/a46d6516c1d6fc1ca588b0bc52de8561.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/a8cc8a367372dfeb28684e1a1e08fc05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/b4366c34af746151059da09f2131066f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/b4b85164a54bcaeb208a0dbce3978f5d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/b7fde5da5447499046df54f239ef5c50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/bc8820a344cc874e88c81fc5b72e85ef.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/bf0688b92604793610dcf1edfea6a386.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/c097d5e71b16030cdeb96aee71bfa595.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/c39b2865ae218bd80556e4a22169c5a5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/c9e84a6e1e0170a5923c2cb20f7aee8f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/ce3fc0217a98473313138cebafde257c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d107d79dc2e1d66c9c6a8a2ec1894fa1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d1e13e437ae356f003890fbccdb2eb7b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d3449876ad8546f599523cab43e65393.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d42db521adbc8043f99205e22fd52b8d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d46e3b6bfa124af8160a52617af99f55.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d6710204820b40021189273d12fe6b49.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d8750cfc5c6bd079b092d6b743aa29a4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/dba19266e5d36e1db1fc322d6f85986c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/e24e20b08e09e2a9641d379217b3c1a5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/e27ca6a11e319008e5dfff5d81e1e0e0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/e2e0bf51861395941de79b3524d1e17b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/e82d9d38b4d50970a4075849745de718.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/eb3c4fc5756f9e069af0d361dc695cc9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/ee21ae8a32d964f6fc67b233cc76ed64.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/f582818f335bcfe86999a1d66049d432.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/f6ceb42ec550db631911784627fce3ac.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/f97b5eab848fbef11ada2d0abd444559.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/fc112bc3c78bf08d6513b96254d6ee24.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/acompanhamento/mediacao/acompanhamento.php" afterPath="$PROJECT_DIR$/acompanhamento.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/acompanhamento/mediacao/agendar_retorno.php" afterPath="$PROJECT_DIR$/agendar_retorno.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/cadastro/assunto/novo_assunto.php" afterPath="$PROJECT_DIR$/novo_assunto.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/docs/enviar_documento.php" afterPath="$PROJECT_DIR$/upload_modelos_docs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atend_NPJ.php" afterPath="$PROJECT_DIR$/atend_NPJ.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atend_def_publica.php" afterPath="$PROJECT_DIR$/atend_def_publica.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/Menu/menuLateral.php" afterPath="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/assunto/cadastrar.php" afterPath="$PROJECT_DIR$/pages/cadastro/assunto/cadastrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/assunto/excluir.php" afterPath="$PROJECT_DIR$/pages/cadastro/assunto/excluir.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/usuario/novo_usuario_backup.php" afterPath="$PROJECT_DIR$/pages/cadastro/usuario/novo_usuario_backup.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,24 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="38" column="75" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
+            <state relative-caret-position="363">
+              <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="8" />
               <folding>
-                <marker date="1461097932368" expanded="true" signature="11245:11303" placeholder="SELECT * FRO... educacao_usuario" />
-                <marker date="1461097932368" expanded="true" signature="15988:16066" placeholder="SELECT * FRO... habilidades_usuario" />
-                <marker date="1461097932368" expanded="true" signature="20783:20838" placeholder="SELECT * FRO... usuario" />
-                <marker date="1461097932368" expanded="true" signature="24022:24094" placeholder="SELECT * FRO... atendimento_defensoria" />
-                <marker date="1461097932368" expanded="true" signature="24554:24619" placeholder="SELECT * FRO... assistido_defensoria" />
-                <marker date="1461097932368" expanded="true" signature="24965:25009" placeholder="SELECT * FRO... requerido" />
-                <marker date="1461097932368" expanded="true" signature="25298:25362" placeholder="SELECT * FRO... assunto_atendimento" />
-                <marker date="1461097932368" expanded="true" signature="30227:30267" placeholder="SELECT * FRO... mensagens" />
-                <marker date="1461097932368" expanded="true" signature="30340:30433" placeholder="SELECT date_... mensagens" />
-                <marker date="1461097932368" expanded="true" signature="30507:30547" placeholder="SELECT * FRO... mensagens" />
-                <marker date="1461097932368" expanded="true" signature="48081:48115" placeholder="..." />
-                <marker date="1461097932368" expanded="true" signature="48231:48265" placeholder="..." />
+                <marker date="1461100594413" expanded="true" signature="11253:11311" placeholder="SELECT * FRO... educacao_usuario" />
+                <marker date="1461100594413" expanded="true" signature="15996:16074" placeholder="SELECT * FRO... habilidades_usuario" />
+                <marker date="1461100594413" expanded="true" signature="20791:20846" placeholder="SELECT * FRO... usuario" />
+                <marker date="1461100594413" expanded="true" signature="24030:24102" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461100594413" expanded="true" signature="24562:24627" placeholder="SELECT * FRO... assistido_defensoria" />
+                <marker date="1461100594413" expanded="true" signature="24973:25017" placeholder="SELECT * FRO... requerido" />
+                <marker date="1461100594413" expanded="true" signature="25306:25370" placeholder="SELECT * FRO... assunto_atendimento" />
+                <marker date="1461100594413" expanded="true" signature="30235:30275" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461100594413" expanded="true" signature="30348:30441" placeholder="SELECT date_... mensagens" />
+                <marker date="1461100594413" expanded="true" signature="30515:30555" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461100594413" expanded="true" signature="48089:48123" placeholder="..." />
+                <marker date="1461100594413" expanded="true" signature="48239:48273" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -164,21 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal_upload.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal_upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/Modals/modal_upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_register.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="51" />
+            <state relative-caret-position="393">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -248,10 +145,10 @@
         <option value="$PROJECT_DIR$/pages/cadastro/assunto/novo_assunto.php" />
         <option value="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
         <option value="$PROJECT_DIR$/novo_assunto.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/Modals/modal_upload.php" />
         <option value="$PROJECT_DIR$/atend_def_publica.php" />
         <option value="$PROJECT_DIR$/atend_NPJ.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -487,12 +384,12 @@
       <workItem from="1460871832532" duration="956000" />
       <workItem from="1460960988731" duration="2545000" />
       <workItem from="1461039734758" duration="6640000" />
-      <workItem from="1461094198915" duration="5879000" />
+      <workItem from="1461094198915" duration="6453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29415000" />
+    <option name="totallyTimeSpent" value="29989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -777,41 +674,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cidades-estados-1.4-utf8.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="727">
           <caret line="116" column="16" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="38" column="75" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
-          <folding>
-            <marker date="1461097932368" expanded="true" signature="11245:11303" placeholder="SELECT * FRO... educacao_usuario" />
-            <marker date="1461097932368" expanded="true" signature="15988:16066" placeholder="SELECT * FRO... habilidades_usuario" />
-            <marker date="1461097932368" expanded="true" signature="20783:20838" placeholder="SELECT * FRO... usuario" />
-            <marker date="1461097932368" expanded="true" signature="24022:24094" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461097932368" expanded="true" signature="24554:24619" placeholder="SELECT * FRO... assistido_defensoria" />
-            <marker date="1461097932368" expanded="true" signature="24965:25009" placeholder="SELECT * FRO... requerido" />
-            <marker date="1461097932368" expanded="true" signature="25298:25362" placeholder="SELECT * FRO... assunto_atendimento" />
-            <marker date="1461097932368" expanded="true" signature="30227:30267" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461097932368" expanded="true" signature="30340:30433" placeholder="SELECT date_... mensagens" />
-            <marker date="1461097932368" expanded="true" signature="30507:30547" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461097932368" expanded="true" signature="48081:48115" placeholder="..." />
-            <marker date="1461097932368" expanded="true" signature="48231:48265" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -855,11 +723,40 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/Modals/modal_upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="393">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="8" />
+          <folding>
+            <marker date="1461100594413" expanded="true" signature="11253:11311" placeholder="SELECT * FRO... educacao_usuario" />
+            <marker date="1461100594413" expanded="true" signature="15996:16074" placeholder="SELECT * FRO... habilidades_usuario" />
+            <marker date="1461100594413" expanded="true" signature="20791:20846" placeholder="SELECT * FRO... usuario" />
+            <marker date="1461100594413" expanded="true" signature="24030:24102" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461100594413" expanded="true" signature="24562:24627" placeholder="SELECT * FRO... assistido_defensoria" />
+            <marker date="1461100594413" expanded="true" signature="24973:25017" placeholder="SELECT * FRO... requerido" />
+            <marker date="1461100594413" expanded="true" signature="25306:25370" placeholder="SELECT * FRO... assunto_atendimento" />
+            <marker date="1461100594413" expanded="true" signature="30235:30275" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461100594413" expanded="true" signature="30348:30441" placeholder="SELECT date_... mensagens" />
+            <marker date="1461100594413" expanded="true" signature="30515:30555" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461100594413" expanded="true" signature="48089:48123" placeholder="..." />
+            <marker date="1461100594413" expanded="true" signature="48239:48273" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

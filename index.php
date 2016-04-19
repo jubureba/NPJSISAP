@@ -65,7 +65,7 @@ protegePagina(); // Chama a função que protege a página
            });
         });
     </script> -->
-
+<!-- -->
     <script>
         function cadastrarEducacao() {
             novaEducacao(2);
