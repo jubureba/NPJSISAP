@@ -32,6 +32,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/form_Style.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="plugins/select2/select2.min.css">
 
 
 </head>
@@ -279,21 +280,30 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                             <h3 class="box-title">3- Coleta de Documentos</h3>
                         </div>
                         <div class="box-body">
-                            <form id="formularioCPF" method="post" enctype="multipart/form-data" action="pages/coleta_dados/NPJ/upload.php">
-                                Foto do CPF
-                                <input type="file" id="imagemCPF" name="imagemCPF" />
-                            </form><br/>
-
-
+                            <!-- /.form-group -->
+                            <!-- ESTE CAMPO SERÁ FEITO UPLOAD DOS ARQUIVOS SCANEADOS - DOCUMENTOS NA PAG2 -->
                             <div class="form-group">
-                                <label>Documentos Enviados</label>
-                                <div class="input-group input-group-sm">
-                                    <div id="DocumentosEnviados"></div>
-                                </div>
-                            </div><!-- /.form-group -->
+                                <select id="idselect" name="idPosto" onchange="UploadDocumentos(this.value)"
+                                        class="form-control select2" multiple="multiple"
+                                        data-placeholder="Documentos Apresentados"
+                                        style="width: 100%;">
+                                    <option value="cpf">CPF</option>
+                                    <option value="rg">RG</option>
+                                    <option value="ctps">CTPS</option>
+                                    <option value="comprovanteResidencia">Comprovante de Residência</option>
+                                    <option value="contracheque">Contracheque</option>
+                                    <option value="certidaoNascimento">Certidão de Nascimento</option>
+                                    <option value="certidaoCasamento">Certidão de Casamento</option>
+                                    <option value="certidaoObito">Certidão de Óbito</option>
+                                </select>
+                                <br/></div>
                             <div id="visualizarSituacao"></div>
-
-
+                            <?php include('pages/Modals/modal_upload.php');?>
+                            <script type="text/javascript">
+                                function UploadDocumentos(valor) {
+                                    $('#myModal').modal('show');
+                                }
+                            </script>
 
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
@@ -550,24 +560,14 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 <script src="dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
-<script type="text/javascript" src="plugins/jQuery/jquery.min.js"></script>
-
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#imagemCPF').live('change',function(){
-            $('#visualizar').html('<img src="pages/coleta_dados/NPJ/ajax-loader.gif" alt="Enviando..."/> Enviando...');
-            var situacao = "CPF";
-            var novaTag = '<input class="form-control" disabled type="text" value="'+situacao+' - ENVIADO COM SUCESSO!"> <span class="input-group-btn"> <button class="btn btn-info btn-flat" type="button">Enviar Novamente</button></span><br/>';
-            $('#DocumentosEnviados').append(''+novaTag);
-            /* Efetua o Upload */
-            $('#formularioCPF').ajaxForm({
-                target:'#visualizar' // o callback serï¿½ no elemento com o id #visualizar
-            }).submit();
-        });
-    })
+<script src="plugins/select2/select2.full.min.js"></script>
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $(".select2").select2();
+    });
 </script>
+
 
 
 </body>

@@ -244,46 +244,7 @@ protegePagina(); // Chama a função que protege a página
                         <br/></div>
 
 
-                    <!-- MODAL PARA UPLOAD -->
-                    <div class="container">
-                        <div class="modal fade" id="myModal" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title" id="TituloModal">Upload do Documento</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- IMAGEM -->
-
-                                        <div class="input-group input-group-sm">
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-image"></i>
-                                                </div>
-                                                <input class="form-control" name="foto" type="file" id="arquivo"/>
-                                            </div>
-                                                <span class="input-group-btn">
-                                                    <button type="button" onclick="submitForm();"
-                                                            class="btn btn-info btn-flat">
-                                                        Enviar Imagem
-                                                    </button>
-                                                </span>
-                                        </div>
-
-                                        <output id="result"></output>
-                                        <!-- FIM IMAGEM --><br/>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" onclick="limparUpload()"
-                                                data-dismiss="modal">Fechar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FIM - MODAL PARA UPLOAD -->
+                   <?php include('pages/Modals/modal_upload.php');?>
 
                     <script>
                         function limparUpload() {
@@ -448,68 +409,7 @@ protegePagina(); // Chama a função que protege a página
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- Page script -->
-<script>
-    $(function () {
-        //Initialize Select2 Elements
-        $(".select2").select2();
 
-        //Datemask dd/mm/yyyy
-        $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-        //Datemask2 mm/dd/yyyy
-        $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
-        //Money Euro
-        $("[data-mask]").inputmask();
-
-        //Date range picker
-        $('#reservation').daterangepicker();
-        //Date range picker with time picker
-        $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
-        //Date range as a button
-        $('#daterange-btn').daterangepicker(
-            {
-                ranges: {
-                    'Today': [moment(), moment()],
-                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                    'This Month': [moment().startOf('month'), moment().endOf('month')],
-                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                },
-                startDate: moment().subtract(29, 'days'),
-                endDate: moment()
-            },
-            function (start, end) {
-                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-            }
-        );
-
-        //iCheck for checkbox and radio inputs
-        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-            checkboxClass: 'icheckbox_minimal-blue',
-            radioClass: 'iradio_minimal-blue'
-        });
-        //Red color scheme for iCheck
-        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-            checkboxClass: 'icheckbox_minimal-red',
-            radioClass: 'iradio_minimal-red'
-        });
-        //Flat red color scheme for iCheck
-        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-            checkboxClass: 'icheckbox_flat-green',
-            radioClass: 'iradio_flat-green'
-        });
-
-        //Colorpicker
-        $(".my-colorpicker1").colorpicker();
-        //color picker with addon
-        $(".my-colorpicker2").colorpicker();
-
-        //Timepicker
-        $(".timepicker").timepicker({
-            showInputs: false
-        });
-    });
-</script>
 <script language="JavaScript" type="text/javascript" charset="utf-8">
     new dgCidadesEstados({
         cidade: document.getElementById('cidade2'),

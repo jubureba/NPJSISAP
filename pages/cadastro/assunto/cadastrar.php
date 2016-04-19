@@ -4,7 +4,7 @@
     <script type="text/javascript">
         function loginsucessfully(){
             alert("Novo Assunto Cadastrado com Sucesso!")
-            setTimeout("window.location='novo_assunto.php'", 100);
+            setTimeout("window.location='../../../novo_assunto.php'", 100);
         }
     </script>
 </head>

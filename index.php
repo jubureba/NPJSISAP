@@ -143,8 +143,6 @@ protegePagina(); // Chama a função que protege a página
             }
         }
     </script>
-
-
 </head>
 
 

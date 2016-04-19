@@ -3,8 +3,8 @@
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 ini_set('default_charset','UTF-8');
 session_start();
-require_once("../../../pages/conexao/conn.php");
-include("../../../pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
+require_once("pages/conexao/conn.php");
+include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 ?>
 
@@ -17,53 +17,53 @@ protegePagina(); // Chama a função que protege a página
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
      folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="../../../plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="../../../plugins/morris/morris.css">
+    <link rel="stylesheet" href="plugins/morris/morris.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="../../../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="../../../plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="../../../plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="../../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 
 
     <!-- daterange picker -->
-    <link rel="stylesheet" href="../../../plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" href="../../../plugins/iCheck/all.css">
+    <link rel="stylesheet" href="plugins/iCheck/all.css">
     <!-- Bootstrap Color Picker -->
-    <link rel="stylesheet" href="../../../plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css">
     <!-- Bootstrap time Picker -->
-    <link rel="stylesheet" href="../../../plugins/timepicker/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
     <!-- Select2 -->
-    <link rel="stylesheet" href="../../../plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="plugins/select2/select2.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../../dist/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="../../../dist/css/form_Style.css">
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/form_Style.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <script src="../../../js/scriptFiltro_Tabela.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/scriptFiltro_Tabela.js"></script>
     <![endif]-->
 
     <script type="text/javascript">
@@ -76,274 +76,9 @@ protegePagina(); // Chama a função que protege a página
 
 <div class="wrapper">
 
-    <header class="main-header">
-        <a href="../../../index.php" class="logo">
-            <span class="logo-mini"><b>NPJ</b></span>
-            <span class="logo-lg"><b>NPJ</b> | FCAT</span>
-        </a>
-
-        <nav class="navbar navbar-static-top" role="navigation">
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Toggle navigation</span>
-            </a>
-
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <!-- NOTIFICAÇÃO DE NOVO VINCULO -->
-                    <li class="dropdown notifications-menu">
-                        <?php
-                        $idUsuario = $_SESSION['usuarioID'];
-                        $sql = mysql_query("SELECT * FROM atendimento_defensoria WHERE Usuario_idUsuario = $idUsuario");
-                        $total = mysql_num_rows($sql);
-                        ?>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-danger"><?php echo $total ?> </span>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li class="header"><?php echo "Voce tem " . $total . " Notificações" ?></li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <?php
-                                    while ($result = mysql_fetch_array($sql)) {
-                                        ?>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-users text-aqua"></i> <?php echo $result['descricaoAtendimentoDefensoria']; ?>
-                                            </a>
-                                        </li>
-                                        <?php
-                                    }
-                                    ?>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">Ver Todas</a></li>
-                        </ul>
-                    </li>
-                    <!-- FIM - NOTIFICAÇÃO -->
-
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="<?php
-                            echo "../../../" . $_SESSION['imagem']
-                            ?>" class="user-image" alt="User Image">
-                            <span class="hidden-xs">
-                                <?php
-                                echo "Bem-Vindo, " . $_SESSION['usuarioNome'];
-                                ?>
-
-                            </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="
-                                <?php
-                                echo "../../../" . $_SESSION['imagem']
-                                ?>
-                                " class="img-circle" alt="User Image">
-
-                                <p>
-                                    <?php
-                                    echo "Bem-Vindo, " . $_SESSION['usuarioNome'];
-                                    ?>
-                                    <small><!-- EMAIL -->
-                                        <?php
-                                        echo "" . $_SESSION['email'];
-                                        ?>
-                                    </small>
-                                    <small><!-- PERMISSAO -->
-                                        <?php
-                                        echo "" . $_SESSION['permissaoUser'];
-                                        ?>
-                                    </small>
-                                </p>
-                            </li>
-
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="../../../pages/login/lockscreen.php" class="btn btn-default btn-flat">Bloquear</a>
-                                </div>
-
-                                <div class="pull-right">
-                                    <a href="#" onclick="ModalFechar()" class="btn btn-default btn-flat">Sair</a>
-                                </div>
-                                <script>
-                                    function ModalFechar() {
-                                        $('#openModal').modal('show');
-                                    }
-                                </script>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Control Sidebar Toggle Button -->
-                    <li>
-                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-
-
-    <!--####################### MENU PRINCIPAL - BARRA LATERAL ESQUERDA ############################-->
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <!-- Sidebar user panel -->
-            <div class="user-panel">
-                <div class="pull-left image">
-                    <!-- IMAGEM DO USUÁRIO, CAMINHO PEGO DO BD  -->
-                    <img src="
-								<?php
-                    echo "../../../" . $_SESSION['imagem']
-                    ?>
-                                " class="img-circle" alt="User Image">
-                </div>
-                <div class="pull-left info">
-                    <!-- NOME DO USUARIO -->
-                    <p>
-                        <?php
-                        echo "" . $_SESSION['usuarioNome'];
-                        ?>
-                    </p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                </div>
-            </div>
-
-
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Pesquisar...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>
-            <!-- /.search form -->
-
-
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu">
-                <li class="header"><h4 ALIGN="center">MENU PRINCIPAL</h4></li>
-                <!-- MENU PARA PROFESSOR -->
-                <li class="header">Professor</li>
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-edit "></i> <span>Correção</span> <i
-                            class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-hand-o-right"></i>Aprovação/Reprovação</a></li>
-
-                    </ul>
-                </li>
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-database"></i> <span>Cadastro</span> <i
-                            class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../../user_register.php"><i class="fa fa-hand-o-right"></i>Novo
-                                Usuário</a>
-                        </li>
-                        <li><a href="../../../pages/cadastro/assunto/novo_assunto.php"><i class="fa fa-hand-o-right"></i>Novo
-                                Assunto/Ação</a></li>
-                    </ul>
-
-                </li>
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-upload"></i> <span>Upload</span> <i
-                            class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../../pages/docs/enviar_documento.php"><i class="fa fa-hand-o-right"></i>Peças</a>
-                        </li>
-                    </ul>
-
-                </li>
-
-                <!-- MENU PARA ALUNO -->
-                <li class="header">Aluno</li>
-
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-file-o"></i> <span> Coleta de Dados </span> <i
-                            class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../../atend_NPJ.php"><i class="fa fa-hand-o-right"></i> NPJ
-                            </a>
-                        </li>
-                        <li><a href="../../../pages/coleta_dados/defensoria_publica/atendimento_defensoria_publica.php"><i
-                                    class="fa fa-hand-o-right"></i> DEFENSORIA PÚBLICA </a></li>
-
-
-                    </ul>
-                </li>
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-bar-chart"></i> <span> Acompanhamento </span> <i
-                            class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../../atend_NPJ.php"><i class="fa fa-hand-o-right"></i>
-                                Mediação
-                            </a></li>
-
-                    </ul>
-                </li>
-
-
-                <!--<li class="header">Secretaria</li>
-
-
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-share"></i> <span>Teste</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                        <li>
-                            <a href="#"><i class="fa fa-circle-o"></i> Level One <i
-                                    class="fa fa-angle-left pull-right"></i></a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                                <li>
-                                    <a href="#"><i class="fa fa-circle-o"></i> Level Two <i
-                                            class="fa fa-angle-left pull-right"></i></a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                    </ul>
-                </li>-->
-
-                <li class="header"></li>
-            </ul>
-            <br/><br/><br/>
-            <img class="imagemFcat" align="center" src="../../../imagens/fcat1.png">
-        </section>
-        <!-- /.sidebar -->
-    </aside>
+   <!-- -->
+    <?php include('pages/Menu/topo.php');?>
+    <?php include('pages/Menu/menuLateral.php');?>
 
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -527,13 +262,7 @@ protegePagina(); // Chama a função que protege a página
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Versão</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; 2015 - NPJ </strong>| FCAT - Núcleo de Prática Jurídica | Faculdade de Castanhal -
-        Desenvolvido por <a href="pages/tecnosoft/tecnosoft.php">TecnoSoft Studio</a> - Todos os direitos reservados.
-    </footer>
+    <?php include('pages/Menu/rodape.php');?>
 
 
     <!-- Control Sidebar -->
@@ -607,7 +336,7 @@ protegePagina(); // Chama a função que protege a página
                     </div>
                     <div class="modal-body">
 
-                        <form method="POST" action="../../../pages/login/logout.php">
+                        <form method="POST" action="pages/login/logout.php">
                             <div class="input-group input-group-sm">
                                 <p>Tem certeza que deseja sair?</p>
                             </div>
@@ -675,32 +404,32 @@ protegePagina(); // Chama a função que protege a página
     <div class="control-sidebar-bg"></div>
 </div><!-- ./wrapper -->
 <!-- jQuery 2.1.4 -->
-<script src="../../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
-<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
-<script src="../../../plugins/select2/select2.full.min.js"></script>
+<script src="plugins/select2/select2.full.min.js"></script>
 <!-- InputMask -->
-<script src="../../../plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <!-- date-range-picker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-<script src="../../../plugins/daterangepicker/daterangepicker.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap color picker -->
-<script src="../../../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<script src="plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
 <!-- bootstrap time picker -->
-<script src="../../../plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
 <!-- SlimScroll 1.3.0 -->
-<script src="../../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- iCheck 1.0.1 -->
-<script src="../../../plugins/iCheck/icheck.min.js"></script>
+<script src="plugins/iCheck/icheck.min.js"></script>
 <!-- FastClick -->
-<script src="../../../plugins/fastclick/fastclick.min.js"></script>
+<script src="plugins/fastclick/fastclick.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../../dist/js/app.min.js"></script>
+<script src="dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../../dist/js/demo.js"></script>
+<script src="dist/js/demo.js"></script>
 <!-- Page script -->
 <script>
     $(function () {

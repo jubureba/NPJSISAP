@@ -223,7 +223,7 @@ protegePagina(); // Chama a função que protege a página
                         <li><a href="../../../user_register.php"><i class="fa fa-hand-o-right"></i>Novo
                                 Usuário</a>
                         </li>
-                        <li><a href="../../../pages/cadastro/assunto/novo_assunto.php"><i class="fa fa-hand-o-right"></i>Novo
+                        <li><a href="../../../novo_assunto.php"><i class="fa fa-hand-o-right"></i>Novo
                                 Assunto/Ação</a></li>
                     </ul>
 
@@ -235,7 +235,7 @@ protegePagina(); // Chama a função que protege a página
                             class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="../../../pages/docs/enviar_documento.php"><i class="fa fa-hand-o-right"></i>Peças</a>
+                        <li><a href="../../../upload_modelos_docs.php"><i class="fa fa-hand-o-right"></i>Peças</a>
                         </li>
                     </ul>
 

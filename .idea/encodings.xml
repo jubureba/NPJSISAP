@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/acompanhamento.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/agendar_retorno.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/atend_NPJ.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/atend_def_publica.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pages/acompanhamento/mediacao/acompanhamento.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pages/acompanhamento/mediacao/agendar_retorno.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pages/cadastro/assunto/novo_assunto.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/novo_assunto.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pages/cadastro/usuario/excluir_Educacao.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pages/docs/enviar_documento.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pages/login/seguranca.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pages/login/valida.php" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/pages/tecnosoft/tecnosoft.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/upload_modelos_docs.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user_register.php" charset="UTF-8" />
   </component>
 </project>
