@@ -5,6 +5,11 @@
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
+            
+            
+            
+            
+            
             <div class="pull-left image">
                 <!-- IMAGEM DO USUÁRIO, CAMINHO PEGO DO BD  -->
                 <img src="
@@ -66,6 +71,19 @@
                     </li>
                     <li><a href="novo_assunto.php"><i class="fa fa-hand-o-right"></i>Novo
                             Assunto/Ação</a></li>
+                </ul>
+
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-database"></i> <span>Consulta</span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a id="novo_usuario" href="see_user.php"><i class="fa fa-hand-o-right"></i>Consultar Usuário</a>
+                    </li>
+                    <li><a href="novo_assunto.php"><i class="fa fa-hand-o-right"></i>Consultar Assuntos</a></li>
                 </ul>
 
             </li>

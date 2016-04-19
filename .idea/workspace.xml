@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
+    <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="alteração3">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/see_user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atend_def_publica.php" afterPath="$PROJECT_DIR$/atend_def_publica.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/Menu/menuLateral.php" afterPath="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,25 +28,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+            <state relative-caret-position="129">
+              <caret line="884" column="0" selection-start-line="884" selection-start-column="0" selection-end-line="915" selection-end-column="39" />
               <folding>
-                <marker date="1461101022637" expanded="true" signature="11259:11317" placeholder="SELECT * FRO... educacao_usuario" />
-                <marker date="1461101022637" expanded="true" signature="16002:16080" placeholder="SELECT * FRO... habilidades_usuario" />
-                <marker date="1461101022637" expanded="true" signature="20797:20852" placeholder="SELECT * FRO... usuario" />
-                <marker date="1461101022637" expanded="true" signature="24036:24108" placeholder="SELECT * FRO... atendimento_defensoria" />
-                <marker date="1461101022637" expanded="true" signature="24568:24633" placeholder="SELECT * FRO... assistido_defensoria" />
-                <marker date="1461101022637" expanded="true" signature="24979:25023" placeholder="SELECT * FRO... requerido" />
-                <marker date="1461101022637" expanded="true" signature="25312:25376" placeholder="SELECT * FRO... assunto_atendimento" />
-                <marker date="1461101022637" expanded="true" signature="30241:30281" placeholder="SELECT * FRO... mensagens" />
-                <marker date="1461101022637" expanded="true" signature="30354:30447" placeholder="SELECT date_... mensagens" />
-                <marker date="1461101022637" expanded="true" signature="30521:30561" placeholder="SELECT * FRO... mensagens" />
-                <marker date="1461101022637" expanded="true" signature="48095:48129" placeholder="..." />
-                <marker date="1461101022637" expanded="true" signature="48245:48279" placeholder="..." />
+                <marker date="1461101420968" expanded="true" signature="11245:11303" placeholder="SELECT * FRO... educacao_usuario" />
+                <marker date="1461101420968" expanded="true" signature="15988:16066" placeholder="SELECT * FRO... habilidades_usuario" />
+                <marker date="1461101420968" expanded="true" signature="20783:20838" placeholder="SELECT * FRO... usuario" />
+                <marker date="1461101420968" expanded="true" signature="24022:24094" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461101420968" expanded="true" signature="24554:24619" placeholder="SELECT * FRO... assistido_defensoria" />
+                <marker date="1461101420968" expanded="true" signature="24965:25009" placeholder="SELECT * FRO... requerido" />
+                <marker date="1461101420968" expanded="true" signature="25298:25362" placeholder="SELECT * FRO... assunto_atendimento" />
+                <marker date="1461101420968" expanded="true" signature="30227:30267" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461101420968" expanded="true" signature="30340:30433" placeholder="SELECT date_... mensagens" />
+                <marker date="1461101420968" expanded="true" signature="30507:30547" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461101420968" expanded="true" signature="48081:48115" placeholder="..." />
+                <marker date="1461101420968" expanded="true" signature="48231:48265" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="see_user.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/see_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/tables/simple.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="465" column="27" selection-start-line="465" selection-start-column="10" selection-end-line="465" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,8 +87,8 @@
       <file leaf-file-name="atend_NPJ.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/atend_NPJ.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="300" column="77" selection-start-line="300" selection-start-column="77" selection-end-line="300" selection-end-column="77" />
+            <state relative-caret-position="455">
+              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -61,22 +97,12 @@
       <file leaf-file-name="atend_def_publica.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/atend_def_publica.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="246" column="68" selection-start-line="246" selection-start-column="19" selection-end-line="246" selection-end-column="68" />
+            <state relative-caret-position="289">
+              <caret line="393" column="9" selection-start-line="393" selection-start-column="9" selection-end-line="393" selection-end-column="9" />
               <folding>
-                <marker date="1461099605616" expanded="true" signature="8697:8761" placeholder="SELECT idAss... assunto_atendimento" />
-                <marker date="1461099605616" expanded="true" signature="9588:9649" placeholder="SELECT idUsu... usuario" />
+                <marker date="1461106655582" expanded="true" signature="8697:8761" placeholder="SELECT idAss... assunto_atendimento" />
+                <marker date="1461106655582" expanded="true" signature="9588:9649" placeholder="SELECT idUsu... usuario" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modal_upload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/Modals/modal_upload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload.php" />
         <option value="$PROJECT_DIR$/TelaLogin/seguranca.php" />
         <option value="$PROJECT_DIR$/pages/login/validaLoockscreen.php" />
         <option value="$PROJECT_DIR$/pages/login/lockscreen.php" />
@@ -143,12 +168,13 @@
         <option value="$PROJECT_DIR$/agendar_retorno.php" />
         <option value="$PROJECT_DIR$/upload_modelos_docs.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/assunto/novo_assunto.php" />
-        <option value="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
         <option value="$PROJECT_DIR$/novo_assunto.php" />
         <option value="$PROJECT_DIR$/pages/Modals/modal_upload.php" />
-        <option value="$PROJECT_DIR$/atend_def_publica.php" />
         <option value="$PROJECT_DIR$/atend_NPJ.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
+        <option value="$PROJECT_DIR$/atend_def_publica.php" />
+        <option value="$PROJECT_DIR$/see_user.php" />
       </list>
     </option>
   </component>
@@ -160,7 +186,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -220,6 +246,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminLTE-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NPJSISAP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -238,51 +278,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Modals" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJ" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Defensoria_Publica" />
+              <option name="myItemId" value="tables" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,7 +380,7 @@
       <workItem from="1460871832532" duration="956000" />
       <workItem from="1460960988731" duration="2545000" />
       <workItem from="1461039734758" duration="6640000" />
-      <workItem from="1461094198915" duration="6748000" />
+      <workItem from="1461094198915" duration="11584000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -393,11 +389,25 @@
       <option name="project" value="LOCAL" />
       <updated>1461100782762</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="alteração3">
+      <created>1461101043308</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461101043308</updated>
+    </task>
+    <task id="LOCAL-00003" summary="alteração3">
+      <created>1461101255962</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461101255962</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30284000" />
+    <option name="totallyTimeSpent" value="35120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -406,6 +416,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20131771" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -469,27 +480,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/select2-3.5.4/select2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="3553" column="4" selection-start-line="3553" selection-start-column="4" selection-end-line="3553" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/usuario/nova_Foto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/usuario/novo_usuario_backup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="658" column="9" selection-start-line="641" selection-start-column="0" selection-end-line="658" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cadastrarEducacao.js" />
     <entry file="file://$PROJECT_DIR$/dist/css/AdminLTE.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -670,14 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/Menu/menuLateral.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/novo_assunto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -695,25 +677,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atend_def_publica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="246" column="68" selection-start-line="246" selection-start-column="19" selection-end-line="246" selection-end-column="68" />
-          <folding>
-            <marker date="1461099605616" expanded="true" signature="8697:8761" placeholder="SELECT idAss... assunto_atendimento" />
-            <marker date="1461099605616" expanded="true" signature="9588:9649" placeholder="SELECT idUsu... usuario" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atend_NPJ.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="300" column="77" selection-start-line="300" selection-start-column="77" selection-end-line="300" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,6 +708,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consulta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/Modals/modal_upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -753,23 +724,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/atend_def_publica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="393" column="9" selection-start-line="393" selection-start-column="9" selection-end-line="393" selection-end-column="9" />
+          <folding>
+            <marker date="1461106655582" expanded="true" signature="8697:8761" placeholder="SELECT idAss... assunto_atendimento" />
+            <marker date="1461106655582" expanded="true" signature="9588:9649" placeholder="SELECT idUsu... usuario" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/Menu/menuLateral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+        <state relative-caret-position="129">
+          <caret line="884" column="0" selection-start-line="884" selection-start-column="0" selection-end-line="915" selection-end-column="39" />
           <folding>
-            <marker date="1461101022637" expanded="true" signature="11259:11317" placeholder="SELECT * FRO... educacao_usuario" />
-            <marker date="1461101022637" expanded="true" signature="16002:16080" placeholder="SELECT * FRO... habilidades_usuario" />
-            <marker date="1461101022637" expanded="true" signature="20797:20852" placeholder="SELECT * FRO... usuario" />
-            <marker date="1461101022637" expanded="true" signature="24036:24108" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461101022637" expanded="true" signature="24568:24633" placeholder="SELECT * FRO... assistido_defensoria" />
-            <marker date="1461101022637" expanded="true" signature="24979:25023" placeholder="SELECT * FRO... requerido" />
-            <marker date="1461101022637" expanded="true" signature="25312:25376" placeholder="SELECT * FRO... assunto_atendimento" />
-            <marker date="1461101022637" expanded="true" signature="30241:30281" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461101022637" expanded="true" signature="30354:30447" placeholder="SELECT date_... mensagens" />
-            <marker date="1461101022637" expanded="true" signature="30521:30561" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461101022637" expanded="true" signature="48095:48129" placeholder="..." />
-            <marker date="1461101022637" expanded="true" signature="48245:48279" placeholder="..." />
+            <marker date="1461101420968" expanded="true" signature="11245:11303" placeholder="SELECT * FRO... educacao_usuario" />
+            <marker date="1461101420968" expanded="true" signature="15988:16066" placeholder="SELECT * FRO... habilidades_usuario" />
+            <marker date="1461101420968" expanded="true" signature="20783:20838" placeholder="SELECT * FRO... usuario" />
+            <marker date="1461101420968" expanded="true" signature="24022:24094" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461101420968" expanded="true" signature="24554:24619" placeholder="SELECT * FRO... assistido_defensoria" />
+            <marker date="1461101420968" expanded="true" signature="24965:25009" placeholder="SELECT * FRO... requerido" />
+            <marker date="1461101420968" expanded="true" signature="25298:25362" placeholder="SELECT * FRO... assunto_atendimento" />
+            <marker date="1461101420968" expanded="true" signature="30227:30267" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461101420968" expanded="true" signature="30340:30433" placeholder="SELECT date_... mensagens" />
+            <marker date="1461101420968" expanded="true" signature="30507:30547" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461101420968" expanded="true" signature="48081:48115" placeholder="..." />
+            <marker date="1461101420968" expanded="true" signature="48231:48265" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atend_NPJ.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tables/simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="465" column="27" selection-start-line="465" selection-start-column="10" selection-end-line="465" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/see_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#2;n#tr#4;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

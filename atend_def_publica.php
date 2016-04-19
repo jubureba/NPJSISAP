@@ -385,8 +385,14 @@ protegePagina(); // Chama a função que protege a página
 </script>
 <!-- Bootstrap 3.3.5 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
-
 <script src="plugins/select2/select2.full.min.js"></script>
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $(".select2").select2();
+    });
+</script>
+
 <!-- InputMask -->
 <script src="plugins/input-mask/jquery.inputmask.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
@@ -426,6 +432,7 @@ protegePagina(); // Chama a função que protege a página
         cidadeVal: 'Castanhal'
     })
 </script>
+
 
 <script type="text/javascript">
     function getCoords() {
