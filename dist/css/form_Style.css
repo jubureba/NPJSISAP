@@ -1,0 +1,172 @@
+/* === HTML5 validation styles === */	
+.contact_form input:required, .contact_form textarea:required {
+	background: #fff url(../img/red_asterisk.png) no-repeat 98% center;
+}
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+	background: #fff url(../img/valid.png) no-repeat 98% center;
+	/*box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;*/
+	box-shadow: 0 0 5px #3c8dbc;
+	border-color: #2779a9;
+
+
+
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+	background: #fff url(../img/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
+}
+
+.required_notification {
+	color:#d45252; 
+	margin:0px 0 0 0;
+	display:inline;
+	float:right;
+	font-size: 11px;
+}
+
+.imagemFcat {
+	opacity: 0.05;
+	transition: opacity 2s;
+
+}
+
+.imagemFcat:hover {
+	transition: opacity 2s;
+	opacity: 0.5;
+	aling: center;
+}
+
+#Editar-css {
+	opacity: 0.3;
+	transition: 1s;
+}
+
+#Editar-css:hover {
+	opacity: 1;
+}
+#ExcluirPerfil{
+
+	opacity: 0;
+	transition: 1s;
+}
+#ExcluirPerfil:hover{
+	opacity: 1;
+}
+
+/* imagem de perfil, trocar foto */
+figure.foto-legenda img{
+	border-radius: 50%;
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	margin: 0 auto;
+	width: 100px;
+	padding: 3px;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #d2d6de
+}
+
+figure.foto-legenda{
+
+	position: relative;
+	border-radius: 50%;
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	margin: 0 auto;
+	width: 100px;
+	padding: 3px;
+
+}
+
+blockquote{
+	font-size: 11pt;
+	text-align: justify;
+}
+
+figure.foto-legenda figcaption{
+	position: absolute;
+	top:10px;
+	right: 10px;
+	background-color: rgba(0,0,0,.1);
+	box-sizing: border-box;
+	border-radius: 50%;
+	width: 80%;
+	height: 82%;
+	padding: 10px;
+	opacity: 0;
+	color: white;
+}
+figure.foto-legenda figcaption a{
+	color: white;
+}
+figure.foto-legenda figcaption a:hover{
+	text-decoration: solid;
+	color: white;
+	text-decoration: underline;
+}
+
+figure.foto-legenda figcaption:hover{
+	opacity: 1;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 12px;
+	text-align: center;
+	top: 10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+	background: #be1111;
+}

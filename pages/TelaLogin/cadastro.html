@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Login NPJ</title>
+    <link href="css/styleCadastro.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+
+    <!--Slider-in icons-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".username").focus(function() {
+                $(".user-icon").css("left","-48px");
+            });
+            $(".username").blur(function() {
+                $(".user-icon").css("left","0px");
+            });
+
+            $(".password").focus(function() {
+                $(".pass-icon").css("left","-48px");
+            });
+            $(".password").blur(function() {
+                $(".pass-icon").css("left","0px");
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript" language="javascript">
+        function valida_form (){
+            if(document.getElementById("nome").value.length < 3){
+                alert('Por favor, preencha o campo nome');
+                document.getElementById("nome").focus();
+                return false
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+
+
+<div id="wrapper">
+
+    <!--SLIDE-IN ICONS-->
+    <div class="user-icon"></div>
+    <div class="pass-icon"></div>
+    <!--END SLIDE-IN ICONS-->
+
+    <!--LOGIN FORM-->
+    <form name="login-form" class="login-form" action="PHP/cadastrando.php" method="post" action="PHP/cadastrando.php" onsubmit="return valida_form(this)">
+
+        <div class="header">
+            <h1>Tela de Cadastro</h1>
+            <span>Faça seu cadastro para usar o sistema</span>
+        </div>
+
+
+
+        <div class="content">
+
+
+
+
+
+            <input name="nome" type="text" class="input username" value="Nome" onfocus="this.value=''" />
+            <input name="matricula" type="text" class="input password" value="Matricula" onfocus="this.value=''" />
+            <input name="senha" type="password" class="input password" value="Senha" onfocus="this.value=''" />
+            <input name="semestre" type="text" class="input password" value="Semestre" onfocus="this.value=''" />
+            <input name="turma" type="text" class="input password" value="Turma" onfocus="this.value=''" />
+            <fieldset name="turno" id="turno"><legend>Turno</legend>
+                <input name="turno" type="radio" id="rbNot" checked> <label for="rbNot">Noturno</label><br/>
+                <input name="turno" type="radio" id="rbVesp"> <label for="rbVesp">Vespertino</label><br/>
+            </fieldset>
+            <input name="telefone" type="text" class="input password" value="Telefone" onfocus="this.value=''" />
+
+
+            <select name="time" class="Selecao" onfocus="this.value=''">
+                <option value="Aluno">Aluno</option>
+                <option value="Professor">Professor</option>
+                <option value="Secretaria">Secretaria</option>
+            </select>
+
+        </div>
+
+
+
+        <div class="footer">
+            <input type="submit" name="submit" value="Cadastrar" class="button" />
+
+        </div>
+
+    </form>
+
+
+</div>
+</body>
+</html>
