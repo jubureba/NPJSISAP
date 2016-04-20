@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
-require_once("pages/conexao/conn.php");
+require_once("pages/config/conn.php");
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 ?>
@@ -20,6 +20,7 @@ protegePagina(); // Chama a função que protege a página
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
     <link rel="stylesheet" href="plugins/morris/morris.css">
+    <link rel="stylesheet" href="dist/css/def_publica_style.css">
     <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
@@ -64,12 +65,32 @@ protegePagina(); // Chama a função que protege a página
         <form class="contact_form" method="post" action="pages/coleta_dados/Defensoria_Publica/cadastro.php">
             <!-- ################### FORMULARIO DE CADASTRO -->
             <!-- ########################### ASSISTIDO -->
-            <div class="box box-primary">
+            <div class="box box-primary" >
                 <div class="box-header">
-                    <div class="form-group">
+                    <div class="form-group" >
                         <h3 class="box-title">Assistido</h3>
-                        <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span><br/>
+                        <span class="required_notification">
+                            <img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span><br/>
                         <hr>
+
+                        <?php
+                        $query = mysql_query("SELECT nomeAssistidoDefensoria FROM 'assistido_defensoria'");
+                        ?>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <select class="form-control select2" name="assunto" style="width: 100%;">
+                                <option>Pesquisar por Nome</option>
+                                <?php while ($result = mysql_fetch_array($query)) { ?>
+                                    <option
+                                        value="<?php echo $result['descricao'] ?>"><?php echo $result['descricao'] ?></option>
+                                <?php } ?>
+
+                            </select><br/>
+                        </div><hr><br/>
+
+
 
                         <div class="input-group">
                             <div class="input-group-addon">

@@ -1,11 +1,12 @@
 <?php
-ini_set('default_charset', 'UTF-8');
-error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
-session_start();
-include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de seguranï¿½a
-protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
-?>
 
+error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+ini_set('default_charset','UTF-8');
+session_start();
+require_once("pages/config/conn.php");
+include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
+protegePagina(); // Chama a função que protege a página
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -67,11 +68,14 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                             <table class="table table-bordered">
                                 <tbody>
                                 <tr>
-                                    <th style="width: 10px">#</th>
-                                    <th>Task</th>
+                                    <th style="width: 10px">id</th>
+                                    <th>Nome</th>
                                     <th>Progress</th>
                                     <th style="width: 40px">Label</th>
                                 </tr>
+
+                                
+
                                 <tr>
                                     <td>1.</td>
                                     <td>Update software</td>

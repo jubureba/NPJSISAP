@@ -1,8 +1,8 @@
 <?php
-require_once("../../../pages/conexao/conn.php");
+require_once("../../../pages/config/conn.php");
 session_start();
 
-//VARIÁVEIS PARA RECEBER OS DADOS DO POST
+//VARIï¿½VEIS PARA RECEBER OS DADOS DO POST
 
 $nomeAssistido = $_POST['nomeAssistido'];
 $telefoneAssistido = $_POST['telefoneAssistido'];
@@ -21,7 +21,7 @@ $observacao = $_POST['observacao'];
 $login = $_POST['loginDefensoria'];
 $aluno = $_POST['AlunoVinculo'];
 
-//VARIÁVEL DE SESSÃO, PARA ENVIAR PARA OUTRAS PAGINAS
+//VARIï¿½VEL DE SESSï¿½O, PARA ENVIAR PARA OUTRAS PAGINAS
 
 $_SESSION['nomeAssistido'] = $nomeAssistido;
 $_SESSION['telefoneAssistido'] = $telefoneAssistido;
@@ -38,7 +38,7 @@ $_SESSION['observacao'] = $observacao;
 $_SESSION['login'] = $login;
 $_SESSION['aluno'] = $aluno;
 
-//INSERÇÃO NO BANCO DE DADOS ===========================
+//INSERï¿½ï¿½O NO BANCO DE DADOS ===========================
 
 $query = mysql_query("INSERT INTO assistido_defensoria (nomeAssistidoDefensoria, telefoneAssistidoDefensoria, loginDefensoria ) values('$nomeAssistido', '$telefoneAssistido','$login')");
 $query = mysql_query("INSERT INTO requerido (nomeRequerido, telefoneRequerido) values ('$nomeRequerido','$telefoneRequerido')");

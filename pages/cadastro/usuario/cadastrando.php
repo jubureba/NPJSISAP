@@ -11,7 +11,7 @@
 <body>
 
 <?php
-require_once("../../conexao/conn.php");
+require_once("../../config/conn.php");
 ?>
 
 <?php

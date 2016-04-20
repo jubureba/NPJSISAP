@@ -12,7 +12,7 @@
 <body>
 
 <?php
-    require_once("../../../pages/conexao/conn.php");
+    require_once("../../../pages/config/conn.php");
     $dadosExcluir = $_POST['AssuntosCadastrados'];
     $query = mysql_query("DELETE FROM assunto_atendimento WHERE idAssunto_Atendimento = $dadosExcluir");
 

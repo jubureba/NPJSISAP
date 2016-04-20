@@ -3,7 +3,7 @@
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 ini_set('default_charset','UTF-8');
 session_start();
-require_once("pages/conexao/conn.php");
+require_once("pages/config/conn.php");
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 ?>

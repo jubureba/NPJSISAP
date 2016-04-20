@@ -1,6 +1,6 @@
 
 <?php
-require_once("../../conexao/conn.php");
+require_once("../../config/conn.php");
 session_start();
 ?>
 

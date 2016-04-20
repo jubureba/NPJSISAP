@@ -13,7 +13,7 @@
 
 <?php
 
-require_once("../../../pages/conexao/conn.php");
+require_once("../../../pages/config/conn.php");
 
 $novoAssunto = $_POST['novoAssunto'];
 
