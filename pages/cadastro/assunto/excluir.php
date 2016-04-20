@@ -4,7 +4,7 @@
     <script type="text/javascript">
         function exclusaosucessfully(){
             alert("Assunto Excluido!")
-            setTimeout("window.location='../../../novo_assunto.php'", 100);
+            setTimeout("window.location='../../../new_subject.php'", 100);
         }
     </script>
 </head>

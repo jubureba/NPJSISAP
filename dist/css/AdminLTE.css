@@ -668,6 +668,7 @@ a:focus {
 .sidebar-form,
 .sidebar-menu > li.header {
   overflow: hidden;
+
   text-overflow: clip;
 }
 .sidebar-menu li > a {
@@ -2443,6 +2444,7 @@ a:focus {
 .nav-stacked > li.header {
   border-bottom: 1px solid #ddd;
   color: #777;
+
   margin-bottom: 10px;
   padding: 5px 10px;
   text-transform: uppercase;
@@ -2524,7 +2526,9 @@ a:focus {
   line-height: 35px;
   padding: 0 10px;
   font-size: 20px;
+
   color: #444;
+
 }
 .nav-tabs-custom > .nav-tabs > li.header > .fa,
 .nav-tabs-custom > .nav-tabs > li.header > .glyphicon,

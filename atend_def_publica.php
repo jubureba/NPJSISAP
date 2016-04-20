@@ -74,17 +74,17 @@ protegePagina(); // Chama a função que protege a página
                         <hr>
 
                         <?php
-                        $query = mysql_query("SELECT nomeAssistidoDefensoria FROM 'assistido_defensoria'");
+                        $query = mysql_query("SELECT nomeAssistidoDefensoria,idAssistidoDefensoria FROM assistido_defensoria");
                         ?>
                         <div class="input-group">
                             <div class="input-group-addon">
-                                <i class="fa fa-check"></i>
+                                <i class="fa fa-search"></i>
                             </div>
                             <select class="form-control select2" name="assunto" style="width: 100%;">
-                                <option>Pesquisar por Nome</option>
+                                <option>Pesquisar por Nome - Assistido Previamente Cadastrado</option>
                                 <?php while ($result = mysql_fetch_array($query)) { ?>
                                     <option
-                                        value="<?php echo $result['descricao'] ?>"><?php echo $result['descricao'] ?></option>
+                                        value="<?php echo $result['idAssistidoDefensoria'] ?>"><?php echo $result['nomeAssistidoDefensoria'] ?></option>
                                 <?php } ?>
 
                             </select><br/>
@@ -146,6 +146,25 @@ protegePagina(); // Chama a função que protege a página
                     <!--REQUERIDO -->
                     <h3 class="box-title">Requerido</h3>
                     <hr>
+
+                    <?php
+                    $query = mysql_query("SELECT idRequerido,nomeRequerido FROM requerido");
+                    ?>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <select class="form-control select2" name="assunto" style="width: 100%;">
+                            <option>Pesquisar por Nome - Requerido Previamente Cadastrado</option>
+                            <?php while ($result = mysql_fetch_array($query)) { ?>
+                                <option
+                                    value="<?php echo $result['idRequerido'] ?>"><?php echo $result['nomeRequerido'] ?></option>
+                            <?php } ?>
+
+                        </select><br/>
+                    </div>
+                    <hr>
+                    <br/>
 
                     <div class="input-group">
                         <div class="input-group-addon">

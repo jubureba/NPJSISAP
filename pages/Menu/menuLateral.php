@@ -47,7 +47,7 @@
         <ul class="sidebar-menu">
             <li class="header"><h4 ALIGN="center">MENU PRINCIPAL</h4></li>
             <!-- MENU PARA PROFESSOR -->
-            <li class="header">Professor</li>
+            <li class="header">PROFESSOR</li>
 
             <li class="treeview">
                 <a href="#">
@@ -69,7 +69,7 @@
                     <li><a id="novo_usuario" href="user_register.php"><i class="fa fa-hand-o-right"></i>Novo
                             Usuário</a>
                     </li>
-                    <li><a href="novo_assunto.php"><i class="fa fa-hand-o-right"></i>Novo
+                    <li><a href="new_subject.php"><i class="fa fa-hand-o-right"></i>Novo
                             Assunto/Ação</a></li>
                 </ul>
 
@@ -77,13 +77,13 @@
 
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-database"></i> <span>Consulta</span> <i
+                    <i class="fa fa-search-plus"></i> <span>Consulta</span> <i
                         class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
                     <li><a id="novo_usuario" href="see_user.php"><i class="fa fa-hand-o-right"></i>Consultar Usuário</a>
                     </li>
-                    <li><a href="novo_assunto.php"><i class="fa fa-hand-o-right"></i>Consultar Assuntos</a></li>
+                    <li><a href="new_subject.php"><i class="fa fa-hand-o-right"></i>Consultar Assuntos</a></li>
                 </ul>
 
             </li>
@@ -94,7 +94,7 @@
                         class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="upload_modelos_docs.php"><i class="fa fa-hand-o-right"></i>Peças</a>
+                    <li><a href="upload_models.php"><i class="fa fa-hand-o-right"></i>Peças</a>
                     </li>
                 </ul>
 

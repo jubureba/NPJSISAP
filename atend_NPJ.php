@@ -18,6 +18,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="dist/css/radio_style.css">
     <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
     <link rel="stylesheet" href="plugins/morris/morris.css">
     <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
@@ -324,6 +325,58 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                 <!-- iCheck -->
 
             </div><!-- /.col (right) -->
+
+
+            <!-- UPLOAD DE ARQUIVOS ---------------------------------------------------->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title">3- Coleta de Documentos</h3>
+                            <hr>
+                        </div>
+                        <div class="box-body">
+
+                            <div class="box-body">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th style="width: 10px">Documento</th>
+                                        <th style="width: 20px">Status</th>
+                                        <th style="width: 20px">Status</th>
+                                        <th style="width: 60px">Valor</th>
+                                        <th style="width: 60px">Upload</th>
+                                    </tr>
+
+                                    <?php include("pages/coleta_dados/NPJ/table_upload.php"); ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div><!-- /.box-body -->
+
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col (left) -->
+            </div><!-- /.col (right) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

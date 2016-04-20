@@ -1,7 +1,10 @@
 <header class="main-header">
     <a href="index.php" class="logo">
-        <span class="logo-mini"><b>NPJ</b></span>
-        <span class="logo-lg"><b>NPJ</b> | FCAT</span>
+        <span class="logo-mini"><b><img width="36" height="36" src="imagens/fcat-estacio-logo-solo.png"/></b></span>
+        <span class="logo-lg">
+            <img width="36" height="36" src="imagens/fcat-estacio-logo-solo.png"/>
+            <img width="100" height="36" src="imagens/estacio.png"/> | <b>NPJ</b>
+        </span>
     </a>
 
     <nav class="navbar navbar-static-top" role="navigation">

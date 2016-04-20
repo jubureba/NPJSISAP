@@ -35,7 +35,8 @@
 
       <div class="login-logo">
 
-        <a href="#"><b>NPJ</b> | System</a>
+
+        <img align="center" width="360" height="150" id="imgFCAT" src="../../imagens/logo-sisap-comp-sem-sombra.png"/>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Faça Login para Iniciar a Sessão</p>
@@ -67,7 +68,8 @@
         <a href="recuperarSenha.php">Esqueceu sua senha?</a><br>
         <div class="social-auth-links text-center">
 
-          <img width="250" height="150" id="imgFCAT" src="../../imagens/fcat.png" onmousemove="imagemFCAT(1)" onmouseout="imagemFCAT(2)" usemap="#meuMapa"/>
+          <img width="341" height="94" id="imgFCAT" src="../../imagens/fcat-estacio-logo-341x94.png"
+               onmousemove="imagemFCAT(1)" onmouseout="imagemFCAT(2)" usemap="#meuMapa"/>
           <map name="meuMapa">
             <area shape="circle" coords="126, 38, 22" href="http://www.fcat.edu.br" />
           </map>
@@ -93,19 +95,7 @@
       });
     </script>
 
-  <script>
-    function imagemFCAT(tipo) {
-      if(tipo == 1) {
-         arquivo = "../../imagens/fcat_original.png";
-      }
-      if(tipo == 2) {
-        arquivo = "../../imagens/fcat.png";
 
-      }
-      document.getElementById("imgFCAT").src = arquivo;
-    }
-
-  </script>
 
   </body>
 </html>
