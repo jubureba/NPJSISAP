@@ -497,12 +497,12 @@ protegePagina(); // Chama a função que protege a página
 
 
                                                     <td><span id="stats"
-                                                              class="label label-success"><?php echo "" . $resultado['status'] ?></span>
+                                                              class="label label-success"><?php echo "" . $resultado['status_atendimento'] ?></span>
                                                     </td>
 
 
                                                     <script type="text/javascript">
-                                                        var status = "<?php echo "".$resultado['status'] ?>";
+                                                        var status = "<?php echo "".$resultado['status_atendimento'] ?>";
                                                         if (status == "aberto") {
                                                             document.getElementById("stats").setAttribute("class", "label label-primary");
                                                             document.getElementById("stats").setAttribute("id", "class1");

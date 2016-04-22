@@ -116,7 +116,7 @@ protegePagina(); // Chama a função que protege a página
                                     <div class="box-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <th><input id="txtColuna0" type="text" name="table_search" class="form-control pull-right"
-                                                       placeholder="Pesquisar por Protocólo"></th>
+                                                       placeholder="Pesquisar por Aluno"></th>
                                         </div>
                                     </div>
                                     <div class="box-tools">
@@ -161,7 +161,7 @@ protegePagina(); // Chama a função que protege a página
                                 <?php
                                 $nomeID = $_SESSION['usuarioID'];
                                 //$sql = "SELECT * FROM peças_juridicas";
-                                $sql = "SELECT * FROM atendimento_defensoria,pecas_juridicas WHERE Usuario_idUsuario = '$nomeID'  and Pecas_idPecas = idPecas";
+                                $sql = "SELECT * FROM atendimento_defensoria,pecas_juridicas,usuario WHERE Usuario_idUsuario = '$nomeID'  and Pecas_idPecas = idPecas and idUsuario = Usuario_idUsuario";
                                 $stmt = mysql_query($sql);
 
                                 while ($resultado = mysql_fetch_array($stmt)) {
@@ -182,16 +182,15 @@ protegePagina(); // Chama a função que protege a página
                                     ?>
 
                                     <tr >
-                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $resultado['idAtendimento_Defensoria'] ?></td>
+                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $resultado['nome'] ?></td>
                                         <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $assistido['nomeAssistidoDefensoria'] ?></a></td>
                                         <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $requerido['nomeRequerido'] ?></td>
-                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo date('d/m/Y', strtotime("" . $resultado['data'])) ?></td>
+                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo date('d/m/Y', strtotime("" . $resultado['dataPeca'])) ?></td>
 
 
                                         <td><span id="stats"
                                                   class="label label-success"><?php echo "" . $resultado['status'] ?></span>
                                         </td>
-
 
                                         <script type="text/javascript">
                                             var status = "<?php echo "".$resultado['status'] ?>";
@@ -199,15 +198,15 @@ protegePagina(); // Chama a função que protege a página
                                                 document.getElementById("stats").setAttribute("class", "label label-primary");
                                                 document.getElementById("stats").setAttribute("id", "class1");
                                             }
-                                            if (status == "concluído") {
+                                            if (status == "Aprovada") {
                                                 document.getElementById("stats").setAttribute("class", "label label-success");
                                                 document.getElementById("stats").setAttribute("id", "class2");
                                             }
-                                            if (status == "Não Aprovado") {
+                                            if (status == "Reprovada") {
                                                 document.getElementById("stats").setAttribute("class", "label label-danger");
                                                 document.getElementById("stats").setAttribute("id", "class3");
                                             }
-                                            if (status == "esperando aprovacao") {
+                                            if (status == "Em correção") {
                                                 document.getElementById("stats").setAttribute("class", "label label-warning");
                                                 document.getElementById("stats").setAttribute("id", "class4");
                                             }

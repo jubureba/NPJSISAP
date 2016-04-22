@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lista_pecas.php" afterPath="$PROJECT_DIR$/lista_pecas.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,17 +29,19 @@
       <file leaf-file-name="lista_pecas.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lista_pecas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="173" column="73" selection-start-line="173" selection-start-column="73" selection-end-line="173" selection-end-column="73" />
+            <state relative-caret-position="183">
+              <caret line="118" column="87" selection-start-line="118" selection-start-column="87" selection-end-line="118" selection-end-column="87" />
               <folding>
-                <marker date="1461338273043" expanded="true" signature="7939:7953" placeholder="SELECT * FRO... atendimento_defensoria" />
-                <marker date="1461338273043" expanded="true" signature="7939:7968" placeholder="SELECT * FRO... peças_juridicasario" />
-                <marker date="1461338273043" expanded="true" signature="8011:8099" placeholder="SELECT * FRO... atendimento_defensoria" />
-                <marker date="1461338273043" expanded="true" signature="8011:8128" placeholder="SELECT * FRO... atendimento_defensoria" />
-                <marker date="1461338273043" expanded="true" signature="8527:8592" placeholder="SELECT * FRO... assistido_defensoria" />
-                <marker date="1461338273043" expanded="true" signature="8890:8934" placeholder="SELECT * FRO... requerido" />
-                <marker date="1461338273043" expanded="true" signature="9187:9251" placeholder="SELECT * FRO... assunto_atendimento" />
-                <marker date="1461338273043" expanded="true" signature="9429:9483" placeholder="..." />
+                <marker date="1461362299327" expanded="true" signature="7935:7949" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461362299327" expanded="true" signature="7935:7964" placeholder="SELECT * FRO... peças_juridicasario" />
+                <marker date="1461362299327" expanded="true" signature="8007:8103" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461362299327" expanded="true" signature="8007:8132" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461362299327" expanded="true" signature="8007:8148" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461362299327" expanded="true" signature="8007:8166" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461362299327" expanded="true" signature="8565:8630" placeholder="SELECT * FRO... assistido_defensoria" />
+                <marker date="1461362299327" expanded="true" signature="8928:8972" placeholder="SELECT * FRO... requerido" />
+                <marker date="1461362299327" expanded="true" signature="9225:9289" placeholder="SELECT * FRO... assunto_atendimento" />
+                <marker date="1461362299327" expanded="true" signature="9467:9521" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -106,11 +110,11 @@
         <option value="$PROJECT_DIR$/see_user.php" />
         <option value="$PROJECT_DIR$/dist/css/def_publica_style.css" />
         <option value="$PROJECT_DIR$/atend_def_publica.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/Menu/rodape.php" />
         <option value="$PROJECT_DIR$/lista_peças.php" />
         <option value="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
         <option value="$PROJECT_DIR$/acompanhamento.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/lista_pecas.php" />
       </list>
     </option>
@@ -273,7 +277,7 @@
       <workItem from="1460960988731" duration="2545000" />
       <workItem from="1461039734758" duration="6640000" />
       <workItem from="1461094198915" duration="14990000" />
-      <workItem from="1461330355982" duration="7750000" />
+      <workItem from="1461330355982" duration="10216000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -331,11 +335,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461340287216</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Início da criação da correção das Peças; &#10;Listar todos os atendimentos com peça em aberto e disponibilizar a opção pra download/upload da peça corrigida">
+      <created>1461359850936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1461359850936</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46276000" />
+    <option name="totallyTimeSpent" value="48742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -659,27 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="413" column="28" selection-start-line="413" selection-start-column="28" selection-end-line="413" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#2;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1461331725705" expanded="true" signature="24020:24092" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461331725705" expanded="true" signature="24552:24617" placeholder="SELECT * FRO... assistido_defensoria" />
-            <marker date="1461331725705" expanded="true" signature="24963:25007" placeholder="SELECT * FRO... requerido" />
-            <marker date="1461331725705" expanded="true" signature="25296:25360" placeholder="SELECT * FRO... assunto_atendimento" />
-            <marker date="1461331725705" expanded="true" signature="30225:30265" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461331725705" expanded="true" signature="30338:30431" placeholder="SELECT date_... mensagens" />
-            <marker date="1461331725705" expanded="true" signature="30505:30545" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461331725705" expanded="true" signature="48079:48113" placeholder="..." />
-            <marker date="1461331725705" expanded="true" signature="48229:48263" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/acompanhamento.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -693,19 +683,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="504" column="114" selection-start-line="504" selection-start-column="114" selection-end-line="504" selection-end-column="114" />
+          <folding>
+            <marker date="1461361930969" expanded="true" signature="11243:11301" placeholder="SELECT * FRO... educacao_usuario" />
+            <marker date="1461361930969" expanded="true" signature="15986:16064" placeholder="SELECT * FRO... habilidades_usuario" />
+            <marker date="1461361930969" expanded="true" signature="20781:20836" placeholder="SELECT * FRO... usuario" />
+            <marker date="1461361930969" expanded="true" signature="24020:24092" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461361930969" expanded="true" signature="24552:24617" placeholder="SELECT * FRO... assistido_defensoria" />
+            <marker date="1461361930969" expanded="true" signature="24963:25007" placeholder="SELECT * FRO... requerido" />
+            <marker date="1461361930969" expanded="true" signature="25296:25360" placeholder="SELECT * FRO... assunto_atendimento" />
+            <marker date="1461361930969" expanded="true" signature="30249:30289" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461361930969" expanded="true" signature="30362:30455" placeholder="SELECT date_... mensagens" />
+            <marker date="1461361930969" expanded="true" signature="30529:30569" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461361930969" expanded="true" signature="48103:48137" placeholder="..." />
+            <marker date="1461361930969" expanded="true" signature="48253:48287" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lista_pecas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="173" column="73" selection-start-line="173" selection-start-column="73" selection-end-line="173" selection-end-column="73" />
+        <state relative-caret-position="183">
+          <caret line="118" column="87" selection-start-line="118" selection-start-column="87" selection-end-line="118" selection-end-column="87" />
           <folding>
-            <marker date="1461338273043" expanded="true" signature="7939:7953" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461338273043" expanded="true" signature="7939:7968" placeholder="SELECT * FRO... peças_juridicasario" />
-            <marker date="1461338273043" expanded="true" signature="8011:8099" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461338273043" expanded="true" signature="8011:8128" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461338273043" expanded="true" signature="8527:8592" placeholder="SELECT * FRO... assistido_defensoria" />
-            <marker date="1461338273043" expanded="true" signature="8890:8934" placeholder="SELECT * FRO... requerido" />
-            <marker date="1461338273043" expanded="true" signature="9187:9251" placeholder="SELECT * FRO... assunto_atendimento" />
-            <marker date="1461338273043" expanded="true" signature="9429:9483" placeholder="..." />
+            <marker date="1461362299327" expanded="true" signature="7935:7949" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461362299327" expanded="true" signature="7935:7964" placeholder="SELECT * FRO... peças_juridicasario" />
+            <marker date="1461362299327" expanded="true" signature="8007:8103" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461362299327" expanded="true" signature="8007:8132" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461362299327" expanded="true" signature="8007:8148" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461362299327" expanded="true" signature="8007:8166" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461362299327" expanded="true" signature="8565:8630" placeholder="SELECT * FRO... assistido_defensoria" />
+            <marker date="1461362299327" expanded="true" signature="8928:8972" placeholder="SELECT * FRO... requerido" />
+            <marker date="1461362299327" expanded="true" signature="9225:9289" placeholder="SELECT * FRO... assunto_atendimento" />
+            <marker date="1461362299327" expanded="true" signature="9467:9521" placeholder="..." />
           </folding>
         </state>
       </provider>
