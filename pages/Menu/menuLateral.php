@@ -55,8 +55,8 @@
                         class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-hand-o-right"></i>Aprovação/Reprovação</a></li>
-
+                    <li><a href="lista_pecas.php"><i class="fa fa-hand-o-right"></i>Peças do NPJ</a></li>
+                    <li><a href="#"><i class="fa fa-hand-o-right"></i>Peças da Defensoria</a></li>
                 </ul>
             </li>
 

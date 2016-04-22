@@ -174,7 +174,6 @@ protegePagina(); // Chama a função que protege a página
         <!-- Main content -->
         <section class="content">
 
-
             <!-- /.box -->
 
             <!-- PERFIL DA TELA INICIAL -->
