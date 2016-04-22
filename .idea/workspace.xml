@@ -27,8 +27,8 @@
       <file leaf-file-name="lista_pecas.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lista_pecas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="197" column="65" selection-start-line="197" selection-start-column="65" selection-end-line="197" selection-end-column="65" />
+            <state relative-caret-position="369">
+              <caret line="173" column="73" selection-start-line="173" selection-start-column="73" selection-end-line="173" selection-end-column="73" />
               <folding>
                 <marker date="1461338273043" expanded="true" signature="7939:7953" placeholder="SELECT * FRO... atendimento_defensoria" />
                 <marker date="1461338273043" expanded="true" signature="7939:7968" placeholder="SELECT * FRO... peças_juridicasario" />
@@ -273,7 +273,7 @@
       <workItem from="1460960988731" duration="2545000" />
       <workItem from="1461039734758" duration="6640000" />
       <workItem from="1461094198915" duration="14990000" />
-      <workItem from="1461330355982" duration="7699000" />
+      <workItem from="1461330355982" duration="7750000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -324,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461340258607</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Início da criação da correção das Peças; &#10;Listar todos os atendimentos com peça em aberto e disponibilizar a opção pra download/upload da peça corrigida">
+      <created>1461340287216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1461340287216</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46225000" />
+    <option name="totallyTimeSpent" value="46276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -688,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lista_pecas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="197" column="65" selection-start-line="197" selection-start-column="65" selection-end-line="197" selection-end-column="65" />
+        <state relative-caret-position="369">
+          <caret line="173" column="73" selection-start-line="173" selection-start-column="73" selection-end-line="173" selection-end-column="73" />
           <folding>
             <marker date="1461338273043" expanded="true" signature="7939:7953" placeholder="SELECT * FRO... atendimento_defensoria" />
             <marker date="1461338273043" expanded="true" signature="7939:7968" placeholder="SELECT * FRO... peças_juridicasario" />
