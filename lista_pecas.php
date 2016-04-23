@@ -41,7 +41,6 @@ protegePagina(); // Chama a função que protege a página
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 
-
     <!-- daterange picker -->
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- iCheck for checkboxes and radio inputs -->
@@ -76,7 +75,7 @@ protegePagina(); // Chama a função que protege a página
 
 <div class="wrapper">
 
-   <!-- -->
+    <!-- -->
     <?php include('pages/Menu/topo.php');?>
     <?php include('pages/Menu/menuLateral.php');?>
 
@@ -84,12 +83,12 @@ protegePagina(); // Chama a função que protege a página
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Coleta de Dados - Defensoria Pública
+                Lista de peças em aberto
                 <small>Painel de Controle</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Acompanhamento - <?php echo "".$_SESSION['nomeAssistido'] ?></li>
+                <li class="active">Peças - <?php echo "".$_SESSION['nomeAssistido'] ?></li>
             </ol>
         </section>
 
@@ -98,138 +97,134 @@ protegePagina(); // Chama a função que protege a página
             <!-- Small boxes (Stat box) -->
             <div class="row">
 
-<!-- ASSUNTO -->
+                <!-- ASSUNTO -->
 
 
+                <div class="col-md-12">
+                    <div class="box box-primary" style="overflow: auto; height: 620px">
+                        <div class="box-header">
+                            <h3 class="box-title">Olá <?php echo " " . $_SESSION['usuarioNome']."," ?> selecione a Peça para corrigir: </h3>
 
 
-
-
-                    <div class="col-md-12">
-                        <div class="box box-primary" style="overflow: auto; height: 620px">
-                            <div class="box-header">
-                                <h3 class="box-title">Olá <?php echo " " . $_SESSION['usuarioNome']."," ?> Escolha/Clique em um Nome para Agendar seu retorno</h3>
-
-
-                            </div>
-                            <!-- /.box-header -->
-                            <div id="divConteudo" class="box-body table-responsive no-padding">
-                                <table id="tabela" class="table table-hover">
-
-                                    <thead>
-                                    <tr>
-                                        <div class="box-tools">
-                                            <div class="input-group input-group-sm" style="width: 150px;">
-                                                <th><input id="txtColuna0" type="text" name="table_search" class="form-control pull-right"
-                                                           placeholder="Pesquisar por Protocólo"></th>
-                                            </div>
-                                        </div>
-                                        <div class="box-tools">
-                                            <div class="input-group input-group-sm" style="width: 150px;">
-                                                <th><input id="txtColuna1" type="text" name="table_search" class="form-control pull-right"
-                                                           placeholder="Pesquisar por Assistido"></th>
-                                            </div>
-                                        </div>
-                                        <div class="box-tools">
-                                            <div class="input-group input-group-sm" style="width: 150px;">
-                                                <th><input id="txtColuna2" type="text" name="table_search" class="form-control pull-right"
-                                                           placeholder="Pesquisar por Requerido"></th>
-                                            </div>
-                                        </div>
-                                        <div class="box-tools">
-                                            <div class="input-group input-group-sm" style="width: 150px;">
-                                                <th><input id="txtColuna3" type="text" name="table_search" class="form-control pull-right"
-                                                           placeholder="Pesquisar por Data"></th>
-                                            </div>
-                                        </div>
-                                        <div class="box-tools">
-                                            <div class="input-group input-group-sm" style="width: 150px;">
-                                                <th><input id="txtColuna4" type="text" name="table_search" class="form-control pull-right"
-                                                           placeholder="Pesquisar por Status"></th>
-                                            </div>
-                                        </div>
-
-
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-
-                                        <th>Protocolo</th>
-                                        <th>Assistido</th>
-                                        <th>Requerido</th>
-                                        <th>Data</th>
-                                        <th>Status</th>
-                                        <th>Assunto</th>
-                                        <th>Observação</th>
-                                    </tr>
-                                    <?php
-                                    $nomeID = $_SESSION['usuarioID'];
-                                    $sql = "SELECT * FROM atendimento_defensoria WHERE Usuario_idUsuario = '$nomeID' ";
-                                    $stmt = mysql_query($sql);
-
-                                    while ($resultado = mysql_fetch_array($stmt)) {
-                                        //PEGA O NOME DO ASSISTIDO NA TABELA ASSISTIDODEFENSORIA, COM O ID
-                                        $assistido = $resultado['Assistido_Defensoria_idAssistidoDefensoria'];
-                                        $query = "SELECT * FROM assistido_defensoria WHERE idAssistidoDefensoria = $assistido";
-                                        $assistido = mysql_fetch_array(mysql_query($query));
-
-                                        //pega o nome do requerido
-                                        $requerido = $resultado['Requerido_idRequerido'];
-                                        $query = "SELECT * FROM requerido WHERE idRequerido = $requerido";
-                                        $requerido = mysql_fetch_array(mysql_query($query));
-
-                                        $assunto = $resultado['Assunto_Atendimento_idAssunto_Atendimento'];
-                                        $query = "SELECT * FROM assunto_atendimento WHERE idAssunto_Atendimento = $assunto";
-                                        $assunto = mysql_fetch_array(mysql_query($query));
-
-                                        ?>
-
-                                        <tr >
-                                            <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $resultado['idAtendimento_Defensoria'] ?></td>
-                                            <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $assistido['nomeAssistidoDefensoria'] ?></a></td>
-                                            <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $requerido['nomeRequerido'] ?></td>
-                                            <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo date('d/m/Y', strtotime("" . $resultado['data'])) ?></td>
-
-
-                                            <td><span id="stats"
-                                                      class="label label-success"><?php echo "" . $resultado['status_atendimento'] ?></span>
-                                            </td>
-
-
-                                            <script type="text/javascript">
-                                                var status = "<?php echo "".$resultado['status_atendimento'] ?>";
-                                                if (status == "aberto") {
-                                                    document.getElementById("stats").setAttribute("class", "label label-primary");
-                                                    document.getElementById("stats").setAttribute("id", "class1");
-                                                }
-                                                if (status == "concluído") {
-                                                    document.getElementById("stats").setAttribute("class", "label label-success");
-                                                    document.getElementById("stats").setAttribute("id", "class2");
-                                                }
-                                                if (status == "Não Aprovado") {
-                                                    document.getElementById("stats").setAttribute("class", "label label-danger");
-                                                    document.getElementById("stats").setAttribute("id", "class3");
-                                                }
-                                                if (status == "esperando aprovacao") {
-                                                    document.getElementById("stats").setAttribute("class", "label label-warning");
-                                                    document.getElementById("stats").setAttribute("id", "class4");
-                                                }
-                                            </script>
-
-                                            <td><?php echo "" . $assunto['descricao'] ?></td>
-                                            <td><?php echo "" . $resultado['descricaoAtendimentoDefensoria'] ?></td>
-                                        </tr>
-
-
-                                    <?php } ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.box-body -->
                         </div>
-                        <!-- /.box -->
+                        <!-- /.box-header -->
+                        <div id="divConteudo" class="box-body table-responsive no-padding">
+                            <table id="tabela" class="table table-hover">
+
+                                <thead>
+                                <tr>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <th><input id="txtColuna0" type="text" name="table_search" class="form-control pull-right"
+                                                       placeholder="Pesquisar por Aluno"></th>
+                                        </div>
+                                    </div>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <th><input id="txtColuna1" type="text" name="table_search" class="form-control pull-right"
+                                                       placeholder="Pesquisar por Assistido"></th>
+                                        </div>
+                                    </div>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <th><input id="txtColuna2" type="text" name="table_search" class="form-control pull-right"
+                                                       placeholder="Pesquisar por Requerido"></th>
+                                        </div>
+                                    </div>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <th><input id="txtColuna3" type="text" name="table_search" class="form-control pull-right"
+                                                       placeholder="Pesquisar por Data"></th>
+                                        </div>
+                                    </div>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <th><input id="txtColuna4" type="text" name="table_search" class="form-control pull-right"
+                                                       placeholder="Pesquisar por Status"></th>
+                                        </div>
+                                    </div>
+
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                    <th>Aluno</th>
+                                    <th>Assistido</th>
+                                    <th>Requerido</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                    <th>Assunto</th>
+                                    <th>Observação</th>
+                                </tr>
+                                <?php
+                                $nomeID = $_SESSION['usuarioID'];
+                                //$sql = "SELECT * FROM peças_juridicas";
+                                $sql = "SELECT * FROM atendimento_defensoria,pecas_juridicas,usuario WHERE Usuario_idUsuario = '$nomeID'  and Pecas_idPecas = idPecas and idUsuario = Usuario_idUsuario";
+                                $stmt = mysql_query($sql);
+
+                                while ($resultado = mysql_fetch_array($stmt)) {
+                                    //PEGA O NOME DO ASSISTIDO NA TABELA ASSISTIDODEFENSORIA, COM O ID
+                                    $assistido = $resultado['Assistido_Defensoria_idAssistidoDefensoria'];
+                                    $query = "SELECT * FROM assistido_defensoria WHERE idAssistidoDefensoria = $assistido";
+                                    $assistido = mysql_fetch_array(mysql_query($query));
+
+                                    //pega o nome do requerido
+                                    $requerido = $resultado['Requerido_idRequerido'];
+                                    $query = "SELECT * FROM requerido WHERE idRequerido = $requerido";
+                                    $requerido = mysql_fetch_array(mysql_query($query));
+
+                                    $assunto = $resultado['Assunto_Atendimento_idAssunto_Atendimento'];
+                                    $query = "SELECT * FROM assunto_atendimento WHERE idAssunto_Atendimento = $assunto";
+                                    $assunto = mysql_fetch_array(mysql_query($query));
+
+                                    ?>
+
+                                    <tr >
+                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $resultado['nome'] ?></td>
+                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $assistido['nomeAssistidoDefensoria'] ?></a></td>
+                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo "" . $requerido['nomeRequerido'] ?></td>
+                                        <td onclick="javascript: if (confirm('Clique em OK para agendar um Retorno para <?php echo $assistido['nomeAssistidoDefensoria'] ?>'))location.href='agendar_retorno.php?nome=<?php echo $assistido['nomeAssistidoDefensoria'];?>&id=<?php echo $resultado['idAtendimento_Defensoria']; ?>'"><?php echo date('d/m/Y', strtotime("" . $resultado['dataPeca'])) ?></td>
+
+
+                                        <td><span id="stats"
+                                                  class="label label-success"><?php echo "" . $resultado['status'] ?></span>
+                                        </td>
+
+                                        <script type="text/javascript">
+                                            var status = "<?php echo "".$resultado['status'] ?>";
+                                            if (status == "Aberto") {
+                                                document.getElementById("stats").setAttribute("class", "label label-primary");
+                                                document.getElementById("stats").setAttribute("id", "class1");
+                                            }
+                                            if (status == "Aprovada") {
+                                                document.getElementById("stats").setAttribute("class", "label label-success");
+                                                document.getElementById("stats").setAttribute("id", "class2");
+                                            }
+                                            if (status == "Reprovada") {
+                                                document.getElementById("stats").setAttribute("class", "label label-danger");
+                                                document.getElementById("stats").setAttribute("id", "class3");
+                                            }
+                                            if (status == "Em correção") {
+                                                document.getElementById("stats").setAttribute("class", "label label-warning");
+                                                document.getElementById("stats").setAttribute("id", "class4");
+                                            }
+                                        </script>
+
+                                        <td><?php echo "" . $assunto['descricao'] ?></td>
+                                        <td><?php echo "" . $resultado['descricaoAtendimentoDefensoria'] ?></td>
+                                    </tr>
+
+
+                                <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
                     </div>
+                    <!-- /.box -->
+                </div>
 
                 <script>
                     function Teste() {
@@ -239,25 +234,15 @@ protegePagina(); // Chama a função que protege a página
                     }
                 </script>
 
-
-
-
-
-
-                    <script  type="text/javascript">
+                <script  type="text/javascript">
                     function setText(){
-                    var x=document.getElementById('assunto')
-                    value = x.options[x.selectedIndex].value
-                    document.getElementById('teste').style.visibility= "";
+                        var x=document.getElementById('assunto')
+                        value = x.options[x.selectedIndex].value
+                        document.getElementById('teste').style.visibility= "";
                         var itemSelecionado = x.options[x.selectedIndex].value;
 
                     }
-                    </script>
-
-
-
-
-
+                </script>
 
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
