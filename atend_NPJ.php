@@ -36,6 +36,9 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
     <link rel="stylesheet" href="plugins/select2/select2.min.css">
 
 
+    <link rel="stylesheet" type="text/css" href="dist/css/component.css"/>
+
+
 </head>
 
 
@@ -273,59 +276,6 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                 </div>
             </form>
 
-            <!-- UPLOAD DE ARQUIVOS ---------------------------------------------------->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="box box-primary">
-                        <div class="box-header">
-                            <h3 class="box-title">3- Coleta de Documentos</h3>
-                        </div>
-                        <div class="box-body">
-                            <!-- /.form-group -->
-                            <!-- ESTE CAMPO SERÁ FEITO UPLOAD DOS ARQUIVOS SCANEADOS - DOCUMENTOS NA PAG2 -->
-                            <div class="form-group">
-                                <select id="idselect" name="idPosto" onchange="UploadDocumentos(this.value)"
-                                        class="form-control select2" multiple="multiple"
-                                        data-placeholder="Documentos Apresentados"
-                                        style="width: 100%;">
-                                    <option value="cpf">CPF</option>
-                                    <option value="rg">RG</option>
-                                    <option value="ctps">CTPS</option>
-                                    <option value="comprovanteResidencia">Comprovante de Residência</option>
-                                    <option value="contracheque">Contracheque</option>
-                                    <option value="certidaoNascimento">Certidão de Nascimento</option>
-                                    <option value="certidaoCasamento">Certidão de Casamento</option>
-                                    <option value="certidaoObito">Certidão de Óbito</option>
-                                </select>
-                                <br/></div>
-                            <div id="visualizarSituacao"></div>
-                            <?php include('pages/Modals/modal_upload.php');?>
-                            <script type="text/javascript">
-                                function UploadDocumentos(valor) {
-                                    $('#myModal').modal('show');
-                                }
-                            </script>
-
-                        </div><!-- /.box-body -->
-                    </div><!-- /.box -->
-                </div><!-- /.col (left) -->
-
-
-                <div class="col-md-6">
-                    <div class="box box-primary">
-                        <div class="box-header">
-                            <h3 class="box-title">Preview Imagem</h3>
-                        </div>
-                        Imagem
-                        <div id="visualizar"></div>
-
-                    </div><!-- /.box-body -->
-                </div><!-- /.box -->
-
-                <!-- iCheck -->
-
-            </div><!-- /.col (right) -->
-
 
             <!-- UPLOAD DE ARQUIVOS ---------------------------------------------------->
             <div class="row">
@@ -344,8 +294,9 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                         <th style="width: 10px">Documento</th>
                                         <th style="width: 20px">Status</th>
                                         <th style="width: 20px">Status</th>
-                                        <th style="width: 60px">Valor</th>
-                                        <th style="width: 60px">Upload</th>
+                                        <th style="width: 20px">Valor</th>
+                                        <th style="width: 20px">Upload</th>
+                                        <th style="width: 20px">preview</th>
                                     </tr>
 
                                     <?php include("pages/coleta_dados/NPJ/table_upload.php"); ?>
@@ -359,26 +310,6 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
             </div><!-- /.col (right) -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             <div class="box box-primary">
@@ -622,6 +553,6 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 </script>
 
 
-
+<script src="js/custom-file-input.js"></script>
 </body>
 </html>

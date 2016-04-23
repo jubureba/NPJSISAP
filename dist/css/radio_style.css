@@ -3,11 +3,12 @@ input.radio:empty {
     margin-left: -999px;
 }
 
+
 /* style label */
 input.radio:empty ~ label {
     position: relative;
     float: left;
-    line-height: 2.5em;
+    line-height: 1.8em;
     text-indent: 3.25em;
     margin-top: -1em;
     cursor: pointer;
@@ -25,8 +26,8 @@ input.radio:empty ~ label:before {
     left: 0;
     content: '';
     width: 2.5em;
-    background: #D1D3D4;
-    border-radius: 3px 0 0 3px;
+    background: #e3e5e6;
+
 }
 
 /* toggle hover */
@@ -45,7 +46,7 @@ input.radio:checked ~ label:before {
     content: '\2714';
     text-indent: .9em;
     color: #9CE2AE;
-    background-color: #4DCB6D;
+    background-color: #5ba0cb;
 }
 
 input.radio:checked ~ label {
@@ -54,3 +55,5 @@ input.radio:checked ~ label {
 
 /* radio focus */
 input.radio:focus ~ label:bef
+
+

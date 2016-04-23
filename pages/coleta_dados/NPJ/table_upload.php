@@ -1,5 +1,7 @@
+<script src="teste-up-img/jquery.min.js"></script>
+<script src="teste-up-img/script.js"></script>
 <tr>
-    <td>CPF</td> <!-- Nome do Documento -->
+    <td>Cadastro de Pessoas Físicas - CPF</td> <!-- Nome do Documento -->
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
@@ -11,7 +13,7 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst');"
+            <input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst'); checked"
                    class="radio"/>
             <label for="radioCPF2">Ausente</label>
         </div>
@@ -27,7 +29,21 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upload-cpf" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="upload-cpf" required onchange="" disabled/>
+                    <img class="upload-button" alt="title=" id="img-cpf" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+_disabled.png"/>
+                </span>
+            </div>
+        </form>
+    </td>
+
+    <td>
+        <div id="image_preview" align="center"><img id="previewing" style="width: 40px; height: 40px;"
+                                                    src="dist/img/defaultimg.gif"/></div>
+        <div id="message"></div>
     </td>
 </tr>
 <script type="text/javascript">
@@ -38,33 +54,36 @@
             document.getElementById("valor-cpf").required = false;
             document.getElementById("upload-cpf").disabled = true;
             document.getElementById("upload-cpf").required = false;
+            document.getElementById('img-cpf').src = "imagens/upload_+_disabled.png";
 
         } else {
             document.getElementById("valor-cpf").disabled = false;
             document.getElementById("valor-cpf").required = true;
             document.getElementById("upload-cpf").disabled = false;
             document.getElementById("upload-cpf").required = true;
+            document.getElementById('img-cpf').src = "imagens/upload_+.png";
         }
     }
 </script>
 
 
 <!-- RG  -->
-
 <tr>
-    <td>RG</td> <!-- Nome do Documento -->
+    <td>Registro Geral - RG</td> <!-- Nome do Documento -->
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioRG" id="radiorg1" value="presente" onclick="uploadRG('atv');" class="radio"/>
-            <label for="radiorg1">Presente</label>
+            <input type="radio" name="radioCPF" id="radioCPF1" value="presente" onclick="uploadCPF('atv');"
+                   class="radio"/>
+            <label for="radioCPF1">Presente</label>
         </div>
     </td>
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioRG" id="radiorg2" value="ausente" onclick="uploadRG('dst');" class="radio"/>
-            <label for="radiorg2">Ausente</label>
+            <input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst'); checked"
+                   class="radio"/>
+            <label for="radioCPF2">Ausente</label>
         </div>
     </td>
 
@@ -73,29 +92,44 @@
             <div class="input-group-addon">
                 <i class="fa fa-user"></i>
             </div>
-            <input class="form-control" id="valor-rg" required name="valorRG" type="NUMBER"
-                   placeholder="RG (Somente Números)" disabled>
+            <input class="form-control" id="valor-cpf" required name="valorCPF" type="NUMBER"
+                   placeholder="CPF (Somente Números)" disabled>
         </div>
     </td>
     <td>
-        <input type="file" id="upload-rg" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="upload-cpf" required onchange="" disabled/>
+                    <img class="upload-button" alt="title=" id="img-cpf" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+_disabled.png"/>
+                </span>
+            </div>
+        </form>
+    </td>
+
+    <td>
+        <div id="image_preview" align="center"><img id="previewing" style="width: 40px; height: 40px;"
+                                                    src="dist/img/defaultimg.gif"/></div>
+        <div id="message"></div>
     </td>
 </tr>
-
 <script type="text/javascript">
-    function uploadRG(value) {
+    function uploadCPF(value) {
 
         if (value == 'dst') {
-            document.getElementById("valor-rg").disabled = true;
-            document.getElementById("valor-rg").required = false;
-            document.getElementById("upload-rg").disabled = true;
-            document.getElementById("upload-rg").required = false;
+            document.getElementById("valor-cpf").disabled = true;
+            document.getElementById("valor-cpf").required = false;
+            document.getElementById("upload-cpf").disabled = true;
+            document.getElementById("upload-cpf").required = false;
+            document.getElementById('img-cpf').src = "imagens/upload_+_disabled.png";
 
         } else {
-            document.getElementById("valor-rg").disabled = false;
-            document.getElementById("valor-rg").required = true;
-            document.getElementById("upload-rg").disabled = false;
-            document.getElementById("upload-rg").required = true;
+            document.getElementById("valor-cpf").disabled = false;
+            document.getElementById("valor-cpf").required = true;
+            document.getElementById("upload-cpf").disabled = false;
+            document.getElementById("upload-cpf").required = true;
+            document.getElementById('img-cpf').src = "imagens/upload_+.png";
         }
     }
 </script>
@@ -114,7 +148,8 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"/>
+            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"
+                   checked/>
             <label for="radio2">Ausente</label>
         </div>
     </td>
@@ -129,7 +164,15 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upCPF" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="file" required onchange=””/>
+                    <img class="upload-button" alt="title=" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+.png"/>
+                </span>
+            </div>
+        </form>
     </td>
 </tr>
 
@@ -148,7 +191,8 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"/>
+            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"
+                   checked/>
             <label for="radio2">Ausente</label>
         </div>
     </td>
@@ -163,7 +207,15 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upCPF" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="file" required onchange=””/>
+                    <img class="upload-button" alt="title=" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+.png"/>
+                </span>
+            </div>
+        </form>
     </td>
 </tr>
 
@@ -181,7 +233,8 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"/>
+            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"
+                   checked/>
             <label for="radio2">Ausente</label>
         </div>
     </td>
@@ -196,7 +249,15 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upCPF" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="file" required onchange=””/>
+                    <img class="upload-button" alt="title=" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+.png"/>
+                </span>
+            </div>
+        </form>
     </td>
 </tr>
 
@@ -214,7 +275,8 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"/>
+            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"
+                   checked/>
             <label for="radio2">Ausente</label>
         </div>
     </td>
@@ -229,7 +291,15 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upCPF" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="file" required onchange=””/>
+                    <img class="upload-button" alt="title=" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+.png"/>
+                </span>
+            </div>
+        </form>
     </td>
 </tr>
 
@@ -247,7 +317,8 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"/>
+            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"
+                   checked/>
             <label for="radio2">Ausente</label>
         </div>
     </td>
@@ -262,7 +333,15 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upCPF" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="file" required onchange=””/>
+                    <img class="upload-button" alt="title=" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+.png"/>
+                </span>
+            </div>
+        </form>
     </td>
 </tr>
 
@@ -280,7 +359,8 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"/>
+            <input type="radio" name="radioCPF" id="radio2" value="ausente" onclick="uploadCPF('dst');" class="radio"
+                   checked/>
             <label for="radio2">Ausente</label>
         </div>
     </td>
@@ -295,7 +375,15 @@
         </div>
     </td>
     <td>
-        <input type="file" id="upCPF" disabled>
+        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+            <div id="selectImage">
+                <span class="upload-wrapper">
+                    <input class="upload-file" type="file" name="file" id="file" required onchange=””/>
+                    <img class="upload-button" alt="title=" style="height: 34px; width: 34px;"
+                         src="imagens/upload_+.png"/>
+                </span>
+            </div>
+        </form>
     </td>
 </tr>
 

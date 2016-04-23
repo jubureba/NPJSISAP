@@ -1,0 +1,36 @@
+.upload-wrapper {
+    cursor: pointer;
+}
+
+.upload-file {
+    cursor: pointer;
+    position: absolute;
+}
+
+.upload-button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+.upload-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-file {
+    cursor: pointer;
+    position: absolute;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.01;
+    opacity: 0.01;
+    font-size: 30px;
+}
+
+.upload-button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}

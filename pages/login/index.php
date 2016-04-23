@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="shortcut icon" href="../../imagens/logoSisAp.ico" type="image/x-icon"/>
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- iCheck -->
@@ -36,7 +37,7 @@
       <div class="login-logo">
 
 
-        <img align="center" width="360" height="150" id="imgFCAT" src="../../imagens/logo-sisap-comp-sem-sombra.png"/>
+        <img align="center" width="360" height="90" id="imgFCAT" src="../../imagens/sisap-logo-simple.png"/>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Faça Login para Iniciar a Sessão</p>
@@ -68,11 +69,6 @@
         <a href="recuperarSenha.php">Esqueceu sua senha?</a><br>
         <div class="social-auth-links text-center">
 
-          <img width="341" height="94" id="imgFCAT" src="../../imagens/fcat-estacio-logo-341x94.png"
-               onmousemove="imagemFCAT(1)" onmouseout="imagemFCAT(2)" usemap="#meuMapa"/>
-          <map name="meuMapa">
-            <area shape="circle" coords="126, 38, 22" href="http://www.fcat.edu.br" />
-          </map>
 
         </div>
       </div><!-- /.login-box-body -->

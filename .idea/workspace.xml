@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imagens/logoSisAp-COMPLETO.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imagens/logoSisAp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/radio_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/novo_assunto.php" afterPath="$PROJECT_DIR$/new_subject.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/upload_modelos_docs.php" afterPath="$PROJECT_DIR$/upload_models.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="Atualização quarta-feira">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/normalize.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/custom-file-input.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-v1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.custom-file-input.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teste-up-img/ajax_php_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teste-up-img/ajax_upload_image_main.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teste-up-img/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teste-up-img/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/AdminLTE-master.iml" afterPath="$PROJECT_DIR$/.idea/NPJSISAP.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atend_NPJ.php" afterPath="$PROJECT_DIR$/atend_NPJ.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atend_def_publica.php" afterPath="$PROJECT_DIR$/atend_def_publica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/AdminLTE.css" afterPath="$PROJECT_DIR$/dist/css/AdminLTE.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/Menu/menuLateral.php" afterPath="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/radio_style.css" afterPath="$PROJECT_DIR$/dist/css/radio_style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/Menu/topo.php" afterPath="$PROJECT_DIR$/pages/Menu/topo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/assunto/cadastrar.php" afterPath="$PROJECT_DIR$/pages/cadastro/assunto/cadastrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/assunto/excluir.php" afterPath="$PROJECT_DIR$/pages/cadastro/assunto/excluir.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/usuario/novo_usuario_backup.php" afterPath="$PROJECT_DIR$/pages/cadastro/usuario/novo_usuario_backup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/index.php" afterPath="$PROJECT_DIR$/pages/login/index.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
@@ -43,15 +47,9 @@
       <file leaf-file-name="atend_NPJ.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/atend_NPJ.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,9 +57,54 @@
       <file leaf-file-name="table_upload.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-954">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="100">
+              <caret line="355" column="30" selection-start-line="355" selection-start-column="30" selection-end-line="355" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#td#5;n#tr#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#7;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teste-up-img/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1461449430313" expanded="true" signature="11325:11383" placeholder="SELECT * FRO... educacao_usuario" />
+                <marker date="1461449430313" expanded="true" signature="16068:16146" placeholder="SELECT * FRO... habilidades_usuario" />
+                <marker date="1461449430313" expanded="true" signature="20863:20918" placeholder="SELECT * FRO... usuario" />
+                <marker date="1461449430313" expanded="true" signature="24102:24174" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461449430313" expanded="true" signature="24634:24699" placeholder="SELECT * FRO... assistido_defensoria" />
+                <marker date="1461449430313" expanded="true" signature="25045:25089" placeholder="SELECT * FRO... requerido" />
+                <marker date="1461449430313" expanded="true" signature="25378:25442" placeholder="SELECT * FRO... assunto_atendimento" />
+                <marker date="1461449430313" expanded="true" signature="30307:30347" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461449430313" expanded="true" signature="30420:30513" placeholder="SELECT date_... mensagens" />
+                <marker date="1461449430313" expanded="true" signature="30587:30627" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461449430313" expanded="true" signature="48161:48195" placeholder="..." />
+                <marker date="1461449430313" expanded="true" signature="48311:48345" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +112,8 @@
       <file leaf-file-name="radio_style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/css/radio_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-167">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="850">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -82,8 +125,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Html5" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -94,12 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugins/select2/select2.full.min.js" />
-        <option value="$PROJECT_DIR$/pages/coleta_dados/Defensoria_Publica/recebeFile.php" />
-        <option value="$PROJECT_DIR$/dist/css/AdminLTE.min.css" />
-        <option value="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/pages/cadastro/usuario/recebeFile.php" />
-        <option value="$PROJECT_DIR$/recebeFile.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/usuario/nova_Foto.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/usuario/nova_Educacao.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/usuario/nova_nota.php" />
@@ -132,17 +169,23 @@
         <option value="$PROJECT_DIR$/pages/cadastro/assunto/novo_assunto.php" />
         <option value="$PROJECT_DIR$/novo_assunto.php" />
         <option value="$PROJECT_DIR$/pages/Modals/modal_upload.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/config/conn.php" />
         <option value="$PROJECT_DIR$/pages/Consulta/user_query.php" />
         <option value="$PROJECT_DIR$/see_user.php" />
         <option value="$PROJECT_DIR$/dist/css/def_publica_style.css" />
-        <option value="$PROJECT_DIR$/atend_def_publica.php" />
         <option value="$PROJECT_DIR$/dist/css/AdminLTE.css" />
         <option value="$PROJECT_DIR$/pages/Menu/menuLateral.php" />
-        <option value="$PROJECT_DIR$/pages/login/index.php" />
-        <option value="$PROJECT_DIR$/pages/Menu/topo.php" />
+        <option value="$PROJECT_DIR$/teste-up-img/ajax_upload_image_main.php" />
+        <option value="$PROJECT_DIR$/teste-up-img/script.js" />
+        <option value="$PROJECT_DIR$/teste-up-img/style.css" />
+        <option value="$PROJECT_DIR$/atend_def_publica.php" />
+        <option value="$PROJECT_DIR$/teste-up-img/ajax_php_file.php" />
+        <option value="$PROJECT_DIR$/dist/css/component.css" />
         <option value="$PROJECT_DIR$/dist/css/radio_style.css" />
+        <option value="$PROJECT_DIR$/pages/Menu/topo.php" />
+        <option value="$PROJECT_DIR$/pages/Menu/favicon.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/pages/login/index.php" />
         <option value="$PROJECT_DIR$/atend_NPJ.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" />
       </list>
@@ -193,13 +236,13 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
+              <option name="myItemId" value="NPJSISAP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
+              <option name="myItemId" value="NPJSISAP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -209,7 +252,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
+              <option name="myItemId" value="NPJSISAP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -217,61 +260,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJ" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminLTE-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc_models" />
+              <option name="myItemId" value="teste-up-img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,7 +270,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ESTACIOWIFI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php5.5.12/php.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -290,18 +279,18 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\NPJSISAP\dist\css" />
+      <recent name="C:\wamp\www\NPJSISAP\js" />
+      <recent name="C:\wamp\www\NPJSISAP\dist" />
+      <recent name="C:\wamp\www\NPJSISAP" />
+      <recent name="C:\wamp\www\NPJ" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp\www\NPJSISAP\imagens" />
       <recent name="C:\wamp\www\NPJ\pages\cadastro\usuario" />
       <recent name="C:\wamp\www\NPJ" />
       <recent name="C:\wamp\www\NPJ\pages\coleta_dados\Defensoria_Publica" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\NPJSISAP" />
-      <recent name="C:\wamp\www\NPJ" />
-      <recent name="C:\wamp\www\NPJ\pages" />
-      <recent name="C:\wamp\www\NPJ\pages\cadastro\usuario" />
-      <recent name="C:\wamp\www\NPJ\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -377,7 +366,9 @@
       <workItem from="1461094198915" duration="14990000" />
       <workItem from="1461126491569" duration="1191000" />
       <workItem from="1461140758010" duration="1668000" />
-      <workItem from="1461146465268" duration="11448000" />
+      <workItem from="1461146465268" duration="13257000" />
+      <workItem from="1461415341963" duration="8166000" />
+      <workItem from="1461448225933" duration="2445000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -407,24 +398,33 @@
       <option name="project" value="LOCAL" />
       <updated>1461108159325</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Atualização quarta-feira">
+      <created>1461183892364</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1461183892364</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52833000" />
+    <option name="totallyTimeSpent" value="65253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -432,35 +432,33 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29503918" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20131771" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29503918" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29503918" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -478,7 +476,9 @@
     <MESSAGE value="alteração2" />
     <MESSAGE value="alteração3" />
     <MESSAGE value="Criação do 'consultar'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação do 'consultar'" />
+    <MESSAGE value="Atualização quarta-feira" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização quarta-feira" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -487,65 +487,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/userauthentication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/valida.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="82" selection-start-line="16" selection-start-column="82" selection-end-line="16" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/seguranca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-951">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json" />
-    <entry file="file://$PROJECT_DIR$/cropFile.php" />
-    <entry file="file://$PROJECT_DIR$/loader.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/recebeFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-515">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teste.php" />
     <entry file="file://$PROJECT_DIR$/.jshintrc" />
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a.html" />
     <entry file="file://$PROJECT_DIR$/a.php" />
     <entry file="file://$PROJECT_DIR$/pages/cadastro/usuario/cadastrando.php">
@@ -647,20 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atend_def_publica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="148" column="20" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="20" />
-          <folding>
-            <marker date="1461146477769" expanded="true" signature="3693:3771" placeholder="SELECT nomeA... " />
-            <marker date="1461146477769" expanded="true" signature="7300:7347" placeholder="SELECT idReq... requerido" />
-            <marker date="1461146477769" expanded="true" signature="10720:10784" placeholder="SELECT idAss... assunto_atendimento" />
-            <marker date="1461146477769" expanded="true" signature="11611:11672" placeholder="SELECT idUsu... usuario" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="2529" column="13" selection-start-line="2529" selection-start-column="13" selection-end-line="2529" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="117" column="19" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,40 +618,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="455" column="67" selection-start-line="455" selection-start-column="66" selection-end-line="455" selection-end-column="67" />
-          <folding>
-            <marker date="1461126479189" expanded="true" signature="11244:11302" placeholder="SELECT * FRO... educacao_usuario" />
-            <marker date="1461126479189" expanded="true" signature="15987:16065" placeholder="SELECT * FRO... habilidades_usuario" />
-            <marker date="1461126479189" expanded="true" signature="20782:20837" placeholder="SELECT * FRO... usuario" />
-            <marker date="1461126479189" expanded="true" signature="24021:24093" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461126479189" expanded="true" signature="24553:24618" placeholder="SELECT * FRO... assistido_defensoria" />
-            <marker date="1461126479189" expanded="true" signature="24964:25008" placeholder="SELECT * FRO... requerido" />
-            <marker date="1461126479189" expanded="true" signature="25297:25361" placeholder="SELECT * FRO... assunto_atendimento" />
-            <marker date="1461126479189" expanded="true" signature="30226:30266" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461126479189" expanded="true" signature="30339:30432" placeholder="SELECT date_... mensagens" />
-            <marker date="1461126479189" expanded="true" signature="30506:30546" placeholder="SELECT * FRO... mensagens" />
-            <marker date="1461126479189" expanded="true" signature="48080:48114" placeholder="..." />
-            <marker date="1461126479189" expanded="true" signature="48230:48264" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="38" column="52" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agendar_retorno.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,12 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2246">
           <caret line="227" column="34" selection-start-line="115" selection-start-column="27" selection-end-line="227" selection-end-column="34" />
-          <folding>
-            <marker date="1461126478071" expanded="true" signature="8188:8260" placeholder="SELECT * FRO... atendimento_defensoria" />
-            <marker date="1461126478071" expanded="true" signature="8680:8745" placeholder="SELECT * FRO... assistido_defensoria" />
-            <marker date="1461126478071" expanded="true" signature="9059:9103" placeholder="SELECT * FRO... requerido" />
-            <marker date="1461126478071" expanded="true" signature="9368:9432" placeholder="SELECT * FRO... assunto_atendimento" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="3002" column="1" selection-start-line="3002" selection-start-column="1" selection-end-line="3002" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="772" column="24" selection-start-line="772" selection-start-column="24" selection-end-line="772" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,47 +658,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1277">
           <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atend_def_publica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674">
+          <caret line="276" column="29" selection-start-line="276" selection-start-column="29" selection-end-line="276" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste-up-img/upload/943930_1080117988706985_2163493282915899592_n.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste-up-img/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste-up-img/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste-up-img/ajax_php_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste-up-img/ajax_upload_image_main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/css/radio_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="850">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/Menu/topo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1461151449645" expanded="true" signature="936:999" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461449390113" expanded="true" signature="937:1000" placeholder="SELECT * FRO... atendimento_defensoria" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/Menu/favicon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="76" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1461449430313" expanded="true" signature="11325:11383" placeholder="SELECT * FRO... educacao_usuario" />
+            <marker date="1461449430313" expanded="true" signature="16068:16146" placeholder="SELECT * FRO... habilidades_usuario" />
+            <marker date="1461449430313" expanded="true" signature="20863:20918" placeholder="SELECT * FRO... usuario" />
+            <marker date="1461449430313" expanded="true" signature="24102:24174" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461449430313" expanded="true" signature="24634:24699" placeholder="SELECT * FRO... assistido_defensoria" />
+            <marker date="1461449430313" expanded="true" signature="25045:25089" placeholder="SELECT * FRO... requerido" />
+            <marker date="1461449430313" expanded="true" signature="25378:25442" placeholder="SELECT * FRO... assunto_atendimento" />
+            <marker date="1461449430313" expanded="true" signature="30307:30347" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461449430313" expanded="true" signature="30420:30513" placeholder="SELECT date_... mensagens" />
+            <marker date="1461449430313" expanded="true" signature="30587:30627" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461449430313" expanded="true" signature="48161:48195" placeholder="..." />
+            <marker date="1461449430313" expanded="true" signature="48311:48345" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/PHP - Projetos atualizados/NPJSISAP/pages/coleta_dados/NPJ/table_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="166" column="16" selection-start-line="166" selection-start-column="16" selection-end-line="166" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste-up-img/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atend_NPJ.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="100">
+          <caret line="355" column="30" selection-start-line="355" selection-start-column="30" selection-end-line="355" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#td#5;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#td#5;n#tr#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#form#0;n#td#4;n#tr#7;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
