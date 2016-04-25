@@ -1,6 +1,6 @@
 <?php
 ini_set('default_charset', 'UTF-8');
-error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de seguranï¿½a
 protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
@@ -65,7 +65,8 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 
         <!-- Main content -->
         <section class="content">
-            <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatï¿½rio</span><br/>
+            <span class="required_notification"><img
+                    src="dist/img/red_asterisk.png"> Indica campo obrigatï¿½rio</span><br/>
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
             <form class="contact_form" method="post" name="form1" action="pages/coleta_dados/NPJ/cadastro.php">
                 <div class="box box-primary">
@@ -76,21 +77,27 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                             <div class="input-group-addon">
                                 <i class="fa fa-user"></i>
                             </div>
-                            <input class="form-control" required name="processoN" type="text" placeholder="Processo Numero">
-                        </div><br/>
+                            <input class="form-control" required name="processoN" type="text"
+                                   placeholder="Processo Numero">
+                        </div>
+                        <br/>
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <i class="fa fa-user"></i>
                             </div>
                             <input class="form-control" name="vara" type="text" placeholder="Vara">
-                        </div><br/>
+                        </div>
+                        <br/>
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
 
-                            <input class="form-control" placeholder="Data do Atendimento" type="date" id="campoData" required="required" maxlength="10" name="data" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="<?php echo date('Y/m/d'); ?>" max="2020-02-18"
-                                value="<?php echo date('d/m/Y');?>"/>
+                            <input class="form-control" placeholder="Data do Atendimento" type="date" id="campoData"
+                                   required="required" maxlength="10" name="data"
+                                   pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="<?php echo date('Y/m/d'); ?>"
+                                   max="2020-02-18"
+                                   value="<?php echo date('d/m/Y'); ?>"/>
                         </div>
                         </br >
 
@@ -101,7 +108,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     <div class="box-header">
 
                         <!-- IDENTIFICAï¿½ï¿½O PARTE 1 ---------------------------------------------------->
-                        <h3 class="box-title">1- Identificação</h3><br />
+                        <h3 class="box-title">1- Identificação</h3><br/>
                         <hr>
                         <div class="col-md-6">
 
@@ -110,8 +117,10 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                     <i class="fa fa-user"></i>
                                 </div>
 
-                                <input class="form-control" required  name="nome" type="text" placeholder="Nome(Assistido, Pai ou Responsável)">
-                            </div><br/>
+                                <input class="form-control" required name="nome" type="text"
+                                       placeholder="Nome(Assistido, Pai ou Responsável)">
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -119,8 +128,10 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required name="NomeMenor" type="text" placeholder="Nome do Menor">
-                            </div><br/>
+                                <input class="form-control" required name="NomeMenor" type="text"
+                                       placeholder="Nome do Menor">
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -129,7 +140,8 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                     <i class="fa fa-user"></i>
                                 </div>
                                 <input class="form-control" name="nomePai" type="text" placeholder="Nome do Pai">
-                            </div><br/>
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -138,7 +150,8 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                     <i class="fa fa-user"></i>
                                 </div>
                                 <input class="form-control" name="nomeMae" type="text" placeholder="Nome da Mãe">
-                            </div><br/>
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -146,8 +159,10 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required value="Paraense" name="Naturalidade" type="text" placeholder="Naturalidade">
-                            </div><br/>
+                                <input class="form-control" required value="Paraense" name="Naturalidade" type="text"
+                                       placeholder="Naturalidade">
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -155,8 +170,10 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required value="Brasileiro(a)" name="Nacionalidade" type="text" placeholder="Nacionalidade">
-                            </div><br/>
+                                <input class="form-control" required value="Brasileiro(a)" name="Nacionalidade"
+                                       type="text" placeholder="Nacionalidade">
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -164,8 +181,11 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" placeholder="Data de Nascimento" type="date" id="campoData2" required="required" maxlength="10" name="date" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2020-02-18" />
-                            </div><br/>
+                                <input class="form-control" placeholder="Data de Nascimento" type="date" id="campoData2"
+                                       required="required" maxlength="10" name="date"
+                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2020-02-18"/>
+                            </div>
+                            <br/>
                         </div>
 
 
@@ -174,64 +194,81 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required name="Escolaridade" type="text" placeholder="Escolaridade">
-                            </div><br/>
+                                <input class="form-control" required name="Escolaridade" type="text"
+                                       placeholder="Escolaridade">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required name="Profissao" type="text" placeholder="Profissão">
-                            </div><br/>
+                                <input class="form-control" required name="Profissao" type="text"
+                                       placeholder="Profissão">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required name="EstadoCivil" type="text" placeholder="Estado Civil">
-                            </div><br/>
+                                <input class="form-control" required name="EstadoCivil" type="text"
+                                       placeholder="Estado Civil">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required name="enderecoResidencial" type="text" placeholder="Endereço Residencial">
-                            </div><br/>
+                                <input class="form-control" required name="enderecoResidencial" type="text"
+                                       placeholder="Endereço Residencial">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required value="Castanhal/PA" name="cidade" type="text" placeholder="Cidade Residencial">
-                            </div><br/>
+                                <input class="form-control" required value="Castanhal/PA" name="cidade" type="text"
+                                       placeholder="Cidade Residencial">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" type="tel"  required name="telefone" id="txttelefone" placeholder="Telefone Residencial" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
-                            </div><br/>
+                                <input class="form-control" type="tel" required name="telefone" id="txttelefone"
+                                       placeholder="Telefone Residencial"
+                                       pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" required name="EnderecoTrabalho"  type="text" placeholder="Endereço do Trabalho">
-                            </div><br/>
+                                <input class="form-control" required name="EnderecoTrabalho" type="text"
+                                       placeholder="Endereço do Trabalho">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" name="cidadeTrabalho" type="text" placeholder="Cidade do Trabalho">
-                            </div><br/>
+                                <input class="form-control" name="cidadeTrabalho" type="text"
+                                       placeholder="Cidade do Trabalho">
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
@@ -239,16 +276,21 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                     <i class="fa fa-user"></i>
                                 </div>
 
-                                <input class="form-control" name="telefoneTrabalho" type="tel" id="txttelefone" placeholder="Telefone do Trabalho" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
-                            </div><br/>
+                                <input class="form-control" name="telefoneTrabalho" type="tel" id="txttelefone"
+                                       placeholder="Telefone do Trabalho"
+                                       pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
+                            </div>
+                            <br/>
                         </div>
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" name="situacaoHabitacional" type="text" placeholder="Situação Habitacional">
-                            </div><br/>
+                                <input class="form-control" name="situacaoHabitacional" type="text"
+                                       placeholder="Situação Habitacional">
+                            </div>
+                            <br/>
                         </div>
 
                         <div class="col-md-6">
@@ -257,7 +299,8 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                     <i class="fa fa-user"></i>
                                 </div>
                                 <input class="form-control" name="Remuneracao" type="text" placeholder="Remuneração">
-                            </div><br/>
+                            </div>
+                            <br/>
                         </div>
 
                     </div>
@@ -267,9 +310,10 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     <div class="box-header">
 
                         <!-- HISTORICO/RELATORIO ---------------------------------------------------->
-                        <h3 class="box-title">2- Histórico/Relatório</h3><br /><br />
+                        <h3 class="box-title">2- Histórico/Relatório</h3><br/><br/>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto" style="width: 975px; height: 68px;"></textarea>
+                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto"
+                                      style="width: 975px; height: 68px;"></textarea>
                         </div>
 
                     </div>
@@ -310,213 +354,248 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
             </div><!-- /.col (right) -->
+            <script src="js/jquery-1.11.3.min.js"></script>
+            <script src="teste-up-img/script.js"></script>
+
+            <!--4 - MEDIDAS JURIDICAS CABIVEIS -->
+
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">IV - Medidas Jurídicas Cabíveis</h3><br/>
+                    <hr>
+
+
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <th style="width: 700px">Documento</th>
+                            <th style="width: 10px">Download</th>
+                            <th style="width: 10px">Upload</th>
+
+                        </tr>
+
+                        <tr>
+                            <td>Petição Inicial</td> <!-- Nome do Documento -->
+                            <td> <!-- Validação Ausente/Presente do Documento -->
+                                <div align="center"><a href="dist/img/docx-png-icon.png" download="">
+                                        <img border="0" src="dist/img/docx-png-icon.png" alt="Petição Inicial"
+                                             width="32" height="32">
+                                    </a></div>
+                            </td>
+                            <td> <!-- Validação Ausente/Presente do Documento -->
+                                <span class="upload-wrapper">
+                                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange=""/>
+                                        <div align="center"> <img class="upload-button" alt="title=" style="height: 16px; width: 16px;"
+                                        src="dist/img/upload-icon.ico"/></div>
+                                </span>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
 
 
             <div class="box box-primary">
                 <div class="box-header">
                         <span class="input-group-btn">
-                            <button type="submit" onclick="document.form1.submit()" name="Submit" class="btn btn-primary">Cadastrar</button>
+                            <button type="submit" onclick="document.form1.submit()" name="Submit"
+                                    class="btn btn-primary">Cadastrar
+                            </button>
                         </span>
 
                     <br/>
                     <br/>
                     redireciona para pagina com os dados do usuario com opcao de download dos documentos
                     </br>
-                    a tela seguinte tem botao de elaborar peï¿½a, imprmir os dados, campo de texto para observacao, mediaï¿½ï¿½o.
+                    a tela seguinte tem botao de elaborar peï¿½a, imprmir os dados, campo de texto para observacao,
+                    mediaï¿½ï¿½o.
                     mediaï¿½ï¿½o - nome dos envolvidos, e se houve acordo ou nao
                 </div>
             </div>
 
 
-
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
 
-
-
-
-
-
-
-
-
-
-
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
 
 <?php include('pages/Menu/rodape.php'); ?>
 
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-user bg-yellow"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                                <p>New phone +1(800)555-1234</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                                <p>nora@example.com</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                                <p>Execution time 5 seconds</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul><!-- /.control-sidebar-menu -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript::;">
+                        <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                            <p>Will be 23 on April 24th</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript::;">
+                        <i class="menu-icon fa fa-user bg-yellow"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                            <p>New phone +1(800)555-1234</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript::;">
+                        <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                            <p>nora@example.com</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript::;">
+                        <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                            <p>Execution time 5 seconds</p>
+                        </div>
+                    </a>
+                </li>
+            </ul><!-- /.control-sidebar-menu -->
 
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                                <span class="label label-danger pull-right">70%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Update Resume
-                                <span class="label label-success pull-right">95%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Laravel Integration
-                                <span class="label label-warning pull-right">50%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript::;">
-                            <h4 class="control-sidebar-subheading">
-                                Back End Framework
-                                <span class="label label-primary pull-right">68%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul><!-- /.control-sidebar-menu -->
+            <h3 class="control-sidebar-heading">Tasks Progress</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript::;">
+                        <h4 class="control-sidebar-subheading">
+                            Custom Template Design
+                            <span class="label label-danger pull-right">70%</span>
+                        </h4>
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript::;">
+                        <h4 class="control-sidebar-subheading">
+                            Update Resume
+                            <span class="label label-success pull-right">95%</span>
+                        </h4>
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript::;">
+                        <h4 class="control-sidebar-subheading">
+                            Laravel Integration
+                            <span class="label label-warning pull-right">50%</span>
+                        </h4>
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript::;">
+                        <h4 class="control-sidebar-subheading">
+                            Back End Framework
+                            <span class="label label-primary pull-right">68%</span>
+                        </h4>
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul><!-- /.control-sidebar-menu -->
 
-            </div><!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">Configuraï¿½ï¿½es Gerais</h3>
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div><!-- /.form-group -->
+        </div><!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+                <h3 class="control-sidebar-heading">Configuraï¿½ï¿½es Gerais</h3>
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Report panel usage
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+                    <p>
+                        Some information about this general settings option
+                    </p>
+                </div><!-- /.form-group -->
 
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Allow mail redirect
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Other sets of options are available
-                        </p>
-                    </div><!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Allow mail redirect
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+                    <p>
+                        Other sets of options are available
+                    </p>
+                </div><!-- /.form-group -->
 
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Expose author name in posts
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Allow the user to show his name in blog posts
-                        </p>
-                    </div><!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Expose author name in posts
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+                    <p>
+                        Allow the user to show his name in blog posts
+                    </p>
+                </div><!-- /.form-group -->
 
-                    <h3 class="control-sidebar-heading">Chat Settings</h3>
+                <h3 class="control-sidebar-heading">Chat Settings</h3>
 
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Show me as online
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                    </div><!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Show me as online
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+                </div><!-- /.form-group -->
 
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Turn off notifications
-                            <input type="checkbox" class="pull-right">
-                        </label>
-                    </div><!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Turn off notifications
+                        <input type="checkbox" class="pull-right">
+                    </label>
+                </div><!-- /.form-group -->
 
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Delete chat history
-                            <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                        </label>
-                    </div><!-- /.form-group -->
-                </form>
-            </div><!-- /.tab-pane -->
-        </div>
-    </aside><!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        Delete chat history
+                        <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                    </label>
+                </div><!-- /.form-group -->
+            </form>
+        </div><!-- /.tab-pane -->
+    </div>
+</aside><!-- /.control-sidebar -->
+<!-- Add the sidebar's background. This div must be placed
+     immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
 </div><!-- ./wrapper -->
 
-<script  src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <script src="js/html5shiv.min.js"></script>
 <script src="js/respond.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
@@ -524,7 +603,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 <!-- InputMask -->
 <script type="text/javascript" src="plugins/mask/jquery.maskedinput.js.sql"></script>
 <script type="text/javascript">
-    jQuery(function($){
+    jQuery(function ($) {
         $("#campoData").mask("99/99/9999");
         $("#campoData2").mask("99/99/9999");
     });

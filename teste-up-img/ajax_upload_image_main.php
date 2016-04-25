@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300' rel='stylesheet'
           type='text/css'>
-    <script src="jquery.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
