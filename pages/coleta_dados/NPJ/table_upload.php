@@ -13,8 +13,7 @@
 
     <td> <!-- Validação Ausente/Presente do Documento -->
         <div>
-            <input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst'); checked"
-                   class="radio"/>
+            <input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst');"  class="radio" checked/>
             <label for="radioCPF2">Ausente</label>
         </div>
     </td>
@@ -92,7 +91,7 @@
             <div class="input-group-addon">
                 <i class="fa fa-user"></i>
             </div>
-            <input class="form-control" id="valor-cpf" required name="valorCPF" type="NUMBER"
+            <input class="form-control" id="valor-cpf" required name="valorCPF" type="number"
                    placeholder="CPF (Somente Números)" disabled>
         </div>
     </td>

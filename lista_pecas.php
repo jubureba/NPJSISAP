@@ -105,7 +105,6 @@ protegePagina(); // Chama a função que protege a página
                         <div class="box-header">
                             <h3 class="box-title">Olá <?php echo " " . $_SESSION['usuarioNome']."," ?> selecione a Peça para corrigir: </h3>
 
-
                         </div>
                         <!-- /.box-header -->
                         <div id="divConteudo" class="box-body table-responsive no-padding">
@@ -240,7 +239,6 @@ protegePagina(); // Chama a função que protege a página
                         value = x.options[x.selectedIndex].value
                         document.getElementById('teste').style.visibility= "";
                         var itemSelecionado = x.options[x.selectedIndex].value;
-
                     }
                 </script>
 
@@ -304,10 +302,6 @@ protegePagina(); // Chama a função que protege a página
             <!-- /.tab-pane -->
         </div>
     </aside>
-
-
-
-
 
     <!-- MODAIS -->
     <div class="container">
