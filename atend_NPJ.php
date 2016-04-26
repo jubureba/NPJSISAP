@@ -37,6 +37,12 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 
 
     <link rel="stylesheet" type="text/css" href="dist/css/component.css"/>
+    <script type="text/javascript" src="dist/js/jquery.maskMoney.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input#dinheiro").maskMoney({showSymbol:true, symbol:"R$", decimal:",", thousands:"."});
+        });
+    </script>
 
 
 </head>
@@ -94,10 +100,11 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                             </div>
 
                             <input class="form-control" placeholder="Data do Atendimento" type="date" id="campoData"
-                                   required="required" maxlength="10" name="data"
+                                   required maxlength="10" name="data"
                                    pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="<?php echo date('Y/m/d'); ?>"
                                    max="2020-02-18"
-                                   value="<?php echo date('d/m/Y'); ?>"/>
+                                   value="<?php echo date('Y/m/d'); ?>"/>
+
                         </div>
                         </br >
 
@@ -108,7 +115,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     <div class="box-header">
 
                         <!-- IDENTIFICAï¿½ï¿½O PARTE 1 ---------------------------------------------------->
-                        <h3 class="box-title">1- Identificação</h3><br/>
+                        <h3 class="box-title">I- Identificação</h3><br/>
                         <hr>
                         <div class="col-md-6">
 
@@ -244,9 +251,9 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" type="tel" required name="telefone" id="txttelefone"
+                                <input class="form-control" type="tel" required name="telefone" id="tel"
                                        placeholder="Telefone Residencial"
-                                       pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
+                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
                             </div>
                             <br/>
                         </div>
@@ -276,9 +283,10 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                                     <i class="fa fa-user"></i>
                                 </div>
 
-                                <input class="form-control" name="telefoneTrabalho" type="tel" id="txttelefone"
+                                <input class="form-control" name="telefoneTrabalho" type="tel" id="telTrab"
                                        placeholder="Telefone do Trabalho"
-                                       pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
+                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
+
                             </div>
                             <br/>
                         </div>
@@ -293,12 +301,13 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                             <br/>
                         </div>
 
+
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" name="Remuneracao" type="text" placeholder="Remuneração">
+                                <input class="form-control" id="dinheiro" name="Remuneracao" type="text" placeholder="Remuneração">
                             </div>
                             <br/>
                         </div>
@@ -310,7 +319,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     <div class="box-header">
 
                         <!-- HISTORICO/RELATORIO ---------------------------------------------------->
-                        <h3 class="box-title">2- Histórico/Relatório</h3><br/><br/>
+                        <h3 class="box-title">II- Histórico/Relatório</h3><br/><br/>
                         <div class="form-group">
                             <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto"
                                       style="width: 975px; height: 68px;"></textarea>
@@ -326,30 +335,11 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                 <div class="col-md-12">
                     <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">3- Coleta de Documentos</h3>
+                            <h3 class="box-title">III- Coleta de Documentos</h3>
                             <hr>
                         </div>
                         <div class="box-body">
-
-                            <div class="box-body">
-                                <table class="table table-bordered">
-                                    <tbody>
-                                    <tr>
-                                        <th style="width: 10px">Documento</th>
-                                        <th style="width: 20px">Status</th>
-                                        <th style="width: 20px">Status</th>
-                                        <th style="width: 20px">Valor</th>
-                                        <th style="width: 20px">Upload</th>
-                                        <th style="width: 20px">preview</th>
-                                    </tr>
-
-                                    <?php include("pages/coleta_dados/NPJ/table_upload.php"); ?>
-
-
-                                    </tbody>
-                                </table>
-                            </div><!-- /.box-body -->
-
+                            <?php include("pages/coleta_dados/NPJ/table_upload.php"); ?>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
@@ -361,38 +351,131 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 
             <div class="box box-primary">
                 <div class="box-header">
-                    <h3 class="box-title">IV - Medidas Jurídicas Cabíveis</h3><br/>
+                    <h3 class="box-title">IV- Medidas Jurídicas Cabíveis</h3><br/>
+                    <hr>
+                    <?php include("pages/coleta_dados/NPJ/table_documentos.php"); ?>
+                </div>
+            </div>
+
+            <!--5 - INFORMAÇÕES SOBRE A PARTE CONTRÁRIA -->
+
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">V- Informações sobre a Parte Contrária</h3><br/>
+
                     <hr>
 
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="nomeContraria" type="text"
+                                   placeholder="Nome">
+                        </div>
+                        <br/>
+                    </div>
 
-                    <table class="table table-bordered">
-                        <tbody>
-                        <tr>
-                            <th style="width: 700px">Documento</th>
-                            <th style="width: 10px">Download</th>
-                            <th style="width: 10px">Upload</th>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="EnderecoResContraria" type="text"
+                                   placeholder="Endereço Residencial">
+                        </div>
+                        <br/>
+                    </div>
 
-                        </tr>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="telContraria" type="text"
+                                   placeholder="Telefone">
+                        </div>
+                        <br/>
+                    </div>
 
-                        <tr>
-                            <td>Petição Inicial</td> <!-- Nome do Documento -->
-                            <td> <!-- Validação Ausente/Presente do Documento -->
-                                <div align="center"><a href="dist/img/docx-png-icon.png" download="">
-                                        <img border="0" src="dist/img/docx-png-icon.png" alt="Petição Inicial"
-                                             width="32" height="32">
-                                    </a></div>
-                            </td>
-                            <td> <!-- Validação Ausente/Presente do Documento -->
-                                <span class="upload-wrapper">
-                                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange=""/>
-                                        <div align="center"> <img class="upload-button" alt="title=" style="height: 16px; width: 16px;"
-                                        src="dist/img/upload-icon.ico"/></div>
-                                </span>
-                            </td>
-                        </tr>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="cpfContraria" type="text"
+                                   placeholder="CPF">
+                        </div>
+                        <br/>
+                    </div>
 
-                        </tbody>
-                    </table>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="rgContraria" type="text"
+                                   placeholder="RG">
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="profissaoContraria" type="text"
+                                   placeholder="Profissão">
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="rzSocialContraria" type="text"
+                                   placeholder="Razão Social da Empresa">
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="cnpjContraria" type="text"
+                                   placeholder="CNPJ da Empresa">
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="endProfissionalContraria" type="text"
+                                   placeholder="Endereço Profissional">
+                        </div>
+                        <br/>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control" name="infAddContraria" type="text"
+                                   placeholder="Informações Adicionais">
+                        </div>
+                        <br/>
+                    </div>
+
+
 
 
                 </div>
@@ -414,6 +497,13 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     a tela seguinte tem botao de elaborar peï¿½a, imprmir os dados, campo de texto para observacao,
                     mediaï¿½ï¿½o.
                     mediaï¿½ï¿½o - nome dos envolvidos, e se houve acordo ou nao
+
+                    <input type="text" id="campoData">
+                    <input type="text" id="campoTelefone">
+                    <input type="text" id="campoSenha">
+
+
+                    - See more at: http://vinteum.com/jquery-mask-mascaras-para-campos-html-utilizando-jquery/#sthash.LHNNLBWu.dpuf
                 </div>
             </div>
 
@@ -602,15 +692,17 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- InputMask -->
 <script type="text/javascript" src="plugins/mask/jquery.maskedinput.js.sql"></script>
+
 <script type="text/javascript">
     jQuery(function ($) {
         $("#campoData").mask("99/99/9999");
-        $("#campoData2").mask("99/99/9999");
     });
 </script>
 <script type="text/javascript" src="plugins/mask/jquery.mask.min.js"></script>
 <script type="text/javascript">
-    $("#txttxttelefone").mask("(00) 0000-00009");
+    $("#tel").mask("(00)0000-00009");
+    $("#telTrab").mask("(00)0000-00009");
+
 </script>
 <script src="plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
 <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
