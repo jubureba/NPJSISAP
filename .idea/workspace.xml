@@ -2,63 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/img/upload-invalid-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/teste.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/upload-img.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Canvas.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Coordinate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Font/GDF.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Font/PS.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Font/TTF.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Image.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/BMP.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/GD.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/GD2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/GIF.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/JPEG.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/PNG.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Mapper/TGA.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/MapperFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/AddNoise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/ApplyConvolution.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/ApplyFilter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/ApplyMask.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/AsGrayscale.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/AsNegative.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/AutoCrop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/CopyChannelsPalette.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/CopyChannelsTrueColor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/CorrectGamma.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Crop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Flip.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/GetMask.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Merge.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Mirror.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Resize.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/ResizeCanvas.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Rotate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/RoundCorners.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/Operation/Unsharp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/OperationFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/PaletteImage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/TrueColorImage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/WideImage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/vendor/de77/BMP.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/lib/vendor/de77/TGA.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/teste-up-img/ajax_php_file.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/teste-up-img/ajax_upload_image_main.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/teste-up-img/style.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/teste-up-img/script.js" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/ajax-loader.gif" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/getitens.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/paginador.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/tab-processos-index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atend_NPJ.php" afterPath="$PROJECT_DIR$/atend_NPJ.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.min.js" afterPath="$PROJECT_DIR$/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_documentos.php" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_documentos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" afterPath="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,34 +30,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="script-cpf-upload.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload-img.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/upload-img.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table_upload.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+            <state relative-caret-position="1615">
+              <caret line="515" column="108" selection-start-line="515" selection-start-column="108" selection-end-line="515" selection-end-column="108" />
               <folding>
-                <marker date="1461728055703" expanded="true" signature="3237:3742" placeholder="..." />
+                <marker date="1461745692850" expanded="true" signature="11696:11754" placeholder="SELECT * FRO... educacao_usuario" />
+                <marker date="1461745692850" expanded="true" signature="16650:16728" placeholder="SELECT * FRO... habilidades_usuario" />
+                <marker date="1461745692850" expanded="true" signature="21633:21688" placeholder="SELECT * FRO... usuario" />
+                <marker date="1461745692850" expanded="true" signature="25207:25247" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461745692850" expanded="true" signature="25328:25421" placeholder="SELECT date_... mensagens" />
+                <marker date="1461745692850" expanded="true" signature="25503:25543" placeholder="SELECT * FRO... mensagens" />
+                <marker date="1461745692850" expanded="true" signature="43226:43260" placeholder="..." />
+                <marker date="1461745692850" expanded="true" signature="43376:43410" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab-processos-index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/config/tab-processos-index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="9" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paginador.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/config/paginador.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getitens.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/config/getitens.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+              <folding>
+                <marker date="1461744602558" expanded="true" signature="559:631" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461744602558" expanded="true" signature="559:647" placeholder="SELECT * FRO... atendimento_defensoria" />
+                <marker date="1461744602558" expanded="true" signature="913:978" placeholder="SELECT * FRO... assistido_defensoria" />
+                <marker date="1461744602558" expanded="true" signature="1164:1208" placeholder="SELECT * FRO... requerido" />
+                <marker date="1461744602558" expanded="true" signature="1377:1441" placeholder="SELECT * FRO... assunto_atendimento" />
+                <marker date="1461744602558" expanded="true" signature="3355:3423" placeholder="SELECT * FRO... atendimento_defensoria" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/config/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="16" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,11 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/cadastro/usuario/nova_Habilidade.php" />
-        <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/AtendimentoNPJ.php" />
-        <option value="$PROJECT_DIR$/teste.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/assunto/excluir.php" />
-        <option value="$PROJECT_DIR$/pages/docs/enviar_documentos.php" />
         <option value="$PROJECT_DIR$/pages/acompanhamento/acompanhamento.php" />
         <option value="$PROJECT_DIR$/pages/acompanhamento/mediacao/agendar_retorno.php" />
         <option value="$PROJECT_DIR$/dist/css/form_Style.css" />
@@ -176,12 +155,17 @@
         <option value="$PROJECT_DIR$/atend_NPJ.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/ajax_php_file.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/scripts/script-up-cpf.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/upload-img.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/script.js" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/teste.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" />
+        <option value="$PROJECT_DIR$/paginacao.php" />
+        <option value="$PROJECT_DIR$/pages/config/index.php" />
+        <option value="$PROJECT_DIR$/pages/config/paginador.js" />
+        <option value="$PROJECT_DIR$/pages/config/getitens.php" />
+        <option value="$PROJECT_DIR$/pages/config/tab-processos-index.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -271,89 +255,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJ" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJ" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJ" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img-upload" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Anderson Thiago" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coleta_dados" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,18 +275,18 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ\upload" />
-      <recent name="C:\wamp\www\NPJSISAP" />
-      <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ" />
-      <recent name="C:\wamp\www\NPJSISAP\dist\img" />
-      <recent name="C:\wamp\www\NPJSISAP\imagens" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ" />
       <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ\upload\scripts-cpf-upload" />
       <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ\upload" />
       <recent name="C:\wamp\www\NPJSISAP\js" />
+      <recent name="C:\wamp\www\NPJSISAP\dist\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\NPJSISAP\pages\config" />
+      <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ\upload" />
+      <recent name="C:\wamp\www\NPJSISAP" />
+      <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ" />
       <recent name="C:\wamp\www\NPJSISAP\dist\img" />
     </key>
   </component>
@@ -463,7 +365,7 @@
       <workItem from="1461614157127" duration="15467000" />
       <workItem from="1461636637902" duration="9256000" />
       <workItem from="1461698383200" duration="17206000" />
-      <workItem from="1461736944566" duration="844000" />
+      <workItem from="1461736944566" duration="9279000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -542,18 +444,26 @@
       <option name="project" value="LOCAL" />
       <updated>1461621335305</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Upload das fotos funcionando, e salvando no caminho pages/coleta_dados/NPJ/upload/&#10;criando a pasta com o nome salvo na sessão">
+      <created>1461737943730</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1461737943730</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91515000" />
+    <option name="totallyTimeSpent" value="99950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -561,7 +471,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -614,7 +523,8 @@
     <MESSAGE value="alteração3" />
     <MESSAGE value="Criação do 'consultar'" />
     <MESSAGE value="Início da criação da correção das Peças; &#10;Listar todos os atendimentos com peça em aberto e disponibilizar a opção pra download/upload da peça corrigida" />
-    <option name="LAST_COMMIT_MESSAGE" value="Início da criação da correção das Peças; &#10;Listar todos os atendimentos com peça em aberto e disponibilizar a opção pra download/upload da peça corrigida" />
+    <MESSAGE value="Upload das fotos funcionando, e salvando no caminho pages/coleta_dados/NPJ/upload/&#10;criando a pasta com o nome salvo na sessão" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload das fotos funcionando, e salvando no caminho pages/coleta_dados/NPJ/upload/&#10;criando a pasta com o nome salvo na sessão" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -623,30 +533,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/4c12dd8142e7cad398346d9c25bf9907.jpg" />
-    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/fotos/d46e3b6bfa124af8160a52617af99f55.jpg" />
-    <entry file="file://$PROJECT_DIR$/user_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consulta.php" />
-    <entry file="file://$PROJECT_DIR$/pages/Modals/modal_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/tables/simple.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="465" column="27" selection-start-line="465" selection-start-column="10" selection-end-line="465" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/see_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -747,6 +633,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -755,6 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -774,13 +662,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/img-upload/Anderson Thiagopp.jpg" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/coleta_dados/Defensoria_Publica/recebeFile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -808,6 +689,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -815,6 +699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="75" column="97" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="97" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,21 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/upload-img.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -865,10 +735,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+        <state relative-caret-position="1173">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
           <folding>
             <marker date="1461728055703" expanded="true" signature="3237:3742" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paginacao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-614">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paginadorAJAX/getitens.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1461740591276" expanded="true" signature="432:479" placeholder="SELECT * FRO... itens" />
+            <marker date="1461740591276" expanded="true" signature="4364:4383" placeholder="SELECT * FRO... itens" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/upload-img.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="16" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/paginador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/getitens.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+          <folding>
+            <marker date="1461744602558" expanded="true" signature="559:631" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461744602558" expanded="true" signature="559:647" placeholder="SELECT * FRO... atendimento_defensoria" />
+            <marker date="1461744602558" expanded="true" signature="913:978" placeholder="SELECT * FRO... assistido_defensoria" />
+            <marker date="1461744602558" expanded="true" signature="1164:1208" placeholder="SELECT * FRO... requerido" />
+            <marker date="1461744602558" expanded="true" signature="1377:1441" placeholder="SELECT * FRO... assunto_atendimento" />
+            <marker date="1461744602558" expanded="true" signature="3355:3423" placeholder="SELECT * FRO... atendimento_defensoria" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/tab-processos-index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="515" column="108" selection-start-line="515" selection-start-column="108" selection-end-line="515" selection-end-column="108" />
+          <folding>
+            <marker date="1461745692850" expanded="true" signature="11696:11754" placeholder="SELECT * FRO... educacao_usuario" />
+            <marker date="1461745692850" expanded="true" signature="16650:16728" placeholder="SELECT * FRO... habilidades_usuario" />
+            <marker date="1461745692850" expanded="true" signature="21633:21688" placeholder="SELECT * FRO... usuario" />
+            <marker date="1461745692850" expanded="true" signature="25207:25247" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461745692850" expanded="true" signature="25328:25421" placeholder="SELECT date_... mensagens" />
+            <marker date="1461745692850" expanded="true" signature="25503:25543" placeholder="SELECT * FRO... mensagens" />
+            <marker date="1461745692850" expanded="true" signature="43226:43260" placeholder="..." />
+            <marker date="1461745692850" expanded="true" signature="43376:43410" placeholder="..." />
           </folding>
         </state>
       </provider>
