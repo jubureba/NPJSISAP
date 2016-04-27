@@ -15,7 +15,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="dist/icons/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="dist/css/radio_style.css">
@@ -71,17 +71,17 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
 
         <!-- Main content -->
         <section class="content">
-            <span class="required_notification"><img
-                    src="dist/img/red_asterisk.png"> Indica campo obrigatï¿½rio</span><br/>
+
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
             <form class="contact_form" method="post" name="form1" action="pages/coleta_dados/NPJ/cadastro.php">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">FICHA DE TRIAGEM</h3><br/>
+                        <h3 class="box-title">FICHA DE TRIAGEM</h3><span class="required_notification"><img
+                                src="dist/img/red_asterisk.png"> Indica campo obrigatório</span><br/>
                         <hr>
                         <div class="input-group">
                             <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
+                                <i class="fa fa-archive"></i>
                             </div>
                             <input class="form-control" required name="processoN" type="text"
                                    placeholder="Processo Numero">
@@ -89,7 +89,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                         <br/>
                         <div class="input-group">
                             <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
+                                <i class="fa fa-odnoklassniki"></i>
                             </div>
                             <input class="form-control" name="vara" type="text" placeholder="Vara">
                         </div>
@@ -344,8 +344,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
             </div><!-- /.col (right) -->
-            <script src="js/jquery-1.11.3.min.js"></script>
-            <script src="teste-up-img/script.js"></script>
+            
 
             <!--4 - MEDIDAS JURIDICAS CABIVEIS -->
 
@@ -370,6 +369,7 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
                             <div class="input-group-addon">
                                 <i class="fa fa-user"></i>
                             </div>
+
                             <input class="form-control" name="nomeContraria" type="text"
                                    placeholder="Nome">
                         </div>

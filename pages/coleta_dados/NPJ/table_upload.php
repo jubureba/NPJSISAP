@@ -1,3 +1,23 @@
+<?php
+//variaveis
+$imgUpOFF = "dist/img/upload-invalid-icon.png";
+$imgUpON = "dist/img/upload-icon.ico";
+
+?>
+
+<style type='text/css'>
+    .aumentaIMG span{display:none;}
+    .aumentaIMG img:hover span{background:transparent; display:block; position:absolute; z-index:100; left: 65%; bottom: 1%}
+    .aumentaIMG img:hover span img{background:blue;}
+    .aumentaIMG img:hover em{z-index:1; display:none;}
+    .aumentaIMG img{border:#000 1px solid;}
+    .aumentaIMG img:hover img{border:#000 1px solid;}
+</style>
+
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js"></script>
+
 <div class="box-body">
     <table class="table table-bordered">
         <tbody>
@@ -39,24 +59,44 @@
                 </div>
             </td>
             <td>
-
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-
+                
+                <!--Mando a IMG do input file por um submit ajax, atraves do script da pasta scripts-->
+             
+                <form id="uploadForm" method="post" enctype="multipart/form-data">
+                    <div id="selectImage">
+                    <div id="uploadFormLayer" align="center">
                     <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-cpf" required onchange="" disabled/>
-
-                    <img class="upload-button" alt="title=" id="img-cpf" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
+                    <input class="upload-file" type="file" name="userImage" id="upload-cpf" required disabled/>
+                    <img class="upload-button" name="file" alt="title=" id="img-cpf" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/><br/>
+                        <input id="upload-cpf-button" type="submit" value="Upload" class="upload-cpf-button" hidden/>
                     </span>
-
+                    </div>
+                    </div>
                 </form>
             </td>
 
             <td>
+                <style>
+                    #image_preview:active{
+                        zoom: 500%
+
+                    }
+                    #image_preview:hover{
+
+                        -webkit-transform: scale(1.5);
+                        -moz-transform: scale(1.5);
+                        -ms-transform: scale(1.5);
+                        -o-transform: scale(1.5);
+                        transform: scale(1.5);
+                    }
+                    }
+                </style>
 
                 <div id="image_preview" align="center">
+                    <div id="targetLayer">
                     <img id="previewing" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
-                         data-zoom-image="dist/img/defaultimg.gif"/></div>
+                                                                                 data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -67,14 +107,14 @@
                     document.getElementById("valor-cpf").required = false;
                     document.getElementById("upload-cpf").disabled = true;
                     document.getElementById("upload-cpf").required = false;
-                    document.getElementById('img-cpf').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-cpf').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("valor-cpf").disabled = false;
                     document.getElementById("valor-cpf").required = true;
                     document.getElementById("upload-cpf").disabled = false;
                     document.getElementById("upload-cpf").required = true;
-                    document.getElementById('img-cpf').src = "imagens/upload_+.png";
+                    document.getElementById('img-cpf').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -112,11 +152,13 @@
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
-                <span class="upload-wrapper">
+                        <div align="center">
+                    <span class="upload-wrapper">
                     <input class="upload-file" type="file" name="file" id="upload-rg" required onchange="" disabled/>
-                    <img class="upload-button" alt="title=" id="img-rg" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
-                </span>
+                    <img class="upload-button" alt="title=" id="img-rg" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/>
+                    </span>
+                        </div>
                     </div>
                 </form>
             </td>
@@ -135,14 +177,14 @@
                     document.getElementById("valor-rg").required = false;
                     document.getElementById("upload-rg").disabled = true;
                     document.getElementById("upload-rg").required = false;
-                    document.getElementById('img-rg').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-rg').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("valor-rg").disabled = false;
                     document.getElementById("valor-rg").required = true;
                     document.getElementById("upload-rg").disabled = false;
                     document.getElementById("upload-rg").required = true;
-                    document.getElementById('img-rg').src = "imagens/upload_+.png";
+                    document.getElementById('img-rg').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -181,12 +223,15 @@
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
+                        <div align="center">
                 <span class="upload-wrapper">
                     <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange="" disabled/>
-                    <img class="upload-button" id="img-ctps" alt="title=" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
+                    <img class="upload-button" id="img-ctps" alt="title=" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/>
                 </span>
+                        </div>
                     </div>
+
                 </form>
             </td>
 
@@ -204,14 +249,14 @@
                     document.getElementById("valor-ctps").required = false;
                     document.getElementById("upload-ctps").disabled = true;
                     document.getElementById("upload-ctps").required = false;
-                    document.getElementById('img-ctps').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-ctps').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("valor-ctps").disabled = false;
                     document.getElementById("valor-ctps").required = true;
                     document.getElementById("upload-ctps").disabled = false;
                     document.getElementById("upload-ctps").required = true;
-                    document.getElementById('img-ctps').src = "imagens/upload_+.png";
+                    document.getElementById('img-ctps').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -245,12 +290,14 @@
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
+                        <div align="center">
                  <span class="upload-wrapper">
                      <input class="upload-file" type="file" name="file" id="upload-residencia" required onchange=""
                             disabled/>
-                     <img class="upload-button" id="img-residencia" alt="title=" style="height: 34px; width: 34px;"
-                          src="imagens/upload_+_disabled.png"/>
+                     <img class="upload-button" id="img-residencia" alt="title=" style="height: 24px; width: 24px;"
+                          src="<?php echo $imgUpOFF; ?>"/>
                  </span>
+                        </div>
                     </div>
                 </form>
             </td>
@@ -266,12 +313,12 @@
                 if (value == 'dst') {
                     document.getElementById("upload-residencia").disabled = true;
                     document.getElementById("upload-residencia").required = false;
-                    document.getElementById('img-residencia').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-residencia').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("upload-residencia").disabled = false;
                     document.getElementById("upload-residencia").required = true;
-                    document.getElementById('img-residencia').src = "imagens/upload_+.png";
+                    document.getElementById('img-residencia').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -304,12 +351,12 @@
 
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                    <div id="selectImage">
+                    <div id="selectImage" align="center">
                 <span class="upload-wrapper">
                     <input class="upload-file" type="file" name="file" id="upload-contracheque" required onchange=""
                            disabled/>
-                    <img class="upload-button" id="img-contracheque" alt="title=" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
+                    <img class="upload-button" id="img-contracheque" alt="title=" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/>
                 </span>
                     </div>
                 </form>
@@ -326,12 +373,12 @@
                 if (value == 'dst') {
                     document.getElementById("upload-contracheque").disabled = true;
                     document.getElementById("upload-contracheque").required = false;
-                    document.getElementById('img-contracheque').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-contracheque').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("upload-contracheque").disabled = false;
                     document.getElementById("upload-contracheque").required = true;
-                    document.getElementById('img-contracheque').src = "imagens/upload_+.png";
+                    document.getElementById('img-contracheque').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -369,12 +416,12 @@
             </td>
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                    <div id="selectImage">
+                    <div id="selectImage" align="center">
                 <span class="upload-wrapper">
                     <input class="upload-file" type="file" name="file" id="upload-nascimento" required onchange=""
                            disabled/>
-                    <img class="upload-button" id="img-nascimento" alt="title=" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
+                    <img class="upload-button" id="img-nascimento" alt="title=" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/>
                 </span>
                     </div>
                 </form>
@@ -392,14 +439,14 @@
                     document.getElementById("valor-nascimento").required = false;
                     document.getElementById("upload-nascimento").disabled = true;
                     document.getElementById("upload-nascimento").required = false;
-                    document.getElementById('img-nascimento').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-nascimento').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("valor-nascimento").disabled = false;
                     document.getElementById("valor-nascimento").required = true;
                     document.getElementById("upload-nascimento").disabled = false;
                     document.getElementById("upload-nascimento").required = true;
-                    document.getElementById('img-nascimento').src = "imagens/upload_+.png";
+                    document.getElementById('img-nascimento').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -428,21 +475,31 @@
             <td> <!-- Campo para digitar o Numero do Documento -->
 
             </td>
+
+
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                    <div id="selectImage">
+                    <div id="selectImage" align="center">
                 <span class="upload-wrapper">
                     <input class="upload-file" type="file" name="file" id="upload-casamento" required onchange=""
                            disabled/>
-                    <img class="upload-button" id="img-casamento" alt="title=" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
+                    <img class="upload-button" id="img-casamento" alt="title=" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/>
                 </span>
                     </div>
                 </form>
             </td>
             <td>
-                <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/></div>
+                <div class="aumentaIMG">
+                <div id="image_preview" class="foto" align="center">
+                    <a href="#">
+                        <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/>
+                        <span>
+                        <img style="width: 400px; height: 400px;" src="dist/img/defaultimg.gif"/>
+                        </span>
+                    </a>
+                </div>
+                </div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -451,12 +508,12 @@
                 if (value == 'dst') {
                     document.getElementById("upload-casamento").disabled = true;
                     document.getElementById("upload-casamento").required = false;
-                    document.getElementById('img-casamento').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-casamento').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("upload-casamento").disabled = false;
                     document.getElementById("upload-casamento").required = true;
-                    document.getElementById('img-casamento').src = "imagens/upload_+.png";
+                    document.getElementById('img-casamento').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>
@@ -488,11 +545,11 @@
             </td>
             <td>
                 <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                    <div id="selectImage">
+                    <div id="selectImage" align="center">
                 <span class="upload-wrapper">
                     <input class="upload-file" type="file" name="file" id="upload-obito" required onchange="" disabled/>
-                    <img class="upload-button" id="img-obito" alt="title=" style="height: 34px; width: 34px;"
-                         src="imagens/upload_+_disabled.png"/>
+                    <img class="upload-button" id="img-obito" alt="title=" style="height: 24px; width: 24px;"
+                         src="<?php echo $imgUpOFF; ?>"/>
                 </span>
                     </div>
                 </form>
@@ -508,12 +565,12 @@
                 if (value == 'dst') {
                     document.getElementById("upload-obito").disabled = true;
                     document.getElementById("upload-obito").required = false;
-                    document.getElementById('img-obito').src = "imagens/upload_+_disabled.png";
+                    document.getElementById('img-obito').src = "<?php echo $imgUpOFF;?>";
 
                 } else {
                     document.getElementById("upload-obito").disabled = false;
                     document.getElementById("upload-obito").required = true;
-                    document.getElementById('img-obito').src = "imagens/upload_+.png";
+                    document.getElementById('img-obito').src = "<?php echo $imgUpON;?>";
                 }
             }
         </script>

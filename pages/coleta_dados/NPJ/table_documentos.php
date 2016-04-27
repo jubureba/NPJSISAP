@@ -2,8 +2,8 @@
     <tbody>
     <tr>
         <th style="width: 700px">Documentação</th>
-        <th style="width: 10px">Download</th>
-        <th style="width: 10px">Upload</th>
+         <th style="width: 15px"><div align="center">Download</div></th>
+        <th style="width: 15px"><div align="center">Upload</div></th>
 
     </tr>
 
@@ -11,8 +11,8 @@
         <td>Petição Inicial</td> <!-- Nome do Documento -->
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><a href="doc_models/documento-1.docx" download="PeticaoInicial.docx">
-                    <img border="0" src="dist/img/download-icon.png" alt="Petição Inicial"
-                         width="16" height="16">
+                    <img border="0" src="dist/img/download-icon.ico" alt="Petição Inicial"
+                         style="height: 16px; width: 16px;">
                 </a></div>
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
@@ -27,8 +27,8 @@
         <td>Contestação</td> <!-- Nome do Documento -->
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><a href="doc_models/documento-1.docx" download="Contestacao.docx">
-                    <img border="0" src="dist/img/download-icon.png" alt="Petição Inicial"
-                         width="16" height="16">
+                    <img border="0" src="dist/img/download-icon.ico" alt="Petição Inicial"
+                         style="height: 16px; width: 16px;">
                 </a></div>
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
@@ -43,8 +43,8 @@
         <td>Notificação Extrajudicial</td> <!-- Nome do Documento -->
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><a href="doc_models/documento-1.docx" download="NotificacaoExtrajudicial.docx">
-                    <img border="0" src="dist/img/download-icon.png" alt="Petição Inicial"
-                         width="16" height="16">
+                    <img border="0" src="dist/img/download-icon.ico" alt="Petição Inicial"
+                         style="height: 16px; width: 16px;">
                 </a></div>
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
@@ -59,8 +59,8 @@
         <td>Procedimento Administrativo</td> <!-- Nome do Documento -->
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><a href="doc_models/documento-1.docx" download="ProcedimentoAdministrativo.docx">
-                    <img border="0" src="dist/img/download-icon.png" alt="Petição Inicial"
-                         width="16" height="16">
+                    <img src="dist/img/download-icon.ico" alt="Petição Inicial"
+                         style="height: 16px; width: 16px;">
                 </a></div>
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->

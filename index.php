@@ -1,4 +1,5 @@
 <?php
+
 require_once("pages/config/conn.php");
 ini_set('default_charset', 'UTF-8');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
