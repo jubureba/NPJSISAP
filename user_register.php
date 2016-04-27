@@ -48,6 +48,7 @@ protegePagina(); // Chama a função que protege a página
     <?php include('pages/Menu/menuLateral.php'); ?>
 
     <div class="content-wrapper">
+    <div class="content-wrapper">
         <section class="content-header">
             <h1>CADASTRAR NOVO USUÁRIO
                 <small>Painel de Controle</small>
@@ -59,17 +60,13 @@ protegePagina(); // Chama a função que protege a página
         </section>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content col-md-12">
             <!-- Small boxes (Stat box) -->
-
-            <div class="box box-primary col-md-10">
+            <div class="box box-primary col-md-10 ">
                 <div class="box-header with-border">
-
                     <h3 class="box-title">Preencha todos os campos e clique no 'Cadastrar'</h3>
                     <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span>
                     <hr>
-
-
                     <!--###########  FORMULARIO DE CADASTRO -->
                     <div class="col-md-12">
 
@@ -187,6 +184,7 @@ protegePagina(); // Chama a função que protege a página
 
 
         </section><!-- /.content -->
+
         <!-- FIM DO MENU - PARTE DO MEIO  -->
     </div>
     <!-- /.content-wrapper -->

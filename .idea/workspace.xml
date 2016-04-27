@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/getitens.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/paginador.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/tab-processos-index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_register.php" afterPath="$PROJECT_DIR$/user_register.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1615">
@@ -45,6 +40,16 @@
                 <marker date="1461745692850" expanded="true" signature="43226:43260" placeholder="..." />
                 <marker date="1461745692850" expanded="true" signature="43376:43410" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_register.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user_register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,7 +133,6 @@
         <option value="$PROJECT_DIR$/pages/login/index.php" />
         <option value="$PROJECT_DIR$/novo_usuario.php" />
         <option value="$PROJECT_DIR$/pages/coleta_dados/Defensoria_Publica/atendimento_defensoria_publica.php" />
-        <option value="$PROJECT_DIR$/user_register.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/usuario/cadastrando.php" />
         <option value="$PROJECT_DIR$/a.html" />
         <option value="$PROJECT_DIR$/a.php" />
@@ -166,6 +170,7 @@
         <option value="$PROJECT_DIR$/pages/config/getitens.php" />
         <option value="$PROJECT_DIR$/pages/config/tab-processos-index.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/user_register.php" />
       </list>
     </option>
   </component>
@@ -224,38 +229,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,7 +338,7 @@
       <workItem from="1461614157127" duration="15467000" />
       <workItem from="1461636637902" duration="9256000" />
       <workItem from="1461698383200" duration="17206000" />
-      <workItem from="1461736944566" duration="9279000" />
+      <workItem from="1461736944566" duration="10493000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -451,11 +424,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461737943730</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="-index com alteração no layout&#10;-tabela com paginação&#10;">
+      <created>1461746779445</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1461746779445</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99950000" />
+    <option name="totallyTimeSpent" value="101164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -524,7 +504,8 @@
     <MESSAGE value="Criação do 'consultar'" />
     <MESSAGE value="Início da criação da correção das Peças; &#10;Listar todos os atendimentos com peça em aberto e disponibilizar a opção pra download/upload da peça corrigida" />
     <MESSAGE value="Upload das fotos funcionando, e salvando no caminho pages/coleta_dados/NPJ/upload/&#10;criando a pasta com o nome salvo na sessão" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload das fotos funcionando, e salvando no caminho pages/coleta_dados/NPJ/upload/&#10;criando a pasta com o nome salvo na sessão" />
+    <MESSAGE value="-index com alteração no layout&#10;-tabela com paginação&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="-index com alteração no layout&#10;-tabela com paginação&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -533,13 +514,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/see_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/Consulta/user_query.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -596,6 +570,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,6 +808,14 @@
             <marker date="1461745692850" expanded="true" signature="43226:43260" placeholder="..." />
             <marker date="1461745692850" expanded="true" signature="43376:43410" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
