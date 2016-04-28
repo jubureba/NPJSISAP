@@ -47,29 +47,28 @@ protegePagina(); // Chama a função que protege a página
     <?php include('pages/Menu/topo.php'); ?>
     <?php include('pages/Menu/menuLateral.php'); ?>
 
-    <div class="content-wrapper">
-    <div class="content-wrapper">
-        <section class="content-header">
-            <h1>CADASTRAR NOVO USUÁRIO
-                <small>Painel de Controle</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Tela de Cadastro</li>
-            </ol>
-        </section>
 
-        <!-- Main content -->
-        <section class="content col-md-12">
-            <!-- Small boxes (Stat box) -->
-            <div class="box box-primary col-md-10 ">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Preencha todos os campos e clique no 'Cadastrar'</h3>
-                    <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span>
-                    <hr>
-                    <!--###########  FORMULARIO DE CADASTRO -->
+    <div class="content-wrapper">
+                    <section class="content-header">
+                        <h1>CADASTRAR NOVO USUÁRIO
+                            <small>Painel de Controle</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                            <li class="active">Tela de Cadastro</li>
+                        </ol>
+                    </section>
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <!-- Small boxes (Stat box) -->
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Preencha todos os campos e clique no 'Cadastrar'</h3>
+                                <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span>
+                                <hr>
+                                <!--###########  FORMULARIO DE CADASTRO -->
                     <div class="col-md-12">
-
                         <div class="form-group">
                             <form class="contact_form"  method="post" action="pages/cadastro/usuario/cadastrando.php">
                                 <div class="input-group">
@@ -189,13 +188,7 @@ protegePagina(); // Chama a função que protege a página
     </div>
     <!-- /.content-wrapper -->
 
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Versão</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; 2015 - NPJ </strong>| FCAT - Núcleo de Prática Jurídica | Faculdade de Castanhal -
-        Desenvolvido por <a href="pages/tecnosoft/tecnosoft.php">TecnoSoft Studio</a> - Todos os direitos reservados.
-    </footer>
+    <?php include('pages/Menu/rodape.php'); ?>
 
 
     <!-- Control Sidebar -->

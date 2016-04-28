@@ -5,11 +5,7 @@
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
-            
-            
-            
-            
-            
+
             <div class="pull-left image">
                 <!-- IMAGEM DO USUÁRIO, CAMINHO PEGO DO BD  -->
                 <img src="
@@ -66,11 +62,11 @@
                         class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a id="novo_usuario" href="user_register.php"><i class="fa fa-hand-o-right"></i>Novo
-                            Usuário</a>
+                    <li><a id="novo_usuario" href="user_register.php"><i class="fa fa-hand-o-right"></i>Usuário</a>
                     </li>
-                    <li><a href="new_subject.php"><i class="fa fa-hand-o-right"></i>Novo
-                            Assunto/Ação</a></li>
+                    <li><a id="novo_cliente" href="client_register.php"><i class="fa fa-hand-o-right"></i>Cliente</a>
+                    </li>
+                    <li><a href="new_subject.php"><i class="fa fa-hand-o-right"></i>Assunto/Ação</a></li>
                 </ul>
 
             </li>

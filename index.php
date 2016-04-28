@@ -18,7 +18,7 @@ protegePagina(); // Chama a função que protege a página
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="shortcut icon" href="imagens/logoSisAp.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="dist/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
@@ -36,12 +36,12 @@ protegePagina(); // Chama a função que protege a página
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" type="text/css" href="dist/css/m2br.dialog.css"/>
-
     <script language="JavaScript" type="text/javascript" src="js/cidades-estados-1.4-utf8.js"></script> <!--cidades e estados -->
     <script src="js/html5shiv.min.js"></script>
     <script src="js/respond.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="pages/config/paginador.js"></script>
     <script type="text/javascript" language="javascript" src="plugins/jQuery/jquery-1.3.2.js"></script>
     <!--  <script type="text/javascript">
           $(document).ready(function () {
@@ -148,288 +148,17 @@ protegePagina(); // Chama a função que protege a página
 
 
 <body class="hold-transition skin-blue sidebar-mini">
-
 <div class="wrapper">
-
-
     <?php include('pages/Menu/topo.php'); ?>
-
     <?php include('pages/Menu/menuLateral.php'); ?>
-
 
     <!-- ####################### INICIO DO MENU - PARTE DO MEIO ####################### -->
 
     <div id="principal">
         <div class="content-wrapper" >
-
-            <!--    <section class="content-header">
-                    <h1>
-                        NPJ | System
-                        <small>#</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    </ol>
-                </section> -->
-
-            <!-- Main content -->
             <section class="content">
 
-                <!-- /.box -->
-
-                <!-- PERFIL DA TELA INICIAL -->
-                <!-- Main content -->
-                <section class="content">
-
-
                     <div class="row">
-                        <div class="col-md-3">
-                            <!-- Profile Image -->
-
-                            <!-- /.box -->
-
-                            <!-- About Me Box -->
-                            <div class="box box-primary">
-
-                                <div class="box-body box-profile">
-                                    <figure class="foto-legenda">
-                                        <img
-                                            src="<?php echo "" . $_SESSION['imagem'] ?>"
-                                            alt="Perfil de <?php echo $_SESSION['usuarioNome'] ?>"
-                                            title="Perfil de <?php echo $_SESSION['usuarioNome'] ?>">
-                                        <figcaption id="foto-legenda">
-                                            <a href="#" onclick="TrocarFoto()" class="pull-right btn-box-tool">Trocar <i
-                                                    title="Editar" class="fa fa-pencil-square-o"></i></a>
-                                        </figcaption>
-                                    </figure>
-
-                                    <script>
-                                        function TrocarFoto() {
-                                            $('#myModal').modal('show');
-                                        }
-                                    </script>
-                                    <h3 class="profile-username text-center"><?php echo "" . $_SESSION['usuarioNome'] ?></h3>
-
-                                    <div class="text-muted text-center"><?php echo "" . $_SESSION['email'] ?></div>
-                                    <p class="text-muted text-center"><?php echo "" . $_SESSION['permissaoUser'] ?></p>
-
-                                </div>
-
-
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Sobre</h3>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <!-- EDUCAÇÃO -->
-                                    <strong><i id="Titulo" class="fa fa-book margin-r-5"></i>Educação</strong>
-                                    <a href="#" class="pull-right btn-box-tool"><i title="Editar" id="Editar-css"
-                                                                                   onclick="novaEducacao(1)"
-                                                                                   class="fa fa-pencil-square-o"></i></a><br/>
-
-
-                                    <!-- NOVO CADASTRO DE EDUCAÇÃO-->
-                                    <form id="formCad" style="display: none"
-                                          action="pages/cadastro/usuario/nova_Educacao.php" method="post">
-
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-user-plus"></i>
-                                            </div>
-                                            <input class="form-control" name="instituicao" required type="text"
-                                                   placeholder="Instituição"/>
-                                        </div>
-                                        <div class="input-group">
-
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-user-plus"></i>
-                                            </div>
-                                            <input class="form-control" name="curso" type="text" required
-                                                   placeholder="Curso"/>
-                                        </div>
-                                 <span class="input-group-btn ">
-                                        <button onclick="cadastrarEducacao()" class="btn btn-block btn-primary btn-xs">
-                                            Cadastrar
-                                        </button>
-                                        <button type="button" onclick="novaEducacao(2)"
-                                                class="btn btn-block btn-danger btn-xs">Cancelar
-                                        </button>
-                                 </span>
-                                        <br/>
-                                    </form>
-                                    <div id="msgPerfil"></div>
-
-                                    <?php
-                                    $educacaoID = $_SESSION['usuarioID'];
-                                    $sql = "SELECT * FROM educacao_usuario WHERE idUsuario_educacao = $educacaoID ";
-                                    $stmt = mysql_query($sql);
-                                    while ($resultado = mysql_fetch_array($stmt)) {
-                                        ?>
-                                        <p class="text-muted">
-                                            <a id="ExcluirPerfil" onclick="
-                                                javascript: if (confirm('Deseja Realmente Excluir esse item?'))location.href='pages/cadastro/usuario/excluir_Educacao.php?idUsuarioEducacao=<?php echo $resultado['idEducacao']; ?>'
-                                                "
-                                               class="pull-right btn-box-tool"><i
-                                                    class="fa fa-times"></i></a>
-
-
-                                            <blockquote>
-                                        <p class="text-muted">
-
-
-
-                                            <?php echo "Estuda ".$resultado['curso']." em ". $resultado['instituicao']; ?> <br/>
-                                        </p>
-                                        <small> <?php echo "Frequentando de 2014 a 2017" ?></small>
-
-                                        </blockquote>
-                                        </p>
-                                        <hr>
-                                        <?php
-                                    }
-                                    ?>
-                                    <!-- LOCALIDADE -->
-                                    <strong><i class="fa fa-map-marker margin-r-5"></i>Localização</strong><br/><br/>
-
-                                    <blockquote>
-                                        <p class="text-muted"><?php echo "" . $_SESSION['cidade'] . ", " . $_SESSION['estado'] ?></p>
-                                    </blockquote>
-                                    <hr>
-
-                                    <!-- HABILIDADES -->
-                                    <strong><i class="fa fa-pencil margin-r-5"></i>Habilidades</strong>
-                                    <a href="#" class="pull-right btn-box-tool"><i title="Editar" id="Editar-css"
-                                                                                   onclick="novaHabilidade(1)"
-                                                                                   class="fa fa-pencil-square-o"></i></a><br/><br/>
-
-                                    <!-- NOVO CADASTRO DE HABILIDADE-->
-                                    <form id="formHab" style="display: none" method="post"
-                                          action="pages/cadastro/usuario/nova_Habilidade.php">
-
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-user-plus"></i>
-                                            </div>
-                                            <input class="form-control" name="habilidade" type="text"
-                                                   placeholder="Habilidade"/>
-                                        </div>
-                                        <div class="input-group center-block text-center ">
-                                            <br/>
-                                            <input type="radio" name="qualidade" value="Excelente" checked>
-                                            <text color="#008054">Excelente</text>
-                                            <input type="radio" name="qualidade" value="Bom">Bom
-                                            <input type="radio" name="qualidade" value="Médio">Médio
-                                            <input type="radio" name="qualidade" value="Ruim">Ruim
-
-                                            <hr>
-                                        </div>
-                                    <span class="input-group-btn ">
-                                        <button onclick="cadastrarHabilidade()"
-                                                class="btn btn-block btn-primary btn-xs">
-                                            Cadastrar
-                                        </button>
-                                        <button type="button" onclick="novaHabilidade(2)"
-                                                class="btn btn-block btn-danger btn-xs">Cancelar
-                                        </button>
-                                    </span>
-                                        <hr>
-                                        <br/>
-                                    </form>
-                                    <div id="msgHabilidade"></div>
-
-                                    <?php
-                                    $habilidadeID = $_SESSION['usuarioID'];
-                                    $sql = "SELECT * FROM habilidades_usuario WHERE idUsuario_Habilidade = '$habilidadeID' ";
-                                    $stmt = mysql_query($sql);
-                                    $somador <= 1;
-                                    while ($resultado = mysql_fetch_array($stmt)) {
-                                        $somador <= $somador + 1;
-                                        ?>
-
-
-                                        <span id="habilidade"
-                                              class="label label-success"><?php echo "" . $resultado['habilidade'] ?>
-                                    </span>
-
-                                        <!-- ESSE SCRIPT TEM QUE FICAR DEPOIS DO SPAN PQ ELE MUDA O NOME DA CLASS -->
-                                        <script type="text/javascript">
-                                            var status1 = "<?php echo $resultado['qualidade']; ?>";
-                                            var somador = "<?php echo $somador; ?>";
-
-                                            if (status1 == "Excelente") {
-                                                document.getElementById("habilidade").setAttribute("class", "label label-success");
-                                                document.getElementById("habilidade").setAttribute("id", "class" + somador);
-                                            } else if (status1 == "Bom") {
-                                                document.getElementById("habilidade").setAttribute("class", "label label-primary");
-                                                document.getElementById("habilidade").setAttribute("id", "class1" + somador);
-                                            } else if (status1 == "Médio") {
-                                                document.getElementById("habilidade").setAttribute("class", "label label-warning");
-                                                document.getElementById("habilidade").setAttribute("id", "class4" + somador);
-                                            } else if (status1 == "Ruim") {
-                                                document.getElementById("habilidade").setAttribute("class", "label label-danger");
-                                                document.getElementById("habilidade").setAttribute("id", "class3" + somador);
-                                            }
-                                        </script>
-                                    <?php } ?>
-                                    <br/><br/>
-                                <span class="required_notification"> Legenda:
-                                    <span class="label label-success">Excelente</span>
-                                    <span class="label label-primary">Bom</span>
-                                    <span class="label label-warning">Médio</span>
-                                    <span class="label label-danger">Ruim</span>
-                                </span>
-                                    <hr>
-
-                                    <!-- NOTAS -->
-
-                                    <strong><i class="fa fa-file-text-o margin-r-5"></i> Notas</strong>
-                                    <a href="#" class="pull-right btn-box-tool"><i onclick="novaNota(1)" title="Editar" id="Editar-css"
-                                                                                   class="fa fa-pencil-square-o"></i></a><br/><br/>
-
-                                    <!-- NOVO CADASTRO DE EDUCAÇÃO-->
-
-                                    <form id="formNota" style="display: none"
-                                          action="pages/cadastro/usuario/nova_nota.php" method="post">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-user-plus"></i>
-                                            </div>
-
-                                            <input class="form-control" name="Nota" required type="text"
-                                                   placeholder="Nova Nota"/>
-                                        </div>
-
-                                 <span class="input-group-btn ">
-                                        <button onclick="cadastrarNota()" class="btn btn-block btn-primary btn-xs">
-                                            Cadastrar
-                                        </button>
-                                        <button type="button" onclick="novaNota(2)"
-                                                class="btn btn-block btn-danger btn-xs">Cancelar
-                                        </button>
-                                 </span>
-                                        <br/>
-                                    </form>
-                                    <div id="msgNota"></div>
-
-
-                                    <?php
-                                    $sql = "SELECT * FROM usuario WHERE idUsuario = '$habilidadeID' ";
-                                    $stmt = mysql_query($sql);
-                                    while ($resultado = mysql_fetch_array($stmt)) { ?>
-                                        <blockquote>
-                                            <p class="text-muted">
-                                                <?php echo "" . $resultado['Nota']; ?>
-                                            </p>
-                                            <small> <?php echo $resultado['autorNota']; ?></small>
-
-                                        </blockquote>
-                                    <?php } ?>
-                                </div>
-                                <!-- /.box-body -->
-                            </div>
-                            <!-- /.box -->
-                        </div>
-
                         <!--***************************************************
                         *******************************************************
                         *******************************************************
@@ -437,10 +166,8 @@ protegePagina(); // Chama a função que protege a página
                         *******************************************************
                         *******************************************************
                         *******************************************************
-                         -->
-
+                        -->
                         <?php include("pages/config/tab-processos-index.php") ?>
-
                         <!--***************************************************
                         *******************************************************
                         *******************************************************
@@ -552,22 +279,12 @@ protegePagina(); // Chama a função que protege a página
                                         <br/>
                                     </div>
                                 </div>
-                                <!-- /.post -->
                             </div>
-                            <!-- /.tab-pane -->
-
-
-                            <!-- /.tab-content -->
                         </div>
-                        <!-- /.nav-tabs-custom -->
                     </div>
-                    <!-- /.col -->
+            </section>
         </div>
-        <!-- /.row -->
 
-
-        </section>
-        </section>
         <!-- /.content -->
 
         <!-- FIM DO MENU - PARTE DO MEIO  -->
