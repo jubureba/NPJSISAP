@@ -34,8 +34,6 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
     <link rel="stylesheet" href="dist/css/form_Style.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="plugins/select2/select2.min.css">
-
-
     <link rel="stylesheet" type="text/css" href="dist/css/component.css"/>
     <script type="text/javascript" src="dist/js/jquery.maskMoney.js" ></script>
     <script type="text/javascript">

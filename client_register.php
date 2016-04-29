@@ -30,13 +30,16 @@ protegePagina(); // Chama a função que protege a página
     <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css">
     <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
     <link rel="stylesheet" href="plugins/select2/select2.min.css">
-
+    <link rel="stylesheet" type="text/css" href="dist/css/component.css"/> <!-- estilo da parte de upload -->
+    <link rel="stylesheet" href="dist/css/radio_style.css">   <!-- estilo da parte de upload -->
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/form_Style.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <script src="js/html5shiv.min.js"></script>
     <script src="js/respond.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/cidades-estados-1.4-utf8.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/valida_cpf_cnpj.js"></script>
+
     <!--cidades e estados -->
 
 
@@ -68,12 +71,15 @@ protegePagina(); // Chama a função que protege a página
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
             <form class="contact_form" method="post" name="form1" action="pages/coleta_dados/NPJ/cadastro.php">
                 <div class="box box-primary">
-                    <div class="box-header">
-
-                        <!-- IDENTIFICAÇÃO PARTE 1 ---------------------------------------------------->
-                        <h3 class="box-title">I- Identificação</h3><br/>
+                    <div class="box-header with-border">
+                        <div align="center"><h3 class="box-title">Identificação</h3></div>
                         <hr>
-
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <!-- IDENTIFICAÇÃO PARTE 1 ---------------------------------------------------->
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
@@ -122,16 +128,22 @@ protegePagina(); // Chama a função que protege a página
 
                 <!-- NATURALIDADE/NACIONALIDADE -->
                 <div class="box box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">II- NATURALIDADE/NACIONALIDADE</h3><br/>
+                    <div class="box-header with-border">
+                        <div align="center"><h3 class="box-title">Naturalidade/Nacionalidade</h3></div>
                         <hr>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+
 
                         <div class="col-md-12">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-location-arrow"></i>
                                 </div>
-                                <input class="form-control" value="" name="pais-naturalidade"
+                                <input class="form-control" value="Brasil" name="pais-naturalidade"
                                        type="text" placeholder="País">
                             </div>
                             <br/>
@@ -162,10 +174,15 @@ protegePagina(); // Chama a função que protege a página
                 </div>
 
                 <div class="box box-primary">
-                    <div class="box-header">
-
-                        <h3 class="box-title">III- ENDEREÇO ATUAL</h3><br/>
+                    <div class="box-header with-border">
+                        <div align="center"><h3 class="box-title">Endereço Residencial</h3></div>
                         <hr>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
@@ -240,9 +257,14 @@ protegePagina(); // Chama a função que protege a página
 
                 <!-- DADOS PESSOAIS -->
                 <div class="box box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">IV- DADOS PESSOAIS</h3><br/>
-                        <hr>
+                        <div class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Informações Pessoais</h3></div>
+                            <hr>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
 
                         <div class="col-md-6">
                             <div class="input-group">
@@ -251,7 +273,7 @@ protegePagina(); // Chama a função que protege a página
                                 </div>
                                 <input class="form-control" placeholder="Data de Nascimento" type="date" id="campoData2"
                                        required="required" maxlength="10" name="date"
-                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2020-02-18"/>
+                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="1910-01-01" max="2020-02-18"/>
                             </div>
                             <br/>
                         </div>
@@ -303,24 +325,51 @@ protegePagina(); // Chama a função que protege a página
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
+                                <input class="form-control" type="tel" required name="telefone" id="tel-residencial"
+                                       placeholder="Telefone Residencial"
+                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informações do Trabalho -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+
+                        <div align="center"><h3 class="box-title">Endereço de Trabalho</h3></div>
+                        <hr>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+
+
+                    <div class="box-body">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
                                 <input class="form-control" required name="Profissao" type="text"
                                        placeholder="Profissão">
                             </div>
                             <br/>
                         </div>
 
-
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" type="tel" required name="telefone" id="tel"
-                                       placeholder="Telefone Residencial"
-                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
+                                <input class="form-control" id="dinheiro" name="Remuneracao" type="text"
+                                       placeholder="Remuneração">
                             </div>
                             <br/>
                         </div>
+
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-addon">
@@ -365,30 +414,6 @@ protegePagina(); // Chama a função que protege a página
                             <br/>
                         </div>
 
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" id="dinheiro" name="Remuneracao" type="text"
-                                       placeholder="Remuneração">
-                            </div>
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="box box-primary">
-                    <div class="box-header">
-
-                        <!-- HISTORICO/RELATORIO ---------------------------------------------------->
-                        <h3 class="box-title">II- Histórico/Relatório</h3><br/><br/>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto"
-                                      style="width: 975px; height: 68px;"></textarea>
-                        </div>
-
                     </div>
                 </div>
             </form>
@@ -398,150 +423,20 @@ protegePagina(); // Chama a função que protege a página
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-primary">
-                        <div class="box-header">
-                            <h3 class="box-title">III- Coleta de Documentos</h3>
+                        <div class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Documentação</h3></div>
                             <hr>
-                        </div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
                         <div class="box-body">
-                            <?php include("pages/coleta_dados/NPJ/table_upload.php"); ?>
-                        </div><!-- /.box-body -->
+                        <?php include("pages/cadastro/pessoa/table_upload.php"); ?>
+                        </div>
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
             </div><!-- /.col (right) -->
 
-
-            <!--4 - MEDIDAS JURIDICAS CABIVEIS -->
-
-            <div class="box box-primary">
-                <div class="box-header">
-                    <h3 class="box-title">IV- Medidas Jurídicas Cabíveis</h3><br/>
-                    <hr>
-                    <?php include("pages/coleta_dados/NPJ/table_documentos.php"); ?>
-                </div>
-            </div>
-
-            <!--5 - INFORMAÇÕES SOBRE A PARTE CONTRÁRIA -->
-
-            <div class="box box-primary">
-                <div class="box-header">
-                    <h3 class="box-title">V- Informações sobre a Parte Contrária</h3><br/>
-
-                    <hr>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-
-                            <input class="form-control" name="nomeContraria" type="text"
-                                   placeholder="Nome">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="EnderecoResContraria" type="text"
-                                   placeholder="Endereço Residencial">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="telContraria" type="text"
-                                   placeholder="Telefone">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="cpfContraria" type="text"
-                                   placeholder="CPF">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="rgContraria" type="text"
-                                   placeholder="RG">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="profissaoContraria" type="text"
-                                   placeholder="Profissão">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="rzSocialContraria" type="text"
-                                   placeholder="Razão Social da Empresa">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="cnpjContraria" type="text"
-                                   placeholder="CNPJ da Empresa">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="endProfissionalContraria" type="text"
-                                   placeholder="Endereço Profissional">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="infAddContraria" type="text"
-                                   placeholder="Informações Adicionais">
-                        </div>
-                        <br/>
-                    </div>
-
-
-                </div>
-            </div>
 
 
             <div class="box box-primary">
@@ -722,7 +617,8 @@ protegePagina(); // Chama a função que protege a página
 <script src="plugins/input-mask/jquery.inputmask.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="js/jquery.maskMoney.js"></script>
+<script src="js/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <script src="plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
 <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
@@ -742,112 +638,48 @@ protegePagina(); // Chama a função que protege a página
 <script type="text/javascript" src="plugins/mask/jquery.mask.min.js"></script>
 <script type="text/javascript">
     $("#txttelefone").mask("(00) 0000-00009");
-</script>
-<script type="text/javascript">
     $("#cep-residencial").mask("00000-000");
-</script
+    $("#valor-cpf").mask("000.000.000-00");
+    $("#tel-residencial").mask("(00)0000-00009");
+</script>
 <script>
     $(function () {
         $(".select2").select2();
-
     });
 </script>
 <script>
     $(document).ready(function() { $("#estado-civil").select2(); });
     $(document).ready(function() { $("#escolaridade").select2(); });
-
-</script>
-<script language="JavaScript" type="text/javascript" charset="utf-8">
     new dgCidadesEstados({
         cidade: document.getElementById('city-naturalidade'),
         estado: document.getElementById('estado-naturalidade'),
         estadoVal: 'PA',
         cidadeVal: 'Castanhal'
-    })
-</script>
-<script language="JavaScript" type="text/javascript" charset="utf-8">
+    });
     new dgCidadesEstados({
         cidade: document.getElementById('city-residencial'),
         estado: document.getElementById('estado-residencial'),
         estadoVal: 'PA',
         cidadeVal: 'Castanhal'
-    })
+    });
+
 </script>
 
 <script type="text/javascript">
-    function getCoords() {
-        var api;
-        $('#toCrop').Jcrop({
-            minSize: [160, 160],
-            aspectRatio: 1,
-            bgOpacity: 0.4,
-            addClass: 'jcrop-light',
-            onSelect: updateCoords,
-            onChange: updateCoords,
-            setSelect: [0, 0, 160, 160]
-        });
-    }
-
-    function updateCoords(c) {
-        $('#x').val(c.x);
-        $('#y').val(c.y);
-        $('#w').val(c.w);
-        $('#h').val(c.h);
-    }
-    ;
-
-    function _(element) {
-        if (document.getElementById(element))
-            return document.getElementById(element);
-        else
-            return false;
-    }
-
-    function submitForm() {
-        if (_('arquivo').files[0]) {//Se houver um arquivo, faremos alguns testes no mesmo
-            var arquivo = _('arquivo').files[0];
-            if (arquivo.type != 'image/png' && arquivo.type != 'image/jpeg')
-                _('result').innerHTML = 'Por favor, selecione uma imagem do tipo JPEG ou PNG';
-            else if (arquivo.size > 1024 * 2048)//2MB
-                _('result').innerHTML = 'Por favor selecione uma image mo máximo 2MB de tamanho.';
-            else {
-                var x = _('x').value;
-                var y = _('y').value;
-                var w = _('w').value;
-                var h = _('h').value;
-                var formData = new FormData();
-                formData.append('arquivo', arquivo);
-                formData.append('x', x);
-                formData.append('y', y);
-                formData.append('w', w);
-                formData.append('h', h);
-                if (_('imgType')) {
-                    var imgType = _('imgType').value;
-                    formData.append('imgType', imgType);
-                }
-                if (_('imgName')) {
-                    var imgName = _('imgName').value;
-                    formData.append('imgName', imgName);
-                }
-                var request = new XMLHttpRequest();
-                if (_('toCrop'))
-                    var includeFile = 'recebeFile.php';
-                else
-                    var includeFile = 'recebeFile.php';
-                request.open('post', includeFile, true);
-                request.onreadystatechange = function () {
-                    if (request.readyState == 4 && request.status == 200)
-                        _('result').innerHTML = request.responseText;
-
-                }
-                request.send(formData);
-                _('result').innerHTML = '<img src="loader.gif" />';
-            }
-        }
-        else
-            _('result').innerHTML = 'Por favor, selecione uma imagem para ser enviada!';
-    }
+    $(function(){
+        $("#dinheiro").maskMoney();
+    })
 </script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-cpf-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-rg-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-ctps-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-contracheque-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-casamento-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-nascimento-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-residencia-upload.js"></script>
+<script src="pages/cadastro/pessoa/upload/scripts/script-obito-upload.js"></script>
+
 
 </body>
 </html>
+

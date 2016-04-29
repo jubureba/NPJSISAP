@@ -12,11 +12,22 @@ $imgUpON = "dist/img/upload-icon.ico";
     .aumentaIMG img:hover em{z-index:1; display:none;}
     .aumentaIMG img{border:#000 1px solid;}
     .aumentaIMG img:hover img{border:#000 1px solid;}
+    #image_preview:active{
+        zoom: 500%
+
+    }
+    #image_preview:hover{
+
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    }
 </style>
 
 
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="pages/coleta_dados/NPJ/upload/scripts/script-cpf-upload.js"></script>
 
 <div class="box-body">
     <table class="table table-bordered">
@@ -31,21 +42,14 @@ $imgUpON = "dist/img/upload-icon.ico";
         </tr>
         <tr>
             <td>CPF</td> <!-- Nome do Documento -->
-
             <td> <!-- Validação Ausente/Presente do Documento -->
-                <div>
-                    <input type="radio" name="radioCPF" id="radioCPF1" value="presente" onclick="uploadCPF('atv');"
-                           class="radio"/>
-                    <label for="radioCPF1">Presente</label>
+                <div><input type="radio" name="radioCPF" id="radioCPF1" value="presente" onclick="uploadCPF('atv');"
+                            class="radio"/><label for="radioCPF1">Presente</label>
                 </div>
             </td>
-
             <td> <!-- Validação Ausente/Presente do Documento -->
-                <div>
-                    <input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst');"
-                           checked
-                           class="radio"/>
-                    <label for="radioCPF2">Ausente</label>
+                <div><input type="radio" name="radioCPF" id="radioCPF2" value="ausente" onclick="uploadCPF('dst');"
+                            checked class="radio"/><label for="radioCPF2">Ausente</label>
                 </div>
             </td>
 
@@ -54,49 +58,33 @@ $imgUpON = "dist/img/upload-icon.ico";
                     <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <input class="form-control" id="valor-cpf" required name="valorCPF" type="text"
+                    <input class="form-control" id="valor-cpf" onblur="validarCPF(this.value)" required name="valorCPF" type="text"
                            placeholder="CPF (Somente Números)" disabled>
                 </div>
             </td>
             <td>
-                
                 <!--Mando a IMG do input file por um submit ajax, atraves do script da pasta scripts-->
-             
-                <form id="uploadForm" method="post" enctype="multipart/form-data">
+
+                <form id="uploadForm1" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
-                    <div id="uploadFormLayer" align="center">
+                        <div id="uploadFormLayer" align="center">
                     <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="userImage" id="upload-cpf" required disabled/>
+                    <input class="upload-file" type="file" name="img-cpf" id="upload-cpf" required disabled/>
                     <img class="upload-button" name="file" alt="title=" id="img-cpf" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/><br/>
                         <input id="upload-cpf-button" type="submit" value="Upload" class="upload-cpf-button" hidden/>
                     </span>
-                    </div>
+                        </div>
                     </div>
                 </form>
             </td>
 
             <td>
-                <style>
-                    #image_preview:active{
-                        zoom: 500%
-
-                    }
-                    #image_preview:hover{
-
-                        -webkit-transform: scale(1.5);
-                        -moz-transform: scale(1.5);
-                        -ms-transform: scale(1.5);
-                        -o-transform: scale(1.5);
-                        transform: scale(1.5);
-                    }
-                    }
-                </style>
 
                 <div id="image_preview" align="center">
-                    <div id="targetLayer">
-                    <img id="previewing" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
-                                                                                 data-zoom-image="dist/img/defaultimg.gif"/></div></div>
+                    <div id="targetLayer1">
+                        <img id="previewing1" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -150,13 +138,14 @@ $imgUpON = "dist/img/upload-icon.ico";
                 </div>
             </td>
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm2" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
                         <div align="center">
                     <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-rg" required onchange="" disabled/>
+                    <input class="upload-file" type="file" name="img-rg" id="upload-rg" required onchange="" disabled/>
                     <img class="upload-button" alt="title=" id="img-rg" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/>
+                        <input id="upload-rg-button" type="submit" value="Upload" class="upload-rg-button" hidden/>
                     </span>
                         </div>
                     </div>
@@ -165,8 +154,9 @@ $imgUpON = "dist/img/upload-icon.ico";
 
             <td>
                 <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;"
-                         src="dist/img/defaultimg.gif"/></div>
+                    <div id="targetLayer2">
+                        <img id="previewing2" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -221,23 +211,30 @@ $imgUpON = "dist/img/upload-icon.ico";
                 </div>
             </td>
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm3" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
                         <div align="center">
                 <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange="" disabled/>
+                    <input class="upload-file" type="file" name="img-ctps" id="upload-ctps"  disabled/>
                     <img class="upload-button" id="img-ctps" alt="title=" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/>
+                    <input id="upload-ctps-button" type="submit" value="Upload" class="upload-ctps-button" hidden/>
                 </span>
                         </div>
                     </div>
 
                 </form>
+
+
+
+
             </td>
 
             <td>
                 <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/></div>
+                    <div id="targetLayer3">
+                        <img id="previewing3" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
 
@@ -288,14 +285,15 @@ $imgUpON = "dist/img/upload-icon.ico";
 
             </td>
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm4" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage">
                         <div align="center">
                  <span class="upload-wrapper">
-                     <input class="upload-file" type="file" name="file" id="upload-residencia" required onchange=""
+                     <input class="upload-file" type="file" name="img-residencia" id="upload-residencia" required onchange=""
                             disabled/>
                      <img class="upload-button" id="img-residencia" alt="title=" style="height: 24px; width: 24px;"
                           src="<?php echo $imgUpOFF; ?>"/>
+                     <input id="upload-residencia-button" type="submit" value="Upload" class="upload-residencia-button" hidden/>
                  </span>
                         </div>
                     </div>
@@ -304,7 +302,9 @@ $imgUpON = "dist/img/upload-icon.ico";
 
             <td>
                 <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/></div>
+                    <div id="targetLayer4">
+                        <img id="previewing4" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -350,13 +350,14 @@ $imgUpON = "dist/img/upload-icon.ico";
             </td>
 
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm5" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage" align="center">
                 <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-contracheque" required onchange=""
+                    <input class="upload-file" type="file" name="img-contracheque" id="upload-contracheque" required onchange=""
                            disabled/>
                     <img class="upload-button" id="img-contracheque" alt="title=" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/>
+                    <input id="upload-contracheque-button" type="submit" value="Upload" class="upload-contracheque-button" hidden/>
                 </span>
                     </div>
                 </form>
@@ -364,7 +365,9 @@ $imgUpON = "dist/img/upload-icon.ico";
 
             <td>
                 <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/></div>
+                    <div id="targetLayer5">
+                        <img id="previewing5" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -415,20 +418,23 @@ $imgUpON = "dist/img/upload-icon.ico";
                 </div>
             </td>
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm6" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage" align="center">
                 <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-nascimento" required onchange=""
+                    <input class="upload-file" type="file" name="img-nascimento" id="upload-nascimento" required onchange=""
                            disabled/>
                     <img class="upload-button" id="img-nascimento" alt="title=" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/>
+                    <input id="upload-nascimento-button" type="submit" value="Upload" class="upload-nascimento-button" hidden/>
                 </span>
                     </div>
                 </form>
             </td>
             <td>
                 <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/></div>
+                    <div id="targetLayer6">
+                        <img id="previewing6" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -478,28 +484,23 @@ $imgUpON = "dist/img/upload-icon.ico";
 
 
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm7" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage" align="center">
                 <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-casamento" required onchange=""
+                    <input class="upload-file" type="file" name="img-casamento" id="upload-casamento" required onchange=""
                            disabled/>
                     <img class="upload-button" id="img-casamento" alt="title=" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/>
+                    <input id="upload-casamento-button" type="submit" value="Upload" class="upload-casamento-button" hidden/>
                 </span>
                     </div>
                 </form>
             </td>
             <td>
-                <div class="aumentaIMG">
-                <div id="image_preview" class="foto" align="center">
-                    <a href="#">
-                        <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/>
-                        <span>
-                        <img style="width: 400px; height: 400px;" src="dist/img/defaultimg.gif"/>
-                        </span>
-                    </a>
-                </div>
-                </div>
+                <div id="image_preview" align="center">
+                    <div id="targetLayer7">
+                        <img id="previewing7" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
@@ -544,19 +545,22 @@ $imgUpON = "dist/img/upload-icon.ico";
 
             </td>
             <td>
-                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <form id="uploadForm8" action="" method="post" enctype="multipart/form-data">
                     <div id="selectImage" align="center">
                 <span class="upload-wrapper">
-                    <input class="upload-file" type="file" name="file" id="upload-obito" required onchange="" disabled/>
+                    <input class="upload-file" type="file" name="img-obito" id="upload-obito" required onchange="" disabled/>
                     <img class="upload-button" id="img-obito" alt="title=" style="height: 24px; width: 24px;"
                          src="<?php echo $imgUpOFF; ?>"/>
+                    <input id="upload-obito-button" type="submit" value="Upload" class="upload-obito-button" hidden/>
                 </span>
                     </div>
                 </form>
             </td>
             <td>
                 <div id="image_preview" align="center">
-                    <img style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"/></div>
+                    <div id="targetLayer8">
+                        <img id="previewing8" style="width: 40px; height: 40px;" src="dist/img/defaultimg.gif"
+                             data-zoom-image="dist/img/defaultimg.gif"/></div></div>
             </td>
         </tr>
         <script type="text/javascript">
