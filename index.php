@@ -41,7 +41,10 @@ protegePagina(); // Chama a função que protege a página
     <script src="js/respond.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="pages/config/paginador.js"></script>
+
+    <script type="text/javascript" src="js/paginador.js"></script>
+    <script type="text/javascript" src="js/mensagens.js"></script>
+
     <script type="text/javascript" language="javascript" src="plugins/jQuery/jquery-1.3.2.js"></script>
     <!--  <script type="text/javascript">
           $(document).ready(function () {
@@ -157,8 +160,7 @@ protegePagina(); // Chama a função que protege a página
     <div id="principal">
         <div class="content-wrapper" >
             <section class="content">
-
-                    <div class="row">
+                
                         <!--***************************************************
                         *******************************************************
                         *******************************************************
@@ -167,7 +169,7 @@ protegePagina(); // Chama a função que protege a página
                         *******************************************************
                         *******************************************************
                         -->
-                        <?php include("pages/config/tab-processos-index.php") ?>
+                        <?php include("pages/config/tab-processos-index.php"); ?>
                         <!--***************************************************
                         *******************************************************
                         *******************************************************
@@ -176,112 +178,8 @@ protegePagina(); // Chama a função que protege a página
                         *******************************************************
                         *******************************************************
                          -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="box box-primary">
-                                    <div class="box-header with-border" align="center">
-                                        Central de Mensagens
-                                    </div><!-- /.box-header -->
-                                    <div class="tab-content">
-                                        <div class="active tab-pane" id="activity">
-                                            <div class="box-body">
+                        <?php include("pages/config/mensagens-index.php"); ?>
 
-                                                <div class="timeline-body">
-                                                    <div class="post">
-                                                        <div class="box box-solid">
-                                                            <div style="overflow: auto; height: 420px" id="msgs">
-                                                                <!-- BARRA DE ROLAGEM -->
-                                                                <!-- VAI CRIAR UM CAMPO DE TEXTO NOVO PARA CADA MENSAGEM NO BANCO DE DADOS-->
-                                                                <!-- Daqui para baixo, eu não sei o que eu fiz, mas Funcionou -->
-                                                                <?php
-                                                                $query = mysql_query("SELECT * FROM mensagens ORDER BY id DESC ");
-                                                                $sqlData = "SELECT date_format(dataHora, '%d/%m/%Y às %H:%i') AS dataHora FROM mensagens ORDER BY id DESC";
-                                                                $todosDados = "SELECT * FROM mensagens ORDER BY id DESC";
-                                                                $consultaData = mysql_query($sqlData) or die(mysql_error());
-                                                                $result = mysql_query($todosDados);
-                                                                while (($mensagem = mysql_fetch_object($query)) && ($row = mysql_fetch_array($consultaData)) && ($dados = mysql_fetch_array($result))) {
-                                                                    ?>
-                                                                    <ul class="timeline timeline-inverse">
-                                                                        <li>
-                                                                            <div class="timeline-item">
-                                                                                <h3 class="timeline-header"><a href="#">
-                                                                                        <div class="user-block">
-                                                                                            <img
-                                                                                                class="img-circle img-bordered-sm"
-                                                                                                src="<?php echo "" . $dados['foto'] ?> "
-                                                                                                alt="user image">
-                                                            					<span class="username">
-                                                                					<a href="#"><?php echo "   " . $dados['nome'] . " " ?></a>
-                                                                                    <?php
-
-                                                                                    if ($dados['nome'] == $_SESSION['usuarioNome']) {
-                                                                                        ?>
-
-
-                                                                                        <a href="#" onclick="
-                                                                                            javascript: if (confirm('Você realmente deseja excluir esta mensagem?\n-> <?php echo $mensagem->mensagem ?> <-'))location.href='pages/chat/excluirMensagem.php?idMensagem=<?php echo $mensagem->id; ?>'
-                                                                                            "
-                                                                                           class="pull-right btn-box-tool"><i
-                                                                                                class="fa fa-times"></i></a>
-
-                                                                                        <?php
-                                                                                    }
-                                                                                    ?>
-
-                                                            					</span>
-                                                            					<span class="description">
-																					<?php
-                                                                                    echo "Enviado em ";
-                                                                                    echo '' . $row['dataHora'];
-                                                                                    ?>
-																				</span>
-                                                                                        </div>
-                                                                                    </a></h3>
-                                                                                <div class="timeline-body">
-                                                                                    <div
-                                                                                        id="mensagens_<?php echo $mensagem->id; ?>"></div>
-                                                                                    <?php echo "  " . $mensagem->mensagem . ""; ?>
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ul>
-
-
-                                                                <?php } //FIM FOR - ?>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.box-body -->
-                                                </div>
-                                                <!-- /.box -->
-                                            </div></div></div>
-
-                                    <div id="status"></div>
-
-                                    <div class="box-comment" id="escrever">
-                                        <form class="form-horizontal" id="formulario"
-                                              action="pages/chat/gravaMensagem.php" method="post">
-                                            <div class="form-group margin-bottom-none">
-                                                <div class="col-sm-9">
-                                                    <input name="mensagem" type="text" id="mensagem"
-                                                           class="form-control input-sm"
-                                                           placeholder="Digite sua Mensagem">
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <button type="submit"
-                                                            class="btn btn-facebook pull-right btn-block btn-sm">
-                                                        Enviar Mensagem
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <br/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
             </section>
         </div>
 

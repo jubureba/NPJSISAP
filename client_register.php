@@ -56,8 +56,8 @@ protegePagina(); // Chama a função que protege a página
 
     <div class="content-wrapper">
         <section class="content-header">
-            <h1>CADASTRAR NOVO USUÁRIO
-                <small>Painel de Controle</small>
+            <h1>CADASTRO
+                <small>de CLIENTE</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -70,389 +70,415 @@ protegePagina(); // Chama a função que protege a página
 
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
             <form class="contact_form" method="post" name="form1" action="pages/coleta_dados/NPJ/cadastro.php">
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <div align="center"><h3 class="box-title">Identificação</h3></div>
-                        <hr>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        </div>
-                    </div><!-- /.box-header -->
-                    <div class="box-body">
-                        <!-- IDENTIFICAÇÃO PARTE 1 ---------------------------------------------------->
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
+
+
+                <!-- IDENTIFICAÇÃO PARTE 1 ---------------------------------------------------->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <div align="center"> <h3 class="box-title">Documentação</h3></div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+
+                                        <input class="form-control" required name="nome" type="text"
+                                               placeholder="Nome Completo">
+                                    </div>
+                                    <br/>
                                 </div>
 
-                                <input class="form-control" required name="nome" type="text"
-                                       placeholder="Nome Completo">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-male"></i>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-male"></i>
+                                        </div>
+                                        <input class="form-control" name="NomeMenor" type="text"
+                                               placeholder="Nome do Menor">
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" name="NomeMenor" type="text"
-                                       placeholder="Nome do Menor">
-                            </div>
-                            <br/>
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-users"></i>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-users"></i>
+                                        </div>
+                                        <input class="form-control" name="nomePai" type="text" placeholder="Nome do Pai">
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" name="nomePai" type="text" placeholder="Nome do Pai">
-                            </div>
-                            <br/>
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-users"></i>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-users"></i>
+                                        </div>
+                                        <input class="form-control" name="nomeMae" type="text" placeholder="Nome da Mãe">
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" name="nomeMae" type="text" placeholder="Nome da Mãe">
-                            </div>
-                            <br/>
-                        </div>
-                    </div>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div><!-- /.col -->
                 </div>
+
+
+
+
+
+
+
 
 
                 <!-- NATURALIDADE/NACIONALIDADE -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <div align="center"><h3 class="box-title">Naturalidade/Nacionalidade</h3></div>
-                        <hr>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        </div>
-                    </div><!-- /.box-header -->
-                    <div class="box-body">
-
-
-                        <div class="col-md-12">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-location-arrow"></i>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <div align="center"> <h3 class="box-title">Naturalidade/Nacionalidade</h3></div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-location-arrow"></i>
+                                        </div>
+                                        <input class="form-control" value="Brasil" name="pais-naturalidade"
+                                               type="text" placeholder="País">
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" value="Brasil" name="pais-naturalidade"
-                                       type="text" placeholder="País">
-                            </div>
-                            <br/>
-                        </div>
-                        <!-- ESTADO -->
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-check"></i>
+                                <!-- ESTADO -->
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <select class="form-control select2" name="estado-naturalidade" id="estado-naturalidade"
+                                                data-placeholder="Estado"></select>
+                                    </div>
+                                    <br/>
                                 </div>
-                                <select class="form-control select2" name="estado-naturalidade" id="estado-naturalidade"
-                                        data-placeholder="Estado"></select>
-                            </div>
-                            <br/>
-                        </div>
-                        <!--CIDADE-->
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-street-view"></i>
+                                <!--CIDADE-->
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-street-view"></i>
+                                        </div>
+                                        <select class="form-control select2" name="city-naturalidade" id="city-naturalidade"
+                                                data-placeholder="Cidade"></select>
+                                    </div>
+                                    <br/>
                                 </div>
-                                <select class="form-control select2" name="city-naturalidade" id="city-naturalidade"
-                                        data-placeholder="Cidade"></select>
-                            </div>
-                            <br/>
-                        </div>
-                    </div>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div><!-- /.col -->
                 </div>
 
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <div align="center"><h3 class="box-title">Endereço Residencial</h3></div>
-                        <hr>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        </div>
-                    </div><!-- /.box-header -->
-                    <div class="box-body">
 
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
+                <!--ENDEREÇO RESIDENCIAL-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <div align="center"> <h3 class="box-title">Endereço Residencial</h3></div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <input class="form-control" name="cep-residencial" id="cep-residencial" type="text"
+                                               placeholder="CEP" size="10" maxlength="9" onblur="pesquisacep(this.value)">
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" name="cep-residencial" id="cep-residencial" type="text"
-                                       placeholder="CEP" size="10" maxlength="9" onblur="pesquisacep(this.value)">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-location-arrow"></i>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-location-arrow"></i>
+                                        </div>
+                                        <input class="form-control" value="" id="pais-residencial" name="pais-residencial"
+                                               type="text" placeholder="País">
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" value="" id="pais-residencial" name="pais-residencial"
-                                       type="text" placeholder="País">
-                            </div>
-                            <br/>
-                        </div>
 
-                        <script type="text/javascript" src="js/form-cep-consult.js"></script>
-                        <!-- ESTADO -->
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-check"></i>
+                                <script type="text/javascript" src="js/form-cep-consult.js"></script>
+                                <!-- ESTADO -->
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <select class="form-control select2" name="estado-residencial"
+                                                id="estado-residencial"></select>
+                                    </div>
+                                    <br/>
                                 </div>
-                                <select class="form-control select2" name="estado-residencial"
-                                        id="estado-residencial"></select>
-                            </div>
-                            <br/>
-                        </div>
-                        <!--CIDADE-->
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-street-view"></i>
-                                </div>
-                                <select class="form-control select2" name="city-residencial" id="city-residencial"
-                                        data-placeholder="Cidade"></select>
-                            </div>
-                            <br/>
+                                <!--CIDADE-->
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-street-view"></i>
+                                        </div>
+                                        <select class="form-control select2" name="city-residencial" id="city-residencial"
+                                                data-placeholder="Cidade"></select>
+                                    </div>
+                                    <br/>
 
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
                                 </div>
-                                <input class="form-control" name="end-residencial-bairro" id="end-residencial-bairro"
-                                       type="text"
-                                       placeholder="Endereço Residencial">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="end-residencial-rua" id="end-residencial-rua"
-                                       type="text"
-                                       placeholder="Endereço Residencial">
-                            </div>
-                            <br/>
-                        </div>
 
-                    </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <input class="form-control" name="end-residencial-bairro" id="end-residencial-bairro"
+                                               type="text"
+                                               placeholder="Endereço Residencial">
+                                    </div>
+                                    <br/>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <input class="form-control" name="end-residencial-rua" id="end-residencial-rua"
+                                               type="text"
+                                               placeholder="Endereço Residencial">
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div><!-- /.col -->
                 </div>
+
+
+
+
+
 
                 <!-- DADOS PESSOAIS -->
-                <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <div align="center"> <h3 class="box-title">Informações Pessoais</h3></div>
-                            <hr>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                            </div>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" placeholder="Data de Nascimento" type="date" id="campoData2"
-                                       required="required" maxlength="10" name="date"
-                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="1910-01-01" max="2020-02-18"/>
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <select class="form-control select2" name="escolaridade" data-placeholder="Escolaridade" id="escolaridade">
-                                    <option selected disabled="disabled">Escolaridade</option>
-                                    <option value="infantil">Educação Infantil</option>
-                                    <option value="fundamental">Ensino Fundamental</option>
-                                    <option value="edJovensAdultos">Educação de Jovens e Adultos</option>
-                                    <option value="tecnico">Ensino Técnico | Pós-Médio</option>
-                                    <option value="superior">Ensino Superior | Tecnológico | Licenciatura | Bacharelado</option>
-                                    <option value="posgraduacao">Pós-Graduação | Especialização</option>
-                                    <option value="mestrado">Mestrado</option>
-                                    <option value="doutorado">Doutorado</option>
-                                    <option value="posdoutorado">Pós-Doutorado</option>
-                                </select>
-                            </div>
-                            <br/>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <div align="center"> <h3 class="box-title">Informações Pessoais</h3></div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <input class="form-control" placeholder="Data de Nascimento" type="date" id="campoData2"
+                                               required="required" maxlength="10" name="date"
+                                               pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="1910-01-01" max="2020-02-18"/>
+                                    </div>
+                                    <br/>
                                 </div>
 
-                                <select class="form-control select2" name="estado-civil" data-placeholder="Estado Civil" id="estado-civil">
-                                    <option selected disabled="disabled">Estado Civil</option>
-                                    <option value="solteiro">Solteiro(a)</option>
-                                    <option value="casado">Casado(a)</option>
-                                    <option value="divorciado">Divorciado(a)</option>
-                                    <option value="viuvo">Viúvo(a)</option>
-                                    <option value="separado">Separado(a)</option>
-                                    <option value="companheiro">Companheiro(a)</option>
-
-                                </select>
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <select class="form-control select2" name="escolaridade" data-placeholder="Escolaridade" id="escolaridade">
+                                            <option selected disabled="disabled">Escolaridade</option>
+                                            <option value="infantil">Educação Infantil</option>
+                                            <option value="fundamental">Ensino Fundamental</option>
+                                            <option value="edJovensAdultos">Educação de Jovens e Adultos</option>
+                                            <option value="tecnico">Ensino Técnico | Pós-Médio</option>
+                                            <option value="superior">Ensino Superior | Tecnológico | Licenciatura | Bacharelado</option>
+                                            <option value="posgraduacao">Pós-Graduação | Especialização</option>
+                                            <option value="mestrado">Mestrado</option>
+                                            <option value="doutorado">Doutorado</option>
+                                            <option value="posdoutorado">Pós-Doutorado</option>
+                                        </select>
+                                    </div>
+                                    <br/>
                                 </div>
-                                <input class="form-control" type="tel" required name="telefone" id="tel-residencial"
-                                       placeholder="Telefone Residencial"
-                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
-                            </div>
-                            <br/>
-                        </div>
-                    </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+
+                                        <select class="form-control select2" name="estado-civil" data-placeholder="Estado Civil" id="estado-civil">
+                                            <option selected disabled="disabled">Estado Civil</option>
+                                            <option value="solteiro">Solteiro(a)</option>
+                                            <option value="casado">Casado(a)</option>
+                                            <option value="divorciado">Divorciado(a)</option>
+                                            <option value="viuvo">Viúvo(a)</option>
+                                            <option value="separado">Separado(a)</option>
+                                            <option value="companheiro">Companheiro(a)</option>
+
+                                        </select>
+                                    </div>
+                                    <br/>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <input class="form-control" type="tel" required name="telefone" id="tel-residencial"
+                                               placeholder="Telefone Residencial"
+                                               pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div><!-- /.col -->
                 </div>
 
                 <!-- Informações do Trabalho -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <div align="center"> <h3 class="box-title">Endereço de Trabalho</h3></div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="box-body">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" required name="Profissao" type="text"
+                                                   placeholder="Profissão">
+                                        </div>
+                                        <br/>
+                                    </div>
 
-                        <div align="center"><h3 class="box-title">Endereço de Trabalho</h3></div>
-                        <hr>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" id="dinheiro" name="Remuneracao" type="text"
+                                                   placeholder="Remuneração">
+                                        </div>
+                                        <br/>
+                                    </div>
 
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        </div>
-                    </div><!-- /.box-header -->
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" required name="EnderecoTrabalho" type="text"
+                                                   placeholder="Endereço do Trabalho">
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" name="cidadeTrabalho" type="text"
+                                                   placeholder="Cidade do Trabalho">
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
 
+                                            <input class="form-control" name="telefoneTrabalho" type="tel" id="telTrab"
+                                                   placeholder="Telefone do Trabalho"
+                                                   pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
 
-                    <div class="box-body">
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" name="situacaoHabitacional" type="text"
+                                                   placeholder="Situação Habitacional">
+                                        </div>
+                                        <br/>
+                                    </div>
                                 </div>
-                                <input class="form-control" required name="Profissao" type="text"
-                                       placeholder="Profissão">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" id="dinheiro" name="Remuneracao" type="text"
-                                       placeholder="Remuneração">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="EnderecoTrabalho" type="text"
-                                       placeholder="Endereço do Trabalho">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="cidadeTrabalho" type="text"
-                                       placeholder="Cidade do Trabalho">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-
-                                <input class="form-control" name="telefoneTrabalho" type="tel" id="telTrab"
-                                       placeholder="Telefone do Trabalho"
-                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
-
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="situacaoHabitacional" type="text"
-                                       placeholder="Situação Habitacional">
-                            </div>
-                            <br/>
-                        </div>
-
-                    </div>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div><!-- /.col -->
                 </div>
+
             </form>
 
 
             <!-- UPLOAD DE ARQUIVOS ---------------------------------------------------->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="box box-primary">
+                    <div class="box box-primary box-solid">
                         <div class="box-header with-border">
                             <div align="center"> <h3 class="box-title">Documentação</h3></div>
-                            <hr>
                             <div class="box-tools pull-right">
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                            </div>
+                            </div><!-- /.box-tools -->
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                        <?php include("pages/cadastro/pessoa/table_upload.php"); ?>
-                        </div>
+                            <?php include("pages/cadastro/pessoa/table_upload.php"); ?>
+                        </div><!-- /.box-body -->
                     </div><!-- /.box -->
-                </div><!-- /.col (left) -->
-            </div><!-- /.col (right) -->
+                </div><!-- /.col -->
+            </div>
 
-
-
-            <div class="box box-primary">
-                <div class="box-header">
-                        <span class="input-group-btn">
+            <!-- BOTOES -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Botões</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <span class="input-group-btn">
                             <button type="submit" onclick="document.form1.submit()" name="Submit"
                                     class="btn btn-primary">Cadastrar
                             </button>
                         </span>
-
-                    <br/>
-                    <br/>
-                    redireciona para pagina com os dados do usuario com opcao de download dos documentos
-                    </br>
-
-                </div>
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
             </div>
 
 

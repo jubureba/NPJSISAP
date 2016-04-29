@@ -31,7 +31,14 @@ function paginador(cont){
 	}else{
 		$('#paginador').html('<li></li>');
 		if(pagina!=1){
-			$('#paginador').append('<li><a href="#" onclick="getitens('+(pagina-1)+', '+numitens+')">«</a></li>')
+			document.getElementById("loading").setAttribute("class", "overlay");
+			document.getElementById("loading").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+			setTimeout(function() {
+				$('#paginador').append('<li><a href="#" onclick="getitens('+(pagina-1)+', '+numitens+')">«</a></li>');
+				document.getElementById("loading").setAttribute("class", "");
+				document.getElementById("loading").innerHTML="<i class=''></i>";
+			}, 500);
+
 		}
 		var qtdpaginas=Math.ceil(cont/numitens)
 		for(var i=1;i<=qtdpaginas;i++){
@@ -42,7 +49,14 @@ function paginador(cont){
 				}
 		}
 		if(pagina!=qtdpaginas){
-			$('#paginador').append('<li><a href="#" onclick="getitens('+(pagina+1)+', '+numitens+')">»</a></li>')
+			document.getElementById("loading").setAttribute("class", "overlay");
+			document.getElementById("loading").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+			setTimeout(function() {
+				$('#paginador').append('<li><a href="#" onclick="getitens('+(pagina+1)+', '+numitens+')">»</a></li>');
+				document.getElementById("loading").setAttribute("class", "");
+				document.getElementById("loading").innerHTML="<i class=''></i>";
+			}, 500);
+
 		}
 	}
 }

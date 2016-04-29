@@ -10,7 +10,7 @@ $(document).ready(function (e) {
             cache: false,
             processData: false,
             success: function (data) {
-                $("#targetLayer7").html(data);
+                $("#targetLayer").html(data);
             },
             error: function () {
             }
