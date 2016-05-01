@@ -42,7 +42,7 @@ if($tipo=='listagem'){
 
         ?>
 
-        <tr>
+        <tr id="dados">
             <td><?php echo "" . $resultado['idAtendimento_Defensoria'] ?></td>
             <td><?php echo "" . $assistido['nomeAssistidoDefensoria'] ?></td>
             <td><?php echo "" . $requerido['nomeRequerido'] ?></td>

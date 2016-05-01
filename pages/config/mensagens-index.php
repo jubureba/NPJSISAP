@@ -1,3 +1,4 @@
+
 <div class="row">
     <div class="col-md-12">
         <div class="box box-primary box-solid">
@@ -15,14 +16,18 @@
                                 <div class="post">
                                     <div class="box box-solid">
                                         <div style="overflow: auto; height: 420px" id="msgs">
-                                           
+
+
+
                                         </div>
                                     </div>
+
                                 </div>
                                 <!-- /.box-body -->
                             </div>
                             <!-- /.box -->
                         </div>
+
                     </div>
                 </div>
                 <div id="status"></div>

@@ -11,6 +11,7 @@ function getmensagens(){
 
             document.getElementById("loading-msg").setAttribute("class", "overlay");
             document.getElementById("loading-msg").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+
             setTimeout(function() {
                 $('#msgs').html(retorno);
                 document.getElementById("loading-msg").setAttribute("class", "");
@@ -20,6 +21,8 @@ function getmensagens(){
         }
     })
 }
+
+
 jQuery(document).ready(function(){
     jQuery('#formulario').submit(function(){
         var dados = jQuery( this ).serialize();
@@ -39,6 +42,9 @@ jQuery(document).ready(function(){
                     document.getElementById("loading-msg").innerHTML="<i class=''></i>";
                     document.getElementById("mensagem").value="";
                     document.getElementById("button-enviando").innerHTML="Enviar Mensagem";
+
+
+
                 }, 500);
             }
         });

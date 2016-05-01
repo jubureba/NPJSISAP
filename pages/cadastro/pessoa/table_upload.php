@@ -30,7 +30,7 @@ $imgUpON = "dist/img/upload-icon.ico";
 
 
 <div class="box-body">
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="example1">
         <tbody>
         <tr>
             <th style="width: 350px">Documento</th>

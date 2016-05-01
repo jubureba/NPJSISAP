@@ -7,7 +7,6 @@ session_start();
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,21 +14,26 @@ protegePagina(); // Chama a função que protege a página
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>NPJ | Tela Principal</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
     <link rel="shortcut icon" href="imagens/logoSisAp.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/ionicons-2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
     <link rel="stylesheet" href="plugins/morris/morris.css">
     <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <link rel="stylesheet" href="plugins/iCheck/all.css">
     <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css">
+
     <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
     <link rel="stylesheet" href="plugins/select2/select2.min.css">
     <link rel="stylesheet" href="dist/css/form_Style.css">
@@ -41,6 +45,7 @@ protegePagina(); // Chama a função que protege a página
     <script src="js/respond.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+
 
     <script type="text/javascript" src="js/paginador.js"></script>
     <script type="text/javascript" src="js/mensagens.js"></script>
@@ -160,28 +165,38 @@ protegePagina(); // Chama a função que protege a página
     <div id="principal">
         <div class="content-wrapper" >
             <section class="content">
+
+                <!--***************************************************
+                *******************************************************
+                *******************************************************
+                ***********************TABELA**************************
+                *******************************************************
+                *******************************************************
+                *******************************************************
+                -->
+                <?php include("pages/config/tab-processos-index.php"); ?>
+
+               
+
+                <!--***************************************************
+                *******************************************************
+                *******************************************************
+                ***********************MENSAGENS***********************
+                *******************************************************
+                *******************************************************
+                *******************************************************
+                 -->
+
+
                 
-                        <!--***************************************************
-                        *******************************************************
-                        *******************************************************
-                        ***********************TABELA**************************
-                        *******************************************************
-                        *******************************************************
-                        *******************************************************
-                        -->
-                        <?php include("pages/config/tab-processos-index.php"); ?>
-                        <!--***************************************************
-                        *******************************************************
-                        *******************************************************
-                        ***********************MENSAGENS***********************
-                        *******************************************************
-                        *******************************************************
-                        *******************************************************
-                         -->
-                        <?php include("pages/config/mensagens-index.php"); ?>
+
+                <?php include("pages/config/mensagens-index.php"); ?>
+
+
 
             </section>
         </div>
+
 
         <!-- /.content -->
 
@@ -438,6 +453,7 @@ protegePagina(); // Chama a função que protege a página
 <script src="plugins/fastclick/fastclick.min.js"></script>
 <script src="dist/js/app.min.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
+<script src="js/pesquisar-tabela.js"></script>
 <script src="dist/js/demo.js"></script>
 <script language='JavaScript'>
     imagenes = new Array(2)
@@ -459,7 +475,23 @@ protegePagina(); // Chama a função que protege a página
 <script type="text/javascript">
     $("#txttelefone").mask("(00) 0000-00009");
 </script>
+<script>
+    window.onload = function(){
+        $(".clk").on("click", function(){
+            var id = $(this).attr("data-id");
+            //alert(id);
+            //ativa popup modal
+            $("#modal").show();
+            $("#modal #delmsg").attr("data-id", id);
 
+            //agora que ativou o popup modal...
+            $("#delmsg").on("click", function(){
+                window.location.href = "deletamensagem.php?idmsg="+id+"";
+            });
+            return false;
+        });
+    }
+</script>
 
 
 </body>
