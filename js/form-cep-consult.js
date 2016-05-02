@@ -10,6 +10,9 @@ function limpa_formulário_cep() {
 function meu_callback(conteudo) {
     if (!("erro" in conteudo)) {
         //Atualiza os campos com os valores.
+
+
+
         document.getElementById('end-residencial-rua').value=(conteudo.logradouro);
         document.getElementById('end-residencial-bairro').value=(conteudo.bairro);
         document.getElementById('city-residencial').value=(conteudo.localidade);
@@ -39,23 +42,32 @@ function pesquisacep(valor) {
         if(validacep.test(cep)) {
 
             //Preenche os campos com "..." enquanto consulta webservice.
-            document.getElementById('end-residencial-rua').value="...";
-            document.getElementById('end-residencial-bairro').value="...";
-            document.getElementById('city-residencial').value="...";
-            document.getElementById('estado-residencial').value="...";
+            document.getElementById('end-residencial-rua').value="pesquisando...";
+            document.getElementById('end-residencial-bairro').value="pesquisando...";
+            document.getElementById('city-residencial').value="pesquisando..";
+            document.getElementById('estado-residencial').value="pesquisando..";
 
-            //Cria um elemento javascript.
-            var script = document.createElement('script');
-            //Sincroniza com o callback.
-            script.src = '//viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+            document.getElementById("loading").setAttribute("class", "overlay");
+            document.getElementById("loading").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+            setTimeout(function() {
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+                //Sincroniza com o callback.
+                script.src = '//viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
 
-            //Insere script no documento e carrega o conteúdo.
-            document.body.appendChild(script);
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+                document.getElementById("loading").setAttribute("class", "");
+                document.getElementById("loading").innerHTML="<i class=''></i>";
+            }, 1500);
+
+
 
         } //end if.
         else {
             //cep é inválido.
             limpa_formulário_cep();
+            document.getElementById('cep-residencial').placeholder=("CEP NÃO ENCONTRADO - TENTE NOVAMENTE");
             alert("Formato de CEP inválido.");
         }
     } //end if.

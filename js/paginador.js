@@ -1,6 +1,7 @@
 
 var numitens=5;//quantidade de itens a ser mostrado por página
 var pagina=1;	//página inicial - DEIXE SEMPRE 1
+
 $(document).ready(function(){
 	getitens(pagina,numitens); //Chamando função que lista os itens
 })

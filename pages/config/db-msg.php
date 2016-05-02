@@ -1,7 +1,24 @@
 <script>
     $('[data-toggle="popover"]').popover(
-        {html: true, title: "Excluir Mensagem", content: function(){return $('#ex02conteudo').html(); },animation: true, placement: "bottom"}
+
+        {html: true , content: function(){return $('#ex02conteudo').html(); },animation: true, placement: "bottom"}
+
+
     );
+
+
+    function apagarMsg(id) {
+        document.getElementById("loading-msg").setAttribute("class", "overlay");
+        document.getElementById("loading-msg").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+        setTimeout(function() {
+            $('#msgs').load("pages/chat/excluirMensagem.php?idMensagem="+id);
+            $('#msgs').load('pages/config/db-msg.php');
+            document.getElementById("loading-msg").setAttribute("class", "");
+            document.getElementById("loading-msg").innerHTML="<i class=''></i>";
+            document.getElementById("mensagem").value="";
+        }, 500);
+
+    }
 </script>
     <!-- BARRA DE ROLAGEM -->
     <!-- VAI CRIAR UM CAMPO DE TEXTO NOVO PARA CADA MENSAGEM NO BANCO DE DADOS-->
@@ -34,7 +51,7 @@
                                         ?>
 
                                         <div id="ex02conteudo" style="display: none">
-                                           <a href="#" onclick="javascript: if (confirm('Você realmente deseja excluir esta mensagem?\n-> <?php echo $mensagem->mensagem ?> <-'))location.href='pages/chat/excluirMensagem.php?idMensagem=<?php echo $mensagem->id; ?>'">Excluir</a>
+                                           <a href="#" id="<?php echo $mensagem->id; ?>" onclick="apagarMsg(this.id);">Excluir</a>
                                         </div>
 
                                         <a href="#" class="pull-right btn-box-tool" role="button" data-toggle="popover" data-trigger="focus" id="popover-dismiss" ><i class="fa fa-times"></i></a>
@@ -66,6 +83,6 @@
                     </div>
                 </div>
             </li>
-
+            
         </ul>
     <?php } //FIM FOR - ?>

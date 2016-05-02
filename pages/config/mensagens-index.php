@@ -1,6 +1,6 @@
 
-<div class="row">
-    <div class="col-md-12">
+
+    <div class="col-md-6" >
         <div class="box box-primary box-solid">
             <div class="box-header with-border">
                 <div align="center"> <h3 class="box-title">Central de Mensagens</h3></div>
@@ -18,10 +18,8 @@
                                         <div style="overflow: auto; height: 420px" id="msgs">
 
 
-
                                         </div>
                                     </div>
-
                                 </div>
                                 <!-- /.box-body -->
                             </div>
@@ -54,9 +52,5 @@
             <div id="loading-msg"></div>
         </div><!-- /.box -->
     </div><!-- /.col -->
-</div>
-
-
-
 
 

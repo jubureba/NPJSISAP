@@ -48,136 +48,139 @@ protegePagina(); // Chama a função que protege a página
     <?php include('pages/Menu/menuLateral.php'); ?>
 
 
+
+
     <div class="content-wrapper">
-                    <section class="content-header">
-                        <h1>CADASTRAR NOVO USUÁRIO
-                            <small>Painel de Controle</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                            <li class="active">Tela de Cadastro</li>
-                        </ol>
-                    </section>
 
                     <!-- Main content -->
                     <section class="content">
                         <!-- Small boxes (Stat box) -->
-                        <div class="box box-primary">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Preencha todos os campos e clique no 'Cadastrar'</h3>
-                                <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span>
-                                <hr>
-                                <!--###########  FORMULARIO DE CADASTRO -->
-                    <div class="col-md-12">
-                        <div class="form-group">
                             <form class="contact_form"  method="post" action="pages/cadastro/usuario/cadastrando.php">
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-user"></i>
-                                    </div>
-                                    <input class="form-control" required name="nome" type="text" placeholder="Nome">
-                                </div><br/>
 
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-user-plus"></i>
-                                    </div>
-                                    <input class="form-control" required name="login" type="text" placeholder="Usuário">
-                                </div><br/>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="box box-primary box-solid">
+                                            <div class="box-header with-border">
+                                                <div align="center"> <h3 class="box-title">Cadastro</h3></div>
 
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-envelope"></i>
-                                    </div>
-                                    <input class="form-control" required name="email" type="email" placeholder="E-Mail">
-                                </div><br/>
+                                                <div class="box-tools pull-right">
+                                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                                </div><!-- /.box-tools -->
+                                            </div><!-- /.box-header -->
+                                            <span class="required_notification"><img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span><br/>
+                                            <div class="box-body">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                    <input class="form-control" required name="nome" type="text" placeholder="Nome">
+                                                </div><br/>
 
-                                <!-- phone mask -->
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <input class="form-control" type="tel"  required name="telefone" id="txttelefone" placeholder="Telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
-                                </div><br/><!-- /.input group -->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user-plus"></i>
+                                                    </div>
+                                                    <input class="form-control" required name="login" type="text" placeholder="Usuário">
+                                                </div><br/>
 
-                                <!-- IMAGEM -->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </div>
+                                                    <input class="form-control" required name="email" type="email" placeholder="E-Mail">
+                                                </div><br/>
 
-                                <div class="input-group input-group-sm">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </div>
-                                        <input class="form-control" name="foto" type="file" id="arquivo" />
-                                    </div>
+                                                <!-- phone mask -->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-phone"></i>
+                                                    </div>
+                                                    <input class="form-control" type="tel"  required name="telefone" id="txttelefone" placeholder="Telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"/>
+                                                </div><br/><!-- /.input group -->
+
+                                                <!-- IMAGEM -->
+
+                                                <div class="input-group input-group-sm">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-image"></i>
+                                                        </div>
+                                                        <input class="form-control" name="foto" type="file" id="arquivo" />
+                                                    </div>
                                     <span class="input-group-btn">
                                         <button type="button" onclick="submitForm();" class="btn btn-info btn-flat">Enviar Imagem</button>
                                     </span>
-                                </div>
+                                                </div>
 
-                                <output id="result"></output>
-                                <!-- FIM IMAGEM --><br/>
+                                                <output id="result"></output>
+                                                <!-- FIM IMAGEM --><br/>
 
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-lock"></i>
-                                    </div>
-                                    <input class="form-control" required name="senha" type="password" placeholder="Senha">
-                                </div><br/>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-lock"></i>
+                                                    </div>
+                                                    <input class="form-control" required name="senha" type="password" placeholder="Senha">
+                                                </div><br/>
 
-                                <!--turma-->
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <input class="form-control" required name="turma" type="text" placeholder="turma">
-                                </div><br/>
+                                                <!--turma-->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-check"></i>
+                                                    </div>
+                                                    <input class="form-control" required name="turma" type="text" placeholder="turma">
+                                                </div><br/>
 
-                                <!--semestre-->
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <select class="form-control select2" title="semestre" name="semestre" style="width: 100%;">
-                                        <option selected="selected" disabled="disabled">Semestre</option>
-                                        <option>Primeiro</option><option>Segundo</option><option>Terceiro</option><option>Quarto</option><option>Quinto</option>
-                                        <option>Sexto</option><option>Setimo</option><option>Oitavo</option><option>Nono</option><option>Decimo</option>
-                                    </select>
-                                </div><br/>
+                                                <!--semestre-->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-check"></i>
+                                                    </div>
+                                                    <select class="form-control select2" title="semestre" name="semestre" style="width: 100%;">
+                                                        <option selected="selected" disabled="disabled">Semestre</option>
+                                                        <option>Primeiro</option><option>Segundo</option><option>Terceiro</option><option>Quarto</option><option>Quinto</option>
+                                                        <option>Sexto</option><option>Setimo</option><option>Oitavo</option><option>Nono</option><option>Decimo</option>
+                                                    </select>
+                                                </div><br/>
 
-                                <!--Turno-->
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <select name="turno" class="form-control select2" title="turno" style="width: 100%;">
-                                        <option selected="selected" disabled="disabled">Turno</option>
-                                        <option>Matutino</option>
-                                        <option>Vespertino</option>
-                                        <option>Noturno</option>
-                                    </select>
-                                </div><br/>
+                                                <!--Turno-->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-check"></i>
+                                                    </div>
+                                                    <select name="turno" class="form-control select2" title="turno" style="width: 100%;">
+                                                        <option selected="selected" disabled="disabled">Turno</option>
+                                                        <option>Matutino</option>
+                                                        <option>Vespertino</option>
+                                                        <option>Noturno</option>
+                                                    </select>
+                                                </div><br/>
 
-                                <!--permissao-->
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-user"></i>
-                                    </div>
-                                    <select class="form-control select2" name="permissao" title="permissao" style="width: 100%;">
-                                        <option selected="selected" disabled="disabled">Permissão</option>
-                                        <option>Aluno</option>
-                                        <option>Professor</option>
-                                        <option>Secretaria</option>
-                                        <option>Suporte/Desenvolvedor</option>
-                                    </select>
-                                </div><br/>
+                                                <!--permissao-->
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                    <select class="form-control select2" name="permissao" title="permissao" style="width: 100%;">
+                                                        <option selected="selected" disabled="disabled">Permissão</option>
+                                                        <option>Aluno</option>
+                                                        <option>Professor</option>
+                                                        <option>Secretaria</option>
+                                                        <option>Suporte/Desenvolvedor</option>
+                                                    </select>
+                                                </div><br/>
 
                                 <span class="input-group-btn">
                                     <button type="submit" name="submit" class="btn btn-primary">Cadastrar</button>
                                 </span>
                             </form>
-                        </div>
-                        <!-- ########### FIM FORMULARIO DE CADASTRO -->
-                    </div>
+                                            </div><!-- /.box-body -->
+                                        </div><!-- /.box -->
+
+
+
+
+
+
                 </div>
 
 

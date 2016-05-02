@@ -56,13 +56,12 @@ protegePagina(); // Chama a função que protege a página
 
     <div class="content-wrapper">
         <section class="content-header">
-            <h1>CADASTRO
-                <small>de CLIENTE</small>
-            </h1>
+
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Tela de Cadastro</li>
             </ol>
+            <br/>
         </section>
 
         <!-- Main content -->
@@ -221,6 +220,7 @@ protegePagina(); // Chama a função que protege a página
 
                                 <script type="text/javascript" src="js/form-cep-consult.js"></script>
                                 <!-- ESTADO -->
+
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <div class="input-group-addon">
@@ -231,6 +231,7 @@ protegePagina(); // Chama a função que protege a página
                                     </div>
                                     <br/>
                                 </div>
+
                                 <!--CIDADE-->
                                 <div class="col-md-6">
                                     <div class="input-group">
@@ -241,9 +242,7 @@ protegePagina(); // Chama a função que protege a página
                                                 data-placeholder="Cidade"></select>
                                     </div>
                                     <br/>
-
                                 </div>
-
                                 <div class="col-md-6">
                                     <div class="input-group">
                                         <div class="input-group-addon">
@@ -266,9 +265,10 @@ protegePagina(); // Chama a função que protege a página
                                     </div>
                                     <br/>
                                 </div>
-                            </div><!-- /.box-body -->
-                        </div><!-- /.box -->
-                    </div><!-- /.col -->
+                            </div>
+                            <div id="loading"></div>
+                        </div>
+                    </div>
                 </div>
 
 
