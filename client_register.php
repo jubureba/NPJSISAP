@@ -76,7 +76,7 @@ protegePagina(); // Chama a função que protege a página
                     <div class="col-md-12">
                         <div class="box box-primary box-solid">
                             <div class="box-header with-border">
-                                <div align="center"> <h3 class="box-title">Documentação</h3></div>
+                                <div align="center"> <h3 class="box-title">Identificação</h3></div>
                                 <div class="box-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                 </div><!-- /.box-tools -->
@@ -218,7 +218,7 @@ protegePagina(); // Chama a função que protege a página
                                     <br/>
                                 </div>
 
-                                <script type="text/javascript" src="js/form-cep-consult.js"></script>
+                                <script type="text/javascript" src="js/cep-search-residencial.js"></script>
                                 <!-- ESTADO -->
 
                                 <div class="col-md-6">
@@ -265,13 +265,12 @@ protegePagina(); // Chama a função que protege a página
                                     </div>
                                     <br/>
                                 </div>
+
                             </div>
                             <div id="loading"></div>
                         </div>
                     </div>
                 </div>
-
-
 
 
 
@@ -396,8 +395,44 @@ protegePagina(); // Chama a função que protege a página
                                             <div class="input-group-addon">
                                                 <i class="fa fa-user"></i>
                                             </div>
-                                            <input class="form-control" required name="EnderecoTrabalho" type="text"
-                                                   placeholder="Endereço do Trabalho">
+                                            <input class="form-control" name="cep-work" id="cep-work" type="text"
+                                                   placeholder="CEP" size="10" maxlength="9" onblur="pesquisacep_work(this.value)">
+                                        </div>
+                                        <br/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-location-arrow"></i>
+                                            </div>
+                                            <input class="form-control" value="" id="pais-work" name="pais-work"
+                                                   type="text" placeholder="País">
+                                        </div>
+                                        <br/>
+                                    </div>
+
+                                    <script type="text/javascript" src="js/cep-search-work.js"></script>
+                                    <!-- ESTADO -->
+
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                            <select class="form-control select2" name="estado-work"
+                                                    id="estado-work"></select>
+                                        </div>
+                                        <br/>
+                                    </div>
+
+                                    <!--CIDADE-->
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-street-view"></i>
+                                            </div>
+                                            <select class="form-control select2" name="city-work" id="city-work"
+                                                    data-placeholder="Cidade"></select>
                                         </div>
                                         <br/>
                                     </div>
@@ -406,11 +441,24 @@ protegePagina(); // Chama a função que protege a página
                                             <div class="input-group-addon">
                                                 <i class="fa fa-user"></i>
                                             </div>
-                                            <input class="form-control" name="cidadeTrabalho" type="text"
-                                                   placeholder="Cidade do Trabalho">
+                                            <input class="form-control" name="end-work-bairro" id="end-work-bairro"
+                                                   type="text"
+                                                   placeholder="Endereço Residencial">
                                         </div>
                                         <br/>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" name="end-work-rua" id="end-work-rua"
+                                                   type="text"
+                                                   placeholder="Endereço Residencial">
+                                        </div>
+                                        <br/>
+                                    </div>
+
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <div class="input-group-addon">
@@ -435,7 +483,9 @@ protegePagina(); // Chama a função que protege a página
                                         <br/>
                                     </div>
                                 </div>
+
                             </div><!-- /.box-body -->
+                            <div id="loading-work"></div>
                         </div><!-- /.box -->
                     </div><!-- /.col -->
                 </div>
@@ -665,6 +715,7 @@ protegePagina(); // Chama a função que protege a página
 <script type="text/javascript">
     $("#txttelefone").mask("(00) 0000-00009");
     $("#cep-residencial").mask("00000-000");
+    $("#cep-work").mask("00000-000");
     $("#valor-cpf").mask("000.000.000-00");
     $("#tel-residencial").mask("(00)0000-00009");
 </script>
@@ -688,6 +739,14 @@ protegePagina(); // Chama a função que protege a página
         estadoVal: 'PA',
         cidadeVal: 'Castanhal'
     });
+    new dgCidadesEstados({
+        cidade: document.getElementById('city-work'),
+        estado: document.getElementById('estado-work'),
+        estadoVal: 'PA',
+        cidadeVal: 'Castanhal'
+    });
+
+
 
 </script>
 

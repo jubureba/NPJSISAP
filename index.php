@@ -48,7 +48,11 @@ protegePagina(); // Chama a função que protege a página
 
 
     <script type="text/javascript" src="js/paginador.js"></script>
+
     <script type="text/javascript" src="js/mensagens.js"></script>
+    <script type="text/javascript" src="js/delete-msg.js"></script>
+    <script type="text/javascript" src="js/popover.js"></script>
+
 
     <script type="text/javascript" language="javascript" src="plugins/jQuery/jquery-1.3.2.js"></script>
     <!--  <script type="text/javascript">
@@ -192,7 +196,7 @@ protegePagina(); // Chama a função que protege a página
                 <?php include("pages/config/tab-new-processos.php"); ?>
 
                 </div>
-                
+
             </section>
         </div>
 

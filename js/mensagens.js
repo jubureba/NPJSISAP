@@ -43,8 +43,6 @@ jQuery(document).ready(function(){
                     document.getElementById("mensagem").value="";
                     document.getElementById("button-enviando").innerHTML="Enviar Mensagem";
 
-
-
                 }, 500);
             }
         });

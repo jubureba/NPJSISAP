@@ -7,7 +7,4 @@ $idMensagem = $_GET["idMensagem"];
 $query = mysql_query("DELETE FROM mensagens WHERE id = $idMensagem");
 
 
-
-
-
 ?>
