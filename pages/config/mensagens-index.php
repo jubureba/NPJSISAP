@@ -15,7 +15,7 @@
                             <div class="timeline-body">
                                 <div class="post">
                                     <div class="box box-solid">
-                                        <div style="overflow: auto; height: 420px" id="msgs">
+                                        <div style="overflow: auto; height: 568px" id="msgs">
 
 
                                         </div>

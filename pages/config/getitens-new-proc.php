@@ -11,6 +11,7 @@ if($tipo=='listagem'){
     ?>
     <tbody>
     <tr>
+        <th></th>
         <th>Nome</th>
         <th>Editar</th>
     </tr>
@@ -26,8 +27,9 @@ if($tipo=='listagem'){
         ?>
 
         <tr id="dados1">
+            <td width="16px" align="center"><img src="dist/icons/png/512/new.gif"/> </td>
             <td><?php echo "" . $resultado['nome'] ?></td>
-            <td width="16px" align="center"><img src="dist/icons/png/512/edit_property.png" height="12px" width="16px" </td>
+            <td width="16px" align="center"><img src="dist/icons/png/512/edit_property.png" height="16px" width="16px"/></td>
         </tr>
 
         </tbody>

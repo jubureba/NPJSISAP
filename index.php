@@ -194,6 +194,7 @@ protegePagina(); // Chama a função que protege a página
 
                 <?php include("pages/config/mensagens-index.php"); ?>
                 <?php include("pages/config/tab-new-processos.php"); ?>
+                <?php include("pages/config/slider.php"); ?>
 
                 </div>
 
