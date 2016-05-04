@@ -27,12 +27,14 @@ if($tipo=='listagem'){
     while ($resultado = mysql_fetch_array($stmt)) {
         //PEGA O NOME DO ASSISTIDO NA TABELA ASSISTIDODEFENSORIA, COM O ID
         $assistido = $resultado['Assistido_Defensoria_idAssistidoDefensoria'];
-        $query = "SELECT * FROM assistido_defensoria WHERE idAssistidoDefensoria = $assistido";
+        $query = "SELECT nome FROM pessoas, assistido_defensoria WHERE assistido_defensoria.pessoas_idPessoa = idPessoa AND assistido_defensoria.idAssistidoDefensoria = $assistido";
+        //$query = "SELECT * FROM assistido_defensoria WHERE idAssistidoDefensoria = $assistido";
         $assistido = mysql_fetch_array(mysql_query($query));
 
         //pega o nome do requerido
         $requerido = $resultado['Requerido_idRequerido'];
-        $query = "SELECT * FROM requerido WHERE idRequerido = $requerido";
+        $query = "SELECT nome FROM pessoas, requerido WHERE requerido.pessoas_idPessoa = idPessoa AND requerido.idRequerido = $requerido";
+        //$query = "SELECT * FROM requerido WHERE idRequerido = $requerido";
         $requerido = mysql_fetch_array(mysql_query($query));
 
         $assunto = $resultado['Assunto_Atendimento_idAssunto_Atendimento'];
@@ -44,11 +46,11 @@ if($tipo=='listagem'){
 
         <tr id="dados">
             <td><?php echo "" . $resultado['idAtendimento_Defensoria'] ?></td>
-            <td><?php echo "" . $assistido['nomeAssistidoDefensoria'] ?></td>
-            <td><?php echo "" . $requerido['nomeRequerido'] ?></td>
+            <td><?php echo "" . $assistido['nome'] ?></td>
+            <td><?php echo "" . $requerido['nome'] ?></td>
             <td><?php echo date('d/m/Y', strtotime("".$resultado['data'])) ?></td>
             <script type="text/javascript">
-                var status = "<?php echo "".$resultado['status'] ?>";
+                var status = "<?php echo "".$resultado['status_atendimento'] ?>";
                 if (status == "aberto") {
                     document.getElementById("stats").setAttribute("class", "label label-primary");
                     document.getElementById("stats").setAttribute("id", "class1");
@@ -67,7 +69,7 @@ if($tipo=='listagem'){
                 }
             </script>
             <td>
-                <span id="stats" class="label label-success"><?php echo $resultado['status'] ?></span>
+                <span id="stats" class="label label-success"><?php echo $resultado['status_atendimento'] ?></span>
             </td>
 
             <td>

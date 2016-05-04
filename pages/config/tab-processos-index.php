@@ -25,9 +25,6 @@
                     <table id="conteudo"  class="table table-bordered"></table>
                 </div><!-- /.box-body -->
 
-
-
-
                 <div class="col-md-6 no-margin pull-right">
                     <div class="box-footer clearfix"><!--paginador -->
                         <ul id="paginador" class="pagination pagination-sm no-margin pull-right"></ul>
@@ -43,9 +40,7 @@
                         <option value="20">20</option>
                     </select>
                 </div>
-
-
-
+                
             </div><!-- /.box-body -->
 
             <div id="loading"></div>

@@ -8,10 +8,9 @@
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                 </div><!-- /.box-tools -->
 
-
                 <!-- /.search form -->
                 <div class="input-group input-group-sm" style="width: 150px; position: absolute; top: 13%;">
-                    <input id="pesquisar-tab" type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
+                    <input id="pesquisar-tab1" type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
                     <div class="input-group-btn">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                     </div>
@@ -20,20 +19,17 @@
             </div><!-- /.box-header -->
             <div class="box-body">
                 <div class="box-body">
-                    <table id="conteudo"  class="table table-bordered"></table>
+                    <table id="conteudo_new_proc"  class="table table-bordered"></table>
                 </div><!-- /.box-body -->
-
-
-
 
                 <div class="col-md-6 no-margin pull-right">
                     <div class="box-footer clearfix"><!--paginador -->
-                        <ul id="paginador" class="pagination pagination-sm no-margin pull-right"></ul>
+                        <ul id="paginador_new_proc" class="pagination pagination-sm no-margin pull-right"></ul>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <select class="form-control select2" style="width: 140px" id="tab-qtd" onchange="getitens(1,this.value);" data-placeholder="itens por página" >
+                    <select class="form-control select2" style="width: 140px" id="tab-qtd" onchange="getitens_new_proc(1,this.value);" data-placeholder="itens por página" >
                         <option selected disabled>itens por página</option>
                         <option value="3">3</option>
                         <option value="5">5</option>
@@ -41,12 +37,10 @@
                         <option value="20">20</option>
                     </select>
                 </div>
-
-
-
+                
             </div><!-- /.box-body -->
 
-            <div id="loading"></div>
+            <div id="loading_new_proc"></div>
             <!--loading
               <div class="overlay">
                 <i class="fa fa-refresh fa-spin"></i>

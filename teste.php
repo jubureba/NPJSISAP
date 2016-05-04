@@ -42,7 +42,7 @@ protegePagina(); // Chama a função que protege a página
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
-    <script type="text/javascript" src="js/paginador.js"></script>
+    <script type="text/javascript" src="js/paginador-tab-proc.js"></script>
     <script type="text/javascript" src="js/mensagens.js"></script>
 
     <script type="text/javascript" language="javascript" src="plugins/jQuery/jquery-1.3.2.js"></script>

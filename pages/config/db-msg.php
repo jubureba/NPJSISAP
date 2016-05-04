@@ -8,6 +8,17 @@
     $result = mysql_query($todosDados);
     while (($mensagem = mysql_fetch_object($query)) && ($row = mysql_fetch_array($consultaData)) && ($dados = mysql_fetch_array($result))) {
         ?>
+
+        <style>
+            .bs-example{
+                margin: 200px 150px 0;
+            }
+            .popover-title .close{
+                position: relative;
+                bottom: 3px;
+            }
+        </style>
+        
         <ul class="timeline timeline-inverse">
             <li>
                 <div class="timeline-item">
@@ -23,7 +34,7 @@
                                         ?>
 
                                         <!-- BOTÃO FECHAR POPOVER -->
-                                        <a href="#" class="pull-right btn-box-tool" onclick="abrirPopover(<?php echo $mensagem->id; ?>)" id="popover-dismiss_<?php echo $mensagem->id; ?>" ><i class="fa fa-times"></i></a>
+                                        <a disabled href="#" class="pull-right btn-box-tool" data-toggle="popover" onmouseenter="abrirPopover(<?php echo $mensagem->id; ?>)" id="popover-dismiss_<?php echo $mensagem->id; ?>" ><i class="fa fa-times"></i></a>
                                         <!-- CONTEUDO DO POPOVER -->
 
                                         <div id="ex02conteudo" style="display: none">
