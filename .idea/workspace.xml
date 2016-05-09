@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67d5d9e-9e4f-4eb0-8e49-83fc02f51994" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/cad_pessoa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/pesq_pessoa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/table_upload_teste.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/config/conn_pdo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client_register.php" afterPath="$PROJECT_DIR$/client_register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-casamento.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-casamento.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-contracheque.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-contracheque.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-ctps.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-ctps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-nascimento.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-nascimento.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-obito.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-obito.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-residencia.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-residencia.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-rg.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-rg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img.php" afterPath="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teste.php" afterPath="$PROJECT_DIR$/teste.php" />
     </list>
     <ignored path="AdminLTE-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,45 +39,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="client_register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client_register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="196" column="46" selection-start-line="196" selection-start-column="46" selection-end-line="196" selection-end-column="46" />
+            <state relative-caret-position="210">
+              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
-                <marker date="1462343664044" expanded="true" signature="19175:19209" placeholder="..." />
-                <marker date="1462343664044" expanded="true" signature="19325:19359" placeholder="..." />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1462792865584" expanded="true" signature="4782:4803" placeholder="SELECT * FRO... pessoas" />
+                <marker date="1462792865584" expanded="true" signature="11466:11487" placeholder="SELECT * FRO... pessoas" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/config/slider.php">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mensagens-index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/config/mensagens-index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab-new-processos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/config/tab-new-processos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="18" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+              <folding>
+                <marker date="1462792865704" expanded="true" signature="195:231" placeholder="SELECT * FRO... pessoas" />
+                <marker date="1462792865704" expanded="true" signature="195:232" placeholder="SELECT * FRO... pessoas" />
+                <marker date="1462792865704" expanded="true" signature="195:237" placeholder="SELECT * FRO... pessoas" />
+                <marker date="1462792865704" expanded="true" signature="283:331" placeholder="SELECT `id`,... cliente" />
+                <marker date="1462792865704" expanded="true" signature="1116:1171" placeholder="SELECT * FRO... end_residencial" />
+                <marker date="1462792865704" expanded="true" signature="1116:1172" placeholder="SELECT * FRO... end_residencial" />
+                <marker date="1462792865704" expanded="true" signature="1116:1188" placeholder="SELECT * FRO... end_residencial" />
+                <marker date="1462792865704" expanded="true" signature="1116:1191" placeholder="SELECT * FRO... end_residencial" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,15 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/config/validar-cpf.php" />
-        <option value="$PROJECT_DIR$/pages/config/validador-cpf-cnpj.js" />
-        <option value="$PROJECT_DIR$/pages/config/valida_cpf_cnpj.js" />
-        <option value="$PROJECT_DIR$/js/valida_cpf_cnpj.js" />
-        <option value="$PROJECT_DIR$/pages/coleta_dados/NPJ/table_upload.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/upload-img.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-rg.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-ctps.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-rg-upload.js" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-contracheque-upload.js" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-ctps-upload.js" />
@@ -102,16 +101,10 @@
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-obito-upload.js" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-cpf-upload.js" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-residencia-upload.js" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-residencia.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-contracheque.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-casamento.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-nascimento.php" />
-        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-obito.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-casamento-upload.js" />
         <option value="$PROJECT_DIR$/pages/config/paginador.js" />
         <option value="$PROJECT_DIR$/pages/chat/gravaMensagem.php" />
         <option value="$PROJECT_DIR$/pages/cadastro/pessoa/table_upload.php" />
-        <option value="$PROJECT_DIR$/teste.php" />
         <option value="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa0.424/jquery.tablefind-1.1.min.js" />
         <option value="$PROJECT_DIR$/pages/config/close-popover.php" />
@@ -120,7 +113,6 @@
         <option value="$PROJECT_DIR$/js/form-cep-consult.js" />
         <option value="$PROJECT_DIR$/js/cep-search-residencial.js" />
         <option value="$PROJECT_DIR$/js/cep-search-work.js" />
-        <option value="$PROJECT_DIR$/client_register.php" />
         <option value="$PROJECT_DIR$/js/mensagens.js" />
         <option value="$PROJECT_DIR$/js/delete-msg.js" />
         <option value="$PROJECT_DIR$/pages/chat/excluirMensagem.php" />
@@ -137,6 +129,22 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/config/mensagens-index.php" />
         <option value="$PROJECT_DIR$/pages/config/slider.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-ctps.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-nascimento.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-contracheque.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-casamento.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-obito.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-residencia.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/table_upload_teste.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-rg.php" />
+        <option value="$PROJECT_DIR$/pages/config/conn_pdo.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/cad_pessoa.php" />
+        <option value="$PROJECT_DIR$/teste1.php" />
+        <option value="$PROJECT_DIR$/pages/cadastro/pessoa/pesq_pessoa.php" />
+        <option value="$PROJECT_DIR$/teste.php" />
+        <option value="$PROJECT_DIR$/client_register.php" />
+        <option value="$PROJECT_DIR$/function.php" />
       </list>
     </option>
   </component>
@@ -182,56 +190,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NPJSISAP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scratches" />
     </panes>
@@ -247,11 +206,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\NPJSISAP\pages\cadastro\pessoa" />
       <recent name="C:\wamp\www\NPJSISAP\pages\config" />
       <recent name="C:\wamp\www\NPJSISAP\js" />
       <recent name="C:\wamp\www\NPJSISAP\pages\cadastro\pessoa\upload\scripts" />
       <recent name="C:\wamp\www\NPJSISAP\pages\cadastro\pessoa\upload\php-img-upload" />
-      <recent name="C:\wamp\www\NPJSISAP\pages\coleta_dados\NPJ\upload" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\NPJSISAP\dist\icons\png\512" />
@@ -342,7 +301,11 @@
       <workItem from="1461915751576" duration="29561000" />
       <workItem from="1461972636518" duration="10131000" />
       <workItem from="1462007368686" duration="53356000" />
-      <workItem from="1462336337802" duration="6781000" />
+      <workItem from="1462336337802" duration="8496000" />
+      <workItem from="1462560757283" duration="4599000" />
+      <workItem from="1462595663044" duration="1577000" />
+      <workItem from="1462650487245" duration="14697000" />
+      <workItem from="1462774638728" duration="16762000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -505,19 +468,25 @@
       <option name="project" value="LOCAL" />
       <updated>1462394345983</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="-ajax no index (tab, comment)">
+      <created>1462396655653</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1462396655653</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215866000" />
+    <option name="totallyTimeSpent" value="255216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.168125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767624" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -525,6 +494,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -550,7 +520,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2542373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.168125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -591,113 +561,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-rg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-nascimento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-ctps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/img-upload/Anderson Thiago/Captura de Tela (1).png" />
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/img-upload/Anderson Thiago/AdobePhotoshopExpress_3e920d32782b49d3acfc22ed2bdf4669.jpg" />
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/img-upload/Anderson Thiago/WP_20151017_22_18_54_Pro.jpg" />
-    <entry file="file://$PROJECT_DIR$/pages/config/index.php" />
-    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/table_documentos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="217" column="16" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.html" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.424/jquery.tablefind-1.1.min.js" />
-    <entry file="file://$PROJECT_DIR$/js/raphael-min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/respond.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/acompanhamento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="116" column="49" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-casamento-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="268" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1094" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/config/bootstrap-confirmation.min.js" />
-    <entry file="file://$PROJECT_DIR$/js/simple.dropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/config/assets/js/ggpopover.js" />
-    <entry file="file://$PROJECT_DIR$/pages/config/confirmation.js" />
     <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -709,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="1363" column="7" selection-start-line="1363" selection-start-column="5" selection-end-line="1363" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,47 +582,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/valida_cpf_cnpj.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/table_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client_register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2108">
-          <caret line="496" column="29" selection-start-line="496" selection-start-column="29" selection-end-line="496" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/chat/gravaMensagem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mensagens.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/delete-msg.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,6 +593,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,18 +604,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cep-search-residencial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="85" selection-start-line="45" selection-start-column="85" selection-end-line="45" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/popover.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="55" column="91" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,53 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <marker date="1462336710005" expanded="true" signature="468:508" placeholder="SELECT nome pessoas" />
-            <marker date="1462336710005" expanded="true" signature="1121:1163" placeholder="SELECT * FRO... nome" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teste.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7713">
-          <caret line="488" column="49" selection-start-line="488" selection-start-column="49" selection-end-line="488" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="196" column="46" selection-start-line="196" selection-start-column="46" selection-end-line="196" selection-end-column="46" />
-          <folding>
-            <marker date="1462343664044" expanded="true" signature="19175:19209" placeholder="..." />
-            <marker date="1462343664044" expanded="true" signature="19325:19359" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/config/tab-new-processos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/config/mensagens-index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +677,282 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/valida_cpf_cnpj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/custom-file-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/table_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-casamento-upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/scripts/script-cpf-upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-casamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-contracheque.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-ctps.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-nascimento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-obito.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-residencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/coleta_dados/NPJ/cadastro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://K:/cad_pessoa.php" />
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/table_upload_teste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="134" column="88" selection-start-line="134" selection-start-column="81" selection-end-line="134" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/upload/php-img-upload/upload-img-rg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/tab-new-processos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/chat/gravaMensagem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <marker date="1461969478418" expanded="true" signature="208:311" placeholder="INSERT INTO mensagens... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cidades-estados-1.4-utf8.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/mensagens-index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="194" column="51" selection-start-line="194" selection-start-column="51" selection-end-line="194" selection-end-column="51" />
+          <folding>
+            <marker date="1462343664044" expanded="true" signature="19175:19209" placeholder="..." />
+            <marker date="1462343664044" expanded="true" signature="19325:19359" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mensagens.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/conn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/config/conn_pdo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/cad_pessoa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <marker date="1462776549183" expanded="true" signature="1662:1695" placeholder="SELECT * FRO... pessoas" />
+            <marker date="1462776549183" expanded="true" signature="1802:2041" placeholder="INSERT INTO pessoas... " />
+            <marker date="1462776549183" expanded="true" signature="2745:2854" placeholder="INSERT INTO end_residencial... " />
+            <marker date="1462776549183" expanded="true" signature="3195:3309" placeholder="INSERT INTO end_work... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/cadastro/pessoa/pesq_pessoa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <marker date="1462783561633" expanded="true" signature="169:205" placeholder="SELECT * FRO... pessoas" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cep-search-residencial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1462792865584" expanded="true" signature="4782:4803" placeholder="SELECT * FRO... pessoas" />
+            <marker date="1462792865584" expanded="true" signature="11466:11487" placeholder="SELECT * FRO... pessoas" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <marker date="1462792865704" expanded="true" signature="195:231" placeholder="SELECT * FRO... pessoas" />
+            <marker date="1462792865704" expanded="true" signature="195:232" placeholder="SELECT * FRO... pessoas" />
+            <marker date="1462792865704" expanded="true" signature="195:237" placeholder="SELECT * FRO... pessoas" />
+            <marker date="1462792865704" expanded="true" signature="283:331" placeholder="SELECT `id`,... cliente" />
+            <marker date="1462792865704" expanded="true" signature="1116:1171" placeholder="SELECT * FRO... end_residencial" />
+            <marker date="1462792865704" expanded="true" signature="1116:1172" placeholder="SELECT * FRO... end_residencial" />
+            <marker date="1462792865704" expanded="true" signature="1116:1188" placeholder="SELECT * FRO... end_residencial" />
+            <marker date="1462792865704" expanded="true" signature="1116:1191" placeholder="SELECT * FRO... end_residencial" />
+          </folding>
         </state>
       </provider>
     </entry>

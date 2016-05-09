@@ -23,6 +23,7 @@ if(is_array($_FILES)) {
                 <?php
             }
         }
+        $_SESSION['img-contracheque']="pages/cadastro/pessoa/upload/".$targetPath;
     }
 }
 ?>

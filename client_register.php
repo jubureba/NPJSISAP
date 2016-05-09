@@ -1,10 +1,11 @@
 <?php
-require_once("pages/config/conn.php");
+require_once("pages/config/conn_pdo.php");
 ini_set('default_charset', 'UTF-8');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+$conn = Conectar();
 ?>
 
 <!DOCTYPE html>
@@ -68,17 +69,166 @@ protegePagina(); // Chama a função que protege a página
         <section class="content">
 
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
-            <form class="contact_form" method="post" name="form1" action="pages/coleta_dados/NPJ/cadastro.php">
+            <form class="contact_form" id="form-cad" method="post" name="form1" action="pages/cadastro/pessoa/cad_pessoa.php" >
+
+                <!-- PESQUISAR USUARIO JÁ CADASTRADO -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid collapsed-box">
+                            <div class="box-header with-border" align="center">
+                                <h3 class="box-title">Pesquisar/Editar Cadastro</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" onclick="botaoEditar(document.getElementById('teste1').className);" class="btn btn-box-tool" data-widget="collapse"><i id="teste1" class="fa fa-plus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div>
+                            <div class="box-body" id="bott" style="display: none;">
+                                <div style="color: red" align="center">*Para Editar um cadastro, deixe essa guia aberta*</div><br/>
+
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <?php
+                                        $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas");
+                                        $b_nome_cpf->execute(); ?>
+                                        <select style="width: 100%" onchange="teste(this.value);" name="teste" class="form-control select2" id="nome_Pessoa">
+                                            <option  value="" selected="selected" disabled>Pesquisar por Nome</option><?php
+                                            while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                                <option  value="<?php echo $linha['nome'];?>" ><?php echo $linha['nome'];?></option>
+                                            <?php  }   ?>
+                                        </select>
+                                    </div>
+                                    <br/>
+                                </div>
+
+                                <script type="text/javascript">
+                                        function teste(teste) {
+                                            var $nome = $("input[name='nome']");
+                                            var $nomeMenor = $("input[name='NomeMenor']");
+
+                                            $nome.val('Carregando...');
+                                            $nomeMenor.val('Carregando...');
+
+                                            $.getJSON(
+                                                'function.php',
+                                                {nome:  $(this).val()},
+                                                function (json) {
+
+                                                    $nome.val(json.nome);
+                                                    $nomeMenor.val(json.nomeMenor);
+                                                }
+                                            );
+                                        }
+
+                                </script>
+
+                                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+                                <script type="text/javascript">
+                                    $(document).ready(function(){
+                                        $("select[name='teste']").change(function(){
+                                            var $nome = $("input[name='nome']");
+                                            var $nomeMenor = $("input[name='NomeMenor']");
+                                            var $nomePai = $("input[name='nomePai']");
+                                            var $nomeMae = $("input[name='nomeMae']");
+
+                                            var $cep_residencial = $("input[name='cep-residencial']");
+                                            var $pais_residencial = $("input[name='pais-residencial']");
+                                            var $estado_residencial = $("input[name='estado-residencial']");
+                                            var $city_residencial = $("input[name='city-residencial']");
+                                            var $end_residencial_bairro = $("input[name='end-residencial-bairro']");
+                                            var $end_residencial_rua = $("input[name='end-residencial-rua']");
+
+                                            document.getElementById("loading_identificacao").setAttribute("class", "overlay");
+                                            document.getElementById("loading_identificacao").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                                            document.getElementById("loading_nacionalidade").setAttribute("class", "overlay");
+                                            document.getElementById("loading_nacionalidade").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                                            document.getElementById("loading").setAttribute("class", "overlay");
+                                            document.getElementById("loading").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                                            setTimeout(function() {
+
+                                                document.getElementById("loading_identificacao").setAttribute("class", "");
+                                                document.getElementById("loading_identificacao").innerHTML="<i class=''></i>";
+                                                document.getElementById("loading_nacionalidade").setAttribute("class", "");
+                                                document.getElementById("loading_nacionalidade").innerHTML="<i class=''></i>";
+                                                document.getElementById("loading").setAttribute("class", "");
+                                                document.getElementById("loading").innerHTML="<i class=''></i>";
+
+                                            }, 1500);
+                                            $.getJSON(
+                                                'function.php',
+                                                {nome: $(this).val()},
+                                                function (json) {
+                                                    $nome.val(json.nome);
+                                                    $nomeMenor.val(json.nomeMenor);
+                                                    $nomePai.val(json.nomePai);
+                                                    $nomeMae.val(json.nomeMae);
+                                                    
+                                                    $cep_residencial.val(json.cep);
+                                                    $pais_residencial.val(json.pais);
+                                                    $estado_residencial.val(json.estado);
+                                                    $city_residencial.val(json.cidade);
+                                                    $end_residencial_bairro.val(json.bairro);
+                                                    $end_residencial_rua.val(json.rua);
+
+                                                }
+                                            );
+
+                                        });
+                                    });
+                                </script>
+
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <?php
+                                        $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas");
+                                        $b_nome_cpf->execute(); ?>
+
+                                        <select style="width: 100%" class="form-control select2" id="cpf_Pessoa">
+                                            <option  value="" selected="selected" disabled>Pesquisar por CPF</option><?php
+                                            while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                                <option value="<?php echo $linha['idPessoa'];?>"><?php echo $linha['cpf'];?></option>
+                                            <?php } ?>
+                                        </select>
+
+                                    </div>
+                                    <br/>
+                                </div>
+
+                            </div><!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <script>
+
+                    function botaoEditar(stats) {
+                        if(stats=="fa fa-plus"){
+                            document.getElementById("b_submit_editar").style.display="block";
+
+                        }else if(stats == "fa fa-minus"){
+                            document.getElementById("b_submit_editar").style.display="none";
+                            document.getElementById("b_submit").style.display="block";
+                        }
+                    }
+                </script>
 
 
                 <!-- IDENTIFICAÇÃO PARTE 1 ---------------------------------------------------->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-primary box-solid">
-                            <div class="box-header with-border">
+                            <div id="box-id" class="box-header with-border">
                                 <div align="center"> <h3 class="box-title">Identificação</h3></div>
                                 <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
                                 </div><!-- /.box-tools -->
                             </div><!-- /.box-header -->
                             <div class="box-body">
@@ -88,7 +238,7 @@ protegePagina(); // Chama a função que protege a página
                                             <i class="fa fa-user"></i>
                                         </div>
 
-                                        <input class="form-control" required name="nome" type="text"
+                                        <input class="form-control" required id="nome" name="nome" type="text"
                                                placeholder="Nome Completo">
                                     </div>
                                     <br/>
@@ -99,7 +249,7 @@ protegePagina(); // Chama a função que protege a página
                                         <div class="input-group-addon">
                                             <i class="fa fa-male"></i>
                                         </div>
-                                        <input class="form-control" name="NomeMenor" type="text"
+                                        <input class="form-control" id="NomeMenor" name="NomeMenor" type="text"
                                                placeholder="Nome do Menor">
                                     </div>
                                     <br/>
@@ -125,6 +275,7 @@ protegePagina(); // Chama a função que protege a página
                                     <br/>
                                 </div>
                             </div><!-- /.box-body -->
+                            <div id="loading_identificacao"></div>
                         </div><!-- /.box -->
                     </div><!-- /.col -->
                 </div>
@@ -181,6 +332,7 @@ protegePagina(); // Chama a função que protege a página
                                     <br/>
                                 </div>
                             </div><!-- /.box-body -->
+                            <div id="loading_nacionalidade"></div>
                         </div><!-- /.box -->
                     </div><!-- /.col -->
                 </div>
@@ -303,7 +455,7 @@ protegePagina(); // Chama a função que protege a página
                                         <div class="input-group-addon">
                                             <i class="fa fa-user"></i>
                                         </div>
-                                        <select class="form-control select2" name="escolaridade" data-placeholder="Escolaridade" id="escolaridade">
+                                        <select class="form-control select2" name="escolaridade"  data-placeholder="Escolaridade" id="escolaridade">
                                             <option selected disabled="disabled">Escolaridade</option>
                                             <option value="infantil">Educação Infantil</option>
                                             <option value="fundamental">Ensino Fundamental</option>
@@ -522,10 +674,21 @@ protegePagina(); // Chama a função que protege a página
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <span class="input-group-btn">
-                            <button type="submit" onclick="document.form1.submit()" name="Submit"
-                                    class="btn btn-primary">Cadastrar
+                            <button type="submit" onclick="$('#form-cad').submit();" id="b_submit" name="Submit"
+                                    class="btn btn-primary">Cadastrar Novo
                             </button>
-                        </span>
+
+                                <button type="submit" id="b_submit_editar" name="Submit_editar"
+                                        class="btn btn-primary" style="display: none;">Salvar Cadastro
+                                </button>
+
+                            </span>
+
+
+
+
+
+
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col -->
@@ -745,6 +908,41 @@ protegePagina(); // Chama a função que protege a página
         estadoVal: 'PA',
         cidadeVal: 'Castanhal'
     });
+
+
+    $(".js-data-example-ajax").select2({
+        ajax: {
+            url: "https://api.github.com/search/repositories",
+            dataType: 'json',
+            delay: 250,
+            data: function (params) {
+                return {
+                    q: params.term, // search term
+                    page: params.page
+                };
+            },
+            processResults: function (data, params) {
+                // parse the results into the format expected by Select2
+                // since we are using custom formatting functions we do not need to
+                // alter the remote JSON data, except to indicate that infinite
+                // scrolling can be used
+                params.page = params.page || 1;
+
+                return {
+                    results: data.items,
+                    pagination: {
+                        more: (params.page * 30) < data.total_count
+                    }
+                };
+            },
+            cache: true
+        },
+        escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+        minimumInputLength: 1,
+        templateResult: formatRepo, // omitted for brevity, see the source of this page
+        templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+    });
+
 
 
 

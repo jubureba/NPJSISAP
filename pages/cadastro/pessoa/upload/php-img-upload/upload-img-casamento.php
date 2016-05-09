@@ -23,6 +23,7 @@ if(is_array($_FILES)) {
                 <?php
             }
         }
+        $_SESSION['img-casamento']="pages/cadastro/pessoa/upload/".$targetPath;
     }
 }
 ?>

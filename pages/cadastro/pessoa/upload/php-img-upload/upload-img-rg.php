@@ -23,6 +23,8 @@ if(is_array($_FILES)) {
                 <?php
             }
         }
+        $_SESSION['img-rg']="pages/cadastro/pessoa/upload/".$targetPath;
+        $_SESSION['rg']=$_POST['valorRG'];
     }
 }
 ?>

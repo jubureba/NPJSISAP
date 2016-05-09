@@ -21,8 +21,10 @@ if(is_array($_FILES)) {
                 ?>
                 <img src="pages/cadastro/pessoa/upload/<?php echo $targetPath; ?>" width="40px" height="40px" />
                 <?php
+
             }
         }
+        $_SESSION['img-residencia']="pages/cadastro/pessoa/upload/".$targetPath;
     }
 }
 ?>

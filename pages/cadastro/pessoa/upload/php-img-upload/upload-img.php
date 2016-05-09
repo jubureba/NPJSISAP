@@ -23,6 +23,8 @@ if(is_array($_FILES)) {
                 <?php
             }
         }
+        $_SESSION['img-cpf']="pages/cadastro/pessoa/upload/".$targetPath;
+        $_SESSION['cpf']=$_POST['valorCPF'];
     }
 }
 ?>

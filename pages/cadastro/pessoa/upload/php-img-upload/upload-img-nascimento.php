@@ -23,6 +23,8 @@ if(is_array($_FILES)) {
                 <?php
             }
         }
+        $_SESSION['img-nascimento']="pages/cadastro/pessoa/upload/".$targetPath;
+        $_SESSION['nascimento']=$_POST['valor-nascimento'];
     }
 }
 ?>
