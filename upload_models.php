@@ -54,7 +54,7 @@ protegePagina(); // Chama a função que protege a página
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Upload de Peça
+                Upload de Modelos
                 <small>Area do Professor</small>
             </h1>
             <ol class="breadcrumb">
@@ -80,7 +80,7 @@ protegePagina(); // Chama a função que protege a página
                         <div class="form-group">
                             <form action="pages/docs/upload.php" method="post" enctype="multipart/form-data">
                                 <fieldset>
-                                    <p><label for="Enviar arquivo">Enviar arquivo:</label></p>
+                                    <p><label for="Enviar arquivo">Modelo da Peça Jurídica</label></p>
                                     <input type="file" name="arquivo" class="width233"/>
                                     <hr>
                                     <span class="input-group-btn">
@@ -93,7 +93,34 @@ protegePagina(); // Chama a função que protege a página
                         <!-- ########### FIM FORMULARIO DE CADASTRO -->
                     </div>
                 </div>
+                    <!--###########  FORMULARIO DE CADASTRO -->
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <form action="pages/docs/upload.php" method="post" enctype="multipart/form-data">
+                                <fieldset>
+                                    <p><label for="Enviar arquivo">Modelo da Petição Inicial</label></p>
+                                    <input type="file" name="arquivo" class="width233"/>
+                                    <hr>
+                                    <span class="input-group-btn">
+                                        <button type="submit" name="enviar" class="btn btn-primary">Enviar Arquivos</button>
+                                    </span>
+
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- ########### FIM FORMULARIO DE CADASTRO -->
+                    </div>
             </div><!-- /.row (main row) -->
+
+
+
+
+
+
+
+
+
 
 
 
