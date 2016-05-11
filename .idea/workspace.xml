@@ -86,7 +86,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -321,7 +321,7 @@
       <workItem from="1462595663044" duration="1577000" />
       <workItem from="1462650487245" duration="14697000" />
       <workItem from="1462774638728" duration="17636000" />
-      <workItem from="1462827123410" duration="9394000" />
+      <workItem from="1462827123410" duration="10004000" />
     </task>
     <task id="LOCAL-00001" summary="alteração2">
       <created>1461100782762</created>
@@ -505,11 +505,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462997186404</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="-ajax no index (tab, comment)">
+      <created>1462997226961</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1462997226961</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265484000" />
+    <option name="totallyTimeSpent" value="266094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
