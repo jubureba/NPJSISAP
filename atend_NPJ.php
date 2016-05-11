@@ -4,6 +4,8 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de seguranï¿½a
 protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
+include("pages/config/conn_pdo.php");
+$conn=Conectar();
 ?>
 
 <!DOCTYPE html>
@@ -33,14 +35,17 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/form_Style.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-    <link rel="stylesheet" href="plugins/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="dist/css/component.css"/>
     <script type="text/javascript" src="dist/js/jquery.maskMoney.js" ></script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $("input#dinheiro").maskMoney({showSymbol:true, symbol:"R$", decimal:",", thousands:"."});
         });
     </script>
+
+
+
 
 
 </head>
@@ -71,440 +76,278 @@ protegePagina(); // Chama a funï¿½ï¿½o que protege a pï¿½gina
         <section class="content">
 
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
-            <form class="contact_form" method="post" name="form1" action="pages/coleta_dados/NPJ/cadastro.php">
-                <div class="box box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">FICHA DE TRIAGEM</h3><span class="required_notification"><img
-                                src="dist/img/red_asterisk.png"> Indica campo obrigatório</span><br/>
-                        <hr>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-archive"></i>
-                            </div>
-                            <input class="form-control" required name="processoN" type="text"
-                                   placeholder="Processo Numero">
-                        </div>
-                        <br/>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-odnoklassniki"></i>
-                            </div>
-                            <input class="form-control" name="vara" type="text" placeholder="Vara">
-                        </div>
-                        <br/>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
+                <!--
+                *
+                *******************IDENTIFICAÇÃO
+                * -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary box-solid">
+                            <div id="box-id" class="box-header with-border">
+                                <div align="center"> <h3 class="box-title">Ficha de Triagem</h3></div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                                </div><!-- /.box-tools -->
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-archive"></i>
+                                        </div>
+                                        <input class="form-control" required name="processoN" type="text"
+                                               placeholder="Processo Numero">
+                                    </div>
+                                    <br/>
+                                </div>
 
-                            <input class="form-control" placeholder="Data do Atendimento" type="date" id="campoData"
-                                   required maxlength="10" name="data"
-                                   pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="<?php echo date('Y/m/d'); ?>"
-                                   max="2020-02-18"
-                                   value="<?php echo date('Y/m/d'); ?>"/>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-odnoklassniki"></i>
+                                        </div>
+                                        <input class="form-control" name="vara" type="text" placeholder="Vara">
+                                    </div>
+                                    <br/>
+                                </div>
 
-                        </div>
-                        </br >
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
 
-                    </div>
+                                        <input class="form-control" placeholder="Data do Atendimento" type="date" id="campoData"
+                                               required maxlength="10" name="data"
+                                               pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="<?php echo date('Y/m/d'); ?>"
+                                               max="2020-02-18"
+                                               value="<?php echo date('Y/m/d'); ?>"/>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div><!-- /.box-body -->
+                            <div id="loading_identificacao"></div>
+                        </div><!-- /.box -->
+                    </div><!-- /.col -->
                 </div>
 
-                <div class="box box-primary">
-                    <div class="box-header">
 
-                        <!-- IDENTIFICAï¿½ï¿½O PARTE 1 ---------------------------------------------------->
-                        <h3 class="box-title">I- Identificação</h3><br/>
-                        <hr>
-                        <div class="col-md-6">
-
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-
-                                <input class="form-control" required name="nome" type="text"
-                                       placeholder="Nome(Assistido, Pai ou Responsável)">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="NomeMenor" type="text"
-                                       placeholder="Nome do Menor">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="nomePai" type="text" placeholder="Nome do Pai">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="nomeMae" type="text" placeholder="Nome da Mãe">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required value="Paraense" name="Naturalidade" type="text"
-                                       placeholder="Naturalidade">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required value="Brasileiro(a)" name="Nacionalidade"
-                                       type="text" placeholder="Nacionalidade">
-                            </div>
-                            <br/>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" placeholder="Data de Nascimento" type="date" id="campoData2"
-                                       required="required" maxlength="10" name="date"
-                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2020-02-18"/>
-                            </div>
-                            <br/>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="Escolaridade" type="text"
-                                       placeholder="Escolaridade">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="Profissao" type="text"
-                                       placeholder="Profissão">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="EstadoCivil" type="text"
-                                       placeholder="Estado Civil">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="enderecoResidencial" type="text"
-                                       placeholder="Endereço Residencial">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required value="Castanhal/PA" name="cidade" type="text"
-                                       placeholder="Cidade Residencial">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" type="tel" required name="telefone" id="tel"
-                                       placeholder="Telefone Residencial"
-                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" required name="EnderecoTrabalho" type="text"
-                                       placeholder="Endereço do Trabalho">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="cidadeTrabalho" type="text"
-                                       placeholder="Cidade do Trabalho">
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-
-                                <input class="form-control" name="telefoneTrabalho" type="tel" id="telTrab"
-                                       placeholder="Telefone do Trabalho"
-                                       pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4,5}"/>
-
-                            </div>
-                            <br/>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" name="situacaoHabitacional" type="text"
-                                       placeholder="Situação Habitacional">
-                            </div>
-                            <br/>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <input class="form-control" id="dinheiro" name="Remuneracao" type="text" placeholder="Remuneração">
-                            </div>
-                            <br/>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="box box-primary">
-                    <div class="box-header">
-
-                        <!-- HISTORICO/RELATORIO ---------------------------------------------------->
-                        <h3 class="box-title">II- Histórico/Relatório</h3><br/><br/>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto"
-                                      style="width: 975px; height: 68px;"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-            </form>
-
-
-            <!-- UPLOAD DE ARQUIVOS ---------------------------------------------------->
+            <!--
+            *********************** IDENTIFICAÇÃO DO ASSISTIDO *****************************
+            -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="box box-primary">
-                        <div class="box-header">
-                            <h3 class="box-title">III- Coleta de Documentos</h3>
-                            <hr>
-                        </div>
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Informações do Assistido</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
                         <div class="box-body">
-                            <?php include("pages/coleta_dados/NPJ/table_upload.php"); ?>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <?php
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas");
+                                    $b_nome_cpf->execute(); ?>
+                                    <select style="width: 100%" nome="part_contr" class="form-control select2" id="nome_Pessoa">
+                                        <option  value="" selected="selected" disabled>Nome da Parte Contrária</option><?php
+                                        while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                            <option  value="<?php echo $linha['nome'];?>" ><?php echo $linha['nome'];?></option>
+                                        <?php  }   ?>
+                                    </select>
+                                </div>
+                                <br/>
+                            </div>
+
+                            <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    var i = 2;
+                                    $("input[name='add_assistido']").click(function( e ){
+                                        document.getElementById("loading_assistido").setAttribute("class", "overlay");
+                                        document.getElementById("loading_assistido").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                                        setTimeout(function() {
+                                            document.getElementById("loading_assistido").setAttribute("class", "");
+                                            document.getElementById("loading_assistido").innerHTML="<i class=''></i>";
+
+                                            var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" id="' + i + '"><option selected="selected" disabled>Nome da Parte Contrária</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["nome"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger" name="add" value="Remover"/></a></label><div></div>';
+                                            // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+                                            $('#inputs_adicionais_assistido').append( input );
+                                            i = i + 1;
+                                        }, 1500);
+                                    });
+                                    $('#inputs_adicionais_assistido').delegate('a','click',function( e ){
+                                        e.preventDefault();
+                                        $( this ).parent('div').remove();
+                                    });
+
+                                });
+                            </script>
+
+                            <div align="center" ><input type="button" class="btn btn-primary" name="add_assistido" value="Adicionar"/></div>
+                            <fieldset id="inputs_adicionais_assistido" style="border: none">
+                                <br/>
+                            </fieldset>
+
                         </div><!-- /.box-body -->
+                        <div id="loading_assistido"></div>
                     </div><!-- /.box -->
-                </div><!-- /.col (left) -->
-            </div><!-- /.col (right) -->
-            
-
-            <!--4 - MEDIDAS JURIDICAS CABIVEIS -->
-
-            <div class="box box-primary">
-                <div class="box-header">
-                    <h3 class="box-title">IV- Medidas Jurídicas Cabíveis</h3><br/>
-                    <hr>
-                    <?php include("pages/coleta_dados/NPJ/table_documentos.php"); ?>
-                </div>
+                </div><!-- /.col -->
             </div>
 
-            <!--5 - INFORMAÇÕES SOBRE A PARTE CONTRÁRIA -->
-
-            <div class="box box-primary">
-                <div class="box-header">
-                    <h3 class="box-title">V- Informações sobre a Parte Contrária</h3><br/>
-
-                    <hr>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
+            <!--
+            *********************** PARTE CONTRÁRIA ***********************************
+            -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Informações da Parte Contrária</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <?php
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas");
+                                    $b_nome_cpf->execute(); ?>
+                                    <select style="width: 100%" nome="part_contr" class="form-control select2" id="nome_Pessoa">
+                                        <option  value="" selected="selected" disabled>Nome da Parte Contrária</option><?php
+                                        while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                            <option  value="<?php echo $linha['nome'];?>" ><?php echo $linha['nome'];?></option>
+                                        <?php  }   ?>
+                                    </select>
+                                </div>
+                                <br/>
                             </div>
 
-                            <input class="form-control" name="nomeContraria" type="text"
-                                   placeholder="Nome">
-                        </div>
-                        <br/>
-                    </div>
+                            <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    var i = 2;
+                                    $("input[name='add']").click(function( e ){
 
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
+                                        document.getElementById("loading_parte_contraria").setAttribute("class", "overlay");
+                                        document.getElementById("loading_parte_contraria").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                                        setTimeout(function() {
+
+                                            document.getElementById("loading_parte_contraria").setAttribute("class", "");
+                                            document.getElementById("loading_parte_contraria").innerHTML="<i class=''></i>";
+
+                                            var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" id="' + i + '"><option selected="selected" disabled>Nome da Parte Contrária</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["nome"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger" name="add" value="Remover"/></a></label><div></div>';
+                                            // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+                                            $('#inputs_adicionais').append( input );
+                                            i = i + 1;
+                                        }, 1500);
+
+
+
+                                    });
+
+                                    $('#inputs_adicionais').delegate('a','click',function( e ){
+                                        e.preventDefault();
+                                        $( this ).parent('div').remove();
+                                    });
+
+                                });
+                            </script>
+
+                            <div align="center" ><input type="button" class="btn btn-primary" name="add" value="Adicionar"/></div>
+                            <fieldset id="inputs_adicionais" style="border: none">
+                            <br/>
+                            </fieldset>
+
+                        </div><!-- /.box-body -->
+                        <div id="loading_parte_contraria"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            <!--
+            *********************** Medidas Cabiveis ***********************************
+            -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Medidas Jurídicas Cabíveis</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
+
+                                <?php include("pages/coleta_dados/NPJ/table_documentos.php"); ?>
+
+                                <br/>
                             </div>
-                            <input class="form-control" name="EnderecoResContraria" type="text"
-                                   placeholder="Endereço Residencial">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="telContraria" type="text"
-                                   placeholder="Telefone">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="cpfContraria" type="text"
-                                   placeholder="CPF">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="rgContraria" type="text"
-                                   placeholder="RG">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="profissaoContraria" type="text"
-                                   placeholder="Profissão">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="rzSocialContraria" type="text"
-                                   placeholder="Razão Social da Empresa">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="cnpjContraria" type="text"
-                                   placeholder="CNPJ da Empresa">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="endProfissionalContraria" type="text"
-                                   placeholder="Endereço Profissional">
-                        </div>
-                        <br/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <input class="form-control" name="infAddContraria" type="text"
-                                   placeholder="Informações Adicionais">
-                        </div>
-                        <br/>
-                    </div>
 
 
-
-
-                </div>
+                        </div><!-- /.box-body -->
+                        <div id="loading_identificacao"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
             </div>
 
 
-            <div class="box box-primary">
-                <div class="box-header">
-                        <span class="input-group-btn">
+            <!--
+            *********************** Historico/Relatorio ***********************************
+            -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Histórico / Relatório</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto"
+                                      style="width: 100%; height: 68px;"></textarea>
+                                </div>
+
+                            </div>
+                        </div><!-- /.box-body -->
+                        <div id="loading_identificacao"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            </form>
+
+            <!-- BOTOES -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Botões</h3></div>
+
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <span class="input-group-btn">
                             <button type="submit" onclick="document.form1.submit()" name="Submit"
                                     class="btn btn-primary">Cadastrar
                             </button>
                         </span>
 
-                    <br/>
-                    <br/>
-                    redireciona para pagina com os dados do usuario com opcao de download dos documentos
-                    </br>
-                    a tela seguinte tem botao de elaborar peï¿½a, imprmir os dados, campo de texto para observacao,
-                    mediaï¿½ï¿½o.
-                    mediaï¿½ï¿½o - nome dos envolvidos, e se houve acordo ou nao
-
-                    <input type="text" id="campoData">
-                    <input type="text" id="campoTelefone">
-                    <input type="text" id="campoSenha">
-
-
-                    - See more at: http://vinteum.com/jquery-mask-mascaras-para-campos-html-utilizando-jquery/#sthash.LHNNLBWu.dpuf
-                </div>
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
             </div>
-
 
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
