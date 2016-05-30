@@ -34,7 +34,7 @@ if($tipo=='listagem'){
 
         </tbody>
     <?php }
-}else if($tipo=='contador'){
+}else if($tipo=='contador_def_pub'){
     $id=$_SESSION['usuarioID'];
     $sql_res=mysql_query("SELECT * FROM nome WHERE idUsuario = '$id'"); //consulta no banco
     $contador=mysql_num_rows($sql_res); //Pegando Quantidade de itens

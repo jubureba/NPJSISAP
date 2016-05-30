@@ -118,6 +118,19 @@
 
             <li class="treeview">
                 <a href="#">
+                    <i class="fa fa-calendar"></i> <span> Agendamento </span> <i
+                        class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="agendamento.php"><i class="fa fa-hand-o-right"></i>
+                            Mediação
+                        </a></li>
+
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
                     <i class="fa fa-bar-chart"></i> <span> Acompanhamento </span> <i
                         class="fa fa-angle-left pull-right"></i>
                 </a>
@@ -127,6 +140,12 @@
                         </a></li>
 
                 </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-question"></i> <span> Ajuda </span>
+                </a>
             </li>
 
 

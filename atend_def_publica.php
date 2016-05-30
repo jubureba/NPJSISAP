@@ -1,15 +1,17 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
-require_once("pages/config/conn.php");
+ini_set('default_charset', 'UTF-8');
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+include("pages/config/conn_pdo.php");
+$conn=Conectar();
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta http-equiv="Content-Type" content="text/html" charset=utf-8">
+    <meta charset="Content-Type: text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>NPJ | Defensoria Publica</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -38,6 +40,62 @@ protegePagina(); // Chama a função que protege a página
     <script language="JavaScript" type="text/javascript" src="js/cidades-estados-1.4-utf8.js"></script>
     <!--cidades e estados -->
 
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var i = 2;
+            $("input[name='add_assistido']").click(function( e ){
+                document.getElementById("loading_assistido").setAttribute("class", "overlay");
+                document.getElementById("loading_assistido").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                setTimeout(function() {
+                    document.getElementById("loading_assistido").setAttribute("class", "");
+                    document.getElementById("loading_assistido").innerHTML="<i class=''></i>";
+
+
+                    var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM cliente"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" name="assistido_' + i + '"><option selected="selected" disabled>Nome do Assistido</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["id_pessoas"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger btn-flat" name="add" value="Remover"/></a></label><div></div>';
+                    // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+                    $('#inputs_adicionais_assistido').append( input );
+                    i = i + 1;
+                }, 1500);
+            });
+            $('#inputs_adicionais_assistido').delegate('a','click',function( e ){
+                e.preventDefault();
+                $( this ).parent('div').remove();
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var i = 2;
+            $("input[name='add']").click(function( e ){
+
+                document.getElementById("loading_parte_contraria").setAttribute("class", "overlay");
+                document.getElementById("loading_parte_contraria").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                setTimeout(function() {
+
+                    document.getElementById("loading_parte_contraria").setAttribute("class", "");
+                    document.getElementById("loading_parte_contraria").innerHTML="<i class=''></i>";
+
+                    var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM cliente"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" name="requerido_' + i + '"><option selected="selected" disabled>Nome da Parte Contrária</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["id_pessoas"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger" name="add" value="Remover"/></a></label><div></div>';
+                    // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+                    $('#inputs_adicionais').append( input );
+                    i = i + 1;
+                }, 1500);
+
+
+
+            });
+
+            $('#inputs_adicionais').delegate('a','click',function( e ){
+                e.preventDefault();
+                $( this ).parent('div').remove();
+            });
+
+        });
+    </script>
+
 </head>
 
 
@@ -64,257 +122,188 @@ protegePagina(); // Chama a função que protege a página
     <section class="content">
         <form class="contact_form" method="post" action="pages/coleta_dados/Defensoria_Publica/cadastro.php">
             <!-- ################### FORMULARIO DE CADASTRO -->
-            <!-- ########################### ASSISTIDO -->
-            <div class="box box-primary" >
-                <div class="box-header">
-                    <div class="form-group" >
-                        <h3 class="box-title">Assistido</h3>
-                        <span class="required_notification">
-                            <img src="dist/img/red_asterisk.png"> Indica campo obrigatório</span><br/>
-                        <hr>
+            <!--
+                        *********************** IDENTIFICAÇÃO DO ASSISTIDO *****************************
+                        -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Informações do Assistido</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <?php
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM cliente");
+                                    $b_nome_cpf->execute(); ?>
 
-                        <?php
-                        $query = mysql_query("SELECT nomeAssistidoDefensoria,idAssistidoDefensoria FROM assistido_defensoria");
-                        ?>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-search"></i>
+                                    <select style="width: 100%" name="assistido_1" class="form-control select2">
+                                        <option  value="" selected="selected" disabled>Nome do Assistido</option><?php
+                                        while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                            <option  value="<?php echo $linha['id_pessoas'];?>" ><?php echo $linha['nome'];?></option>
+                                        <?php  }   ?>
+                                    </select>
+                                </div>
+                                <br/>
                             </div>
-                            <select class="form-control select2" name="assunto" style="width: 100%;">
-                                <option>Pesquisar por Nome - Assistido Previamente Cadastrado</option>
-                                <?php while ($result = mysql_fetch_array($query)) { ?>
-                                    <option
-                                        value="<?php echo $result['idAssistidoDefensoria'] ?>"><?php echo $result['nomeAssistidoDefensoria'] ?></option>
-                                <?php } ?>
-
-                            </select><br/>
-                        </div><hr><br/>
 
 
 
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-user"></i>
+                            <div align="center" ><input type="button" class="btn btn-primary" name="add_assistido" value="Adicionar"/></div>
+                            <fieldset id="inputs_adicionais_assistido" style="border: none">
+                                <br/>
+                            </fieldset>
+
+                        </div><!-- /.box-body -->
+                        <div id="loading_assistido"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            <!--
+             *********************** PARTE CONTRÁRIA ***********************************
+             -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Informações da Parte Contrária</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <?php
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM cliente");
+                                    $b_nome_cpf->execute(); ?>
+                                    <select style="width: 100%" name="requerido_1" class="form-control select2" id="nome_Pessoa">
+                                        <option  value="" selected="selected" disabled>Nome da Parte Contrária</option><?php
+                                        while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                            <option  value="<?php echo $linha['id_pessoas'];?>" ><?php echo $linha['nome'];?></option>
+                                        <?php  }   ?>
+                                    </select>
+                                </div>
+                                <br/>
                             </div>
-                            <input class="form-control" required name="nomeAssistido" type="text"
-                                   placeholder="Nome do Assistido">
-                        </div>
-                        <br/>
 
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <input type="text" required name="telefoneAssistido" class="form-control"
-                                   placeholder="Telefone do Assistido" data-inputmask='"mask": "(99)99999-9999"'
-                                   data-mask>
-                        </div>
-                        <br/>
-                        <!-- ENDEREÇO DO ASSISTIDO -->
-                        <!-- ESTADO -->
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <select class="form-control select2" name="estadoAssistido" id="estado2"></select>
-                        </div>
-                        <br/>
-                        <!--CIDADE-->
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-street-view"></i>
-                            </div>
-                            <select class="form-control select2" name="cidadeAssistido" id="cidade2"></select>
-                        </div>
-                        <br/>
+                            <div align="center" ><input type="button" class="btn btn-primary" name="add" value="Adicionar"/></div>
+                            <fieldset id="inputs_adicionais" style="border: none">
+                                <br/>
+                            </fieldset>
 
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-street-view"></i>
+                        </div><!-- /.box-body -->
+                        <div id="loading_parte_contraria"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            <!-- dados -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Dados</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
                             </div>
-                            <input class="form-control" name="enderecoAssistido" required="required" type="text"
-                                   placeholder="Endereço do Assistido">
-                        </div>
-                        <br/>
-                    </div>
-                </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <?php
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM assuntos ");
+                                    $b_nome_cpf->execute(); ?>
+                                    <select style="width: 100%" name="assunto" class="form-control select2" id="nome_Pessoa">
+                                        <option  value="" selected="selected" disabled>Selecione um Assunto para este caso</option><?php
+                                        while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                            <option  value="<?php echo $linha['id_assunto'];?>" ><?php echo $linha['assunto'];?></option>
+                                        <?php  }   ?>
+                                    </select>
+                                </div>
+                                <br/>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <?php
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM usuario WHERE permissao='Aluno' ");
+                                    $b_nome_cpf->execute(); ?>
+                                    <select style="width: 100%" name="aluno" class="form-control select2" id="nome_Pessoa">
+                                        <option  value="" selected="selected" disabled>Selecione um aluno para este caso</option><?php
+                                        while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                            <option  value="<?php echo $linha['id_usuario'];?>" ><?php echo $linha['nome'];?></option>
+                                        <?php  }   ?>
+                                    </select>
+                                </div>
+                                <br/>
+                            </div>
+                            <!-- textarea -->
+
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="observacao" rows="5" placeholder="Observação"></textarea>
+                                </div>
+                            </div>
+
+                            <!--Login-->
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <input class="form-control" name="loginDefensoria" type="text"
+                                           placeholder="Login da Defensoria">
+                                </div>
+                                <br/>
+                            </div>
+
+
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+
+            <!-- BOTOES -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Botões</h3></div>
+
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <span class="input-group-btn">
+
+                            <button type="submit" onclick="document.form1.submit()" name="Submit"
+                                    class="btn btn-primary">Cadastrar
+                            </button>
+                        </span>
+
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
             </div>
 
 
-            <div class="box box-primary">
-                <div class="box-header">
-                    <!--REQUERIDO -->
-                    <h3 class="box-title">Requerido</h3>
-                    <hr>
-
-                    <?php
-                    $query = mysql_query("SELECT idRequerido,nomeRequerido FROM requerido");
-                    ?>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <select class="form-control select2" name="assunto" style="width: 100%;">
-                            <option>Pesquisar por Nome - Requerido Previamente Cadastrado</option>
-                            <?php while ($result = mysql_fetch_array($query)) { ?>
-                                <option
-                                    value="<?php echo $result['idRequerido'] ?>"><?php echo $result['nomeRequerido'] ?></option>
-                            <?php } ?>
-
-                        </select><br/>
-                    </div>
-                    <hr>
-                    <br/>
-
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <input class="form-control" name="nomeRequerido" required type="text"
-                               placeholder="Nome do Requerido">
-                    </div>
-                    <br/>
-                    <!-- phone mask -->
-
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <input type="text" name="telefoneRequerido" required class="form-control"
-                               placeholder="Telefone do Requerido" maxlength="14"
-                               data-inputmask='"mask": "(99)99999-9999"'
-                               data-mask>
-                    </div>
-                    <br/>
-
-                    <!-- ENDEREÇO DO REQUERIDO -->
-                    <!-- ESTADO -->
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <select class="form-control select2" title="estadoRequerido" required name="estadoRequerido"
-                                id="estado3"></select>
-                    </div>
-                    <br/>
-                    <!-- CIDADE -->
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-street-view"></i>
-                        </div>
-                        <select class="form-control select2" name="cidadeRequerido" id="cidade3"></select>
-                    </div>
-                    <br/>
-
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-street-view"></i>
-                        </div>
-                        <input class="form-control" name="enderecoRequerido" required="required" type="text"
-                               placeholder="Endereço do Requerido">
-                    </div>
-                    <br/>
-
-                </div>
-            </div>
-
-            <div class="box box-primary">
-                <div class="box-header">
-                    <!-- DADOS -->
-                    <h3 class="box-title">Dados</h3><br/><br/>
-
-
-                    <?php
-                    $query = mysql_query("SELECT idAssunto_Atendimento, descricao FROM assunto_atendimento");
-                    ?>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <select class="form-control select2" name="assunto" style="width: 100%;">
-                            <option>Selecione um Assunto</option>
-                            <?php while ($result = mysql_fetch_array($query)) { ?>
-                                <option
-                                    value="<?php echo $result['descricao'] ?>"><?php echo $result['descricao'] ?></option>
-                            <?php } ?>
-
-                        </select><br/>
-                    </div>
-                    <br/>
-
-                    <?php
-                    $query = mysql_query("SELECT idUsuario, nome FROM usuario WHERE permissao = 'Aluno'")
-                    ?>
-
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <select class="form-control select2" name="AlunoVinculo">
-                            <option>Selecione um Aluno para tratar do caso</option>
-                            <?php while ($result = mysql_fetch_array($query)) { ?>
-                                <option value="<?php echo $result['nome'] ?>"><?php echo $result['nome'] ?></option>
-                            <?php } ?>
-
-                        </select><br/>
-                    </div>
-                    <br/>
-
-                    <!-- textarea -->
-                    <div class="form-group">
-
-                        <textarea class="form-control" name="observacao" rows="5" placeholder="Observação"></textarea>
-                    </div>
-
-                    <!-- ESTE CAMPO SERÁ FEITO UPLOAD DOS ARQUIVOS SCANEADOS - DOCUMENTOS NA PAG2 -->
-                    <div class="form-group">
-                        <select id="idselect" name="idPosto" onchange="UploadDocumentos(this.value)"
-                                class="form-control select2" multiple="multiple"
-                                data-placeholder="Documentos Apresentados"
-                                style="width: 100%;">
-                            <option value="cpf">CPF</option>
-                            <option value="rg">RG</option>
-                            <option value="ctps">CTPS</option>
-                            <option value="comprovanteResidencia">Comprovante de Residência</option>
-                            <option value="contracheque">Contracheque</option>
-                            <option value="certidaoNascimento">Certidão de Nascimento</option>
-                            <option value="certidaoCasamento">Certidão de Casamento</option>
-                            <option value="certidaoObito">Certidão de Óbito</option>
-                        </select>
-                        <br/></div>
-
-
-                   <?php include('pages/Modals/modal_upload.php');?>
-
-                    <script>
-                        function limparUpload() {
-                            $('#arquivo').value = "";
-                            $('#result').value = "";
-                        }
-                    </script>
-
-                    <script type="text/javascript">
-                        function UploadDocumentos(valor) {
-                            $('#myModal').modal('show');
-                        }
-                    </script>
-
-
-                    <!--Login-->
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <input class="form-control" name="loginDefensoria" type="text"
-                               placeholder="Login da Defensoria">
-                    </div>
-                    <br/>
-
-                     <span class="input-group-btn">
-                         <button type="submit" name="Submit" class="btn btn-primary">Cadastrar</button>
-                     </span>
-                </div>
-            </div>
         </form>
     </section>
     <!-- /.content -->

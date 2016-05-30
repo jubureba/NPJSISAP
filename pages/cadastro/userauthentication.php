@@ -4,7 +4,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$banco = "npjdb";
+$banco = "npj";
 $conexao = mysql_connect($host, $user, $pass) or die(mysql_error());
 mysql_select_db($banco) or die(mysql_error());
 ?>
@@ -15,11 +15,11 @@ mysql_select_db($banco) or die(mysql_error());
 
     <script type="text/javascript">
         function loginsucessfully(){
-            alert("Você foi autenticado com sucesso! Aguarde um instante.")
+            alert("Vocï¿½ foi autenticado com sucesso! Aguarde um instante.")
             setTimeout("window.location='../../index.php'", 100);
         }
         function loginfailed(){
-            alert("Nome de usuário ou senha inválidos! Aguarde um instante.")
+            alert("Nome de usuï¿½rio ou senha invï¿½lidos! Aguarde um instante.")
             setTimeout("window.location='../index.html'", 100)
         }
     </script>

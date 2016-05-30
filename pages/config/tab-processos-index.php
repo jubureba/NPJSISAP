@@ -12,7 +12,7 @@
 
 
                 <!-- /.search form -->
-                <div class="input-group input-group-sm" style="width: 150px; position: absolute; top: 13%;">
+                <div class="input-group input-group-sm" style="width: 20%; position: absolute; top: 13%;">
                     <input id="pesquisar-tab" type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
                     <div class="input-group-btn">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <select class="form-control select2" style="width: 140px" id="tab-qtd" onchange="getitens(1,this.value);" data-placeholder="itens por página" >
+                    <select class="form-control select2" style="width: 140px" id="tab-qtd" onchange="getitens_def_pub(1,this.value);" data-placeholder="itens por página" >
                         <option selected disabled>itens por página</option>
                         <option value="3">3</option>
                         <option value="5">5</option>

@@ -45,7 +45,61 @@ $conn=Conectar();
     </script>
 
 
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var i = 2;
+            $("input[name='add_assistido']").click(function( e ){
+                document.getElementById("loading_assistido").setAttribute("class", "overlay");
+                document.getElementById("loading_assistido").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                setTimeout(function() {
+                    document.getElementById("loading_assistido").setAttribute("class", "");
+                    document.getElementById("loading_assistido").innerHTML="<i class=''></i>";
 
+
+                    var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM cliente"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" name="assistido_' + i + '"><option selected="selected" disabled>Nome do Assistido</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["id_pessoas"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger btn-flat" name="add" value="Remover"/></a></label><div></div>';
+                    // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+                    $('#inputs_adicionais_assistido').append( input );
+                    i = i + 1;
+                }, 1500);
+            });
+            $('#inputs_adicionais_assistido').delegate('a','click',function( e ){
+                e.preventDefault();
+                $( this ).parent('div').remove();
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var i = 2;
+            $("input[name='add']").click(function( e ){
+
+                document.getElementById("loading_parte_contraria").setAttribute("class", "overlay");
+                document.getElementById("loading_parte_contraria").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
+                setTimeout(function() {
+
+                    document.getElementById("loading_parte_contraria").setAttribute("class", "");
+                    document.getElementById("loading_parte_contraria").innerHTML="<i class=''></i>";
+
+                    var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM cliente"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" name="requerido_' + i + '"><option selected="selected" disabled>Nome da Parte Contrária</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["id_pessoas"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger" name="add" value="Remover"/></a></label><div></div>';
+                    // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+                    $('#inputs_adicionais').append( input );
+                    i = i + 1;
+                }, 1500);
+
+
+
+            });
+
+            $('#inputs_adicionais').delegate('a','click',function( e ){
+                e.preventDefault();
+                $( this ).parent('div').remove();
+            });
+
+        });
+    </script>
 
 
 </head>
@@ -74,6 +128,7 @@ $conn=Conectar();
 
         <!-- Main content -->
         <section class="content">
+            <form class="contact_form" method="post" action="pages/coleta_dados/NPJ/cadastro.php">
 
             <!-- ################### FORMULARIO DE CADASTRO ############################-->
                 <!--
@@ -95,7 +150,7 @@ $conn=Conectar();
                                         <div class="input-group-addon">
                                             <i class="fa fa-archive"></i>
                                         </div>
-                                        <input class="form-control" required name="processoN" type="text"
+                                        <input class="form-control" name="processoN" type="text"
                                                placeholder="Processo Numero">
                                     </div>
                                     <br/>
@@ -118,13 +173,51 @@ $conn=Conectar();
                                         </div>
 
                                         <input class="form-control" placeholder="Data do Atendimento" type="date" id="campoData"
-                                               required maxlength="10" name="data"
+                                               maxlength="10" name="data"
                                                pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="<?php echo date('Y/m/d'); ?>"
                                                max="2020-02-18"
                                                value="<?php echo date('Y/m/d'); ?>"/>
                                     </div>
                                     <br/>
                                 </div>
+
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <?php
+                                        $b_nome_cpf=$conn->prepare("SELECT * FROM assuntos ");
+                                        $b_nome_cpf->execute(); ?>
+                                        <select style="width: 100%" name="assunto" class="form-control select2" id="nome_Pessoa">
+                                            <option  value="" selected="selected" disabled>Selecione um Assunto para este caso</option><?php
+                                            while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                                <option  value="<?php echo $linha['id_assunto'];?>" ><?php echo $linha['assunto'];?></option>
+                                            <?php  }   ?>
+                                        </select>
+                                    </div>
+                                    <br/>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <?php
+                                        $b_nome_cpf=$conn->prepare("SELECT * FROM usuario WHERE permissao='Aluno' ");
+                                        $b_nome_cpf->execute(); ?>
+                                        <select style="width: 100%" name="aluno" class="form-control select2" id="nome_Pessoa">
+                                            <option  value="" selected="selected" disabled>Selecione um aluno para este caso</option><?php
+                                            while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
+                                                <option  value="<?php echo $linha['id_usuario'];?>" ><?php echo $linha['nome'];?></option>
+                                            <?php  }   ?>
+                                        </select>
+                                    </div>
+                                    <br/>
+                                </div>
+
+
                             </div><!-- /.box-body -->
                             <div id="loading_identificacao"></div>
                         </div><!-- /.box -->
@@ -151,42 +244,20 @@ $conn=Conectar();
                                         <i class="fa fa-user"></i>
                                     </div>
                                     <?php
-                                    $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas");
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM cliente");
                                     $b_nome_cpf->execute(); ?>
-                                    <select style="width: 100%" nome="part_contr" class="form-control select2" id="nome_Pessoa">
-                                        <option  value="" selected="selected" disabled>Nome da Parte Contrária</option><?php
+
+                                    <select style="width: 100%" name="assistido_1" class="form-control select2">
+                                        <option  value="" selected="selected" disabled>Nome do Assistido</option><?php
                                         while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
-                                            <option  value="<?php echo $linha['nome'];?>" ><?php echo $linha['nome'];?></option>
+                                            <option  value="<?php echo $linha['id_pessoas'];?>" ><?php echo $linha['nome'];?></option>
                                         <?php  }   ?>
                                     </select>
                                 </div>
                                 <br/>
                             </div>
 
-                            <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-                            <script type="text/javascript">
-                                $(document).ready(function(){
-                                    var i = 2;
-                                    $("input[name='add_assistido']").click(function( e ){
-                                        document.getElementById("loading_assistido").setAttribute("class", "overlay");
-                                        document.getElementById("loading_assistido").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
-                                        setTimeout(function() {
-                                            document.getElementById("loading_assistido").setAttribute("class", "");
-                                            document.getElementById("loading_assistido").innerHTML="<i class=''></i>";
 
-                                            var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" id="' + i + '"><option selected="selected" disabled>Nome da Parte Contrária</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["nome"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger" name="add" value="Remover"/></a></label><div></div>';
-                                            // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
-                                            $('#inputs_adicionais_assistido').append( input );
-                                            i = i + 1;
-                                        }, 1500);
-                                    });
-                                    $('#inputs_adicionais_assistido').delegate('a','click',function( e ){
-                                        e.preventDefault();
-                                        $( this ).parent('div').remove();
-                                    });
-
-                                });
-                            </script>
 
                             <div align="center" ><input type="button" class="btn btn-primary" name="add_assistido" value="Adicionar"/></div>
                             <fieldset id="inputs_adicionais_assistido" style="border: none">
@@ -218,48 +289,17 @@ $conn=Conectar();
                                         <i class="fa fa-user"></i>
                                     </div>
                                     <?php
-                                    $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas");
+                                    $b_nome_cpf=$conn->prepare("SELECT * FROM cliente");
                                     $b_nome_cpf->execute(); ?>
-                                    <select style="width: 100%" nome="part_contr" class="form-control select2" id="nome_Pessoa">
+                                    <select style="width: 100%" name="requerido_1" class="form-control select2" id="nome_Pessoa">
                                         <option  value="" selected="selected" disabled>Nome da Parte Contrária</option><?php
                                         while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?>
-                                            <option  value="<?php echo $linha['nome'];?>" ><?php echo $linha['nome'];?></option>
+                                            <option  value="<?php echo $linha['id_pessoas'];?>" ><?php echo $linha['nome'];?></option>
                                         <?php  }   ?>
                                     </select>
                                 </div>
                                 <br/>
                             </div>
-
-                            <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-                            <script type="text/javascript">
-                                $(document).ready(function(){
-                                    var i = 2;
-                                    $("input[name='add']").click(function( e ){
-
-                                        document.getElementById("loading_parte_contraria").setAttribute("class", "overlay");
-                                        document.getElementById("loading_parte_contraria").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
-                                        setTimeout(function() {
-
-                                            document.getElementById("loading_parte_contraria").setAttribute("class", "");
-                                            document.getElementById("loading_parte_contraria").innerHTML="<i class=''></i>";
-
-                                            var input = '<?php $b_nome_cpf=$conn->prepare("SELECT * FROM pessoas"); $b_nome_cpf->execute(); ?><label style="display: block"><div class="col-md-12"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><select style="width: 100%" class="form-control select2" id="' + i + '"><option selected="selected" disabled>Nome da Parte Contrária</option><?php while($linha=$b_nome_cpf->fetch(PDO::FETCH_ASSOC)){ ?> <option  value="<?php echo $linha["nome"];?>" ><?php echo $linha["nome"];?></option> <?php  }   ?> </select><a href=""><input type="button" style="width:100%;" class="btn btn-danger" name="add" value="Remover"/></a></label><div></div>';
-                                            // var input = '<label style="display: block">Nome: <input id="' + i + '" type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
-                                            $('#inputs_adicionais').append( input );
-                                            i = i + 1;
-                                        }, 1500);
-
-
-
-                                    });
-
-                                    $('#inputs_adicionais').delegate('a','click',function( e ){
-                                        e.preventDefault();
-                                        $( this ).parent('div').remove();
-                                    });
-
-                                });
-                            </script>
 
                             <div align="center" ><input type="button" class="btn btn-primary" name="add" value="Adicionar"/></div>
                             <fieldset id="inputs_adicionais" style="border: none">
@@ -316,7 +356,7 @@ $conn=Conectar();
                             <div class="col-md-12">
 
                                 <div class="form-group">
-                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="assunto"
+                            <textarea class="form-control" placeholder="HistoricoRelatorio" rows="5" name="historico"
                                       style="width: 100%; height: 68px;"></textarea>
                                 </div>
 
@@ -327,7 +367,7 @@ $conn=Conectar();
                 </div><!-- /.col -->
             </div>
 
-            </form>
+
 
             <!-- BOTOES -->
             <div class="row">
@@ -339,7 +379,7 @@ $conn=Conectar();
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <span class="input-group-btn">
-                            <button type="submit" onclick="document.form1.submit()" name="Submit"
+                            <button type="submit" name="Submit"
                                     class="btn btn-primary">Cadastrar
                             </button>
                         </span>
@@ -348,7 +388,7 @@ $conn=Conectar();
                     </div><!-- /.box -->
                 </div><!-- /.col -->
             </div>
-
+            </form>
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 

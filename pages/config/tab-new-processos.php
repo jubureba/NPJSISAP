@@ -9,12 +9,14 @@
                 </div><!-- /.box-tools -->
 
                 <!-- /.search form -->
-                <div class="input-group input-group-sm" style="width: 150px; position: absolute; top: 13%;">
+                <div class="input-group input-group-sm" style="width:20%; position: absolute; top: 13%;">
                     <input id="pesquisar-tab1" type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
                     <div class="input-group-btn">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
+
+                
 
             </div><!-- /.box-header -->
             <div class="box-body">

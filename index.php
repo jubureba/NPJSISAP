@@ -1,6 +1,7 @@
 <?php
 
 require_once("pages/config/conn.php");
+require_once("pages/config/conn_pdo.php");
 ini_set('default_charset', 'UTF-8');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
@@ -201,6 +202,13 @@ protegePagina(); // Chama a função que protege a página
             </section>
         </div>
 
+
+        <?php
+
+        $sql="SELECT distinct atend_npj.data_atend, atend_npj.proc_num, cliente.nome FROM atend_npj, cliente, cliente_npj, status  WHERE cliente_npj.id_cliente_assist = cliente.id_pessoas AND cliente_npj.id_atend_npj = atend_npj.id_atend_npj ORDER BY cliente_npj.id_cliente_npj";
+        $assistido = mysql_fetch_array(mysql_query($sql));
+        echo $assistido['nome'];
+        ?>
 
         <!-- /.content -->
 

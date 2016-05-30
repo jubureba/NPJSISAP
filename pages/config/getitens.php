@@ -1,7 +1,8 @@
 <?php
-require_once("conn.php");
-ini_set('default_charset', 'UTF-8');
-error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+ini_set( 'display_errors', true );
+error_reporting( E_ALL );
+require_once("conn_pdo.php");
+$conn=Conectar();
 session_start();
 $tipo=$_GET['tipo'];
 if($tipo=='listagem'){
@@ -11,79 +12,93 @@ if($tipo=='listagem'){
     ?>
     <tbody>
     <tr>
-        <th>Protocolo</th>
-        <th>Assistido</th>
-        <th>Requerido</th>
-        <th>Data</th>
-        <th>Status</th>
-        <th>Observação</th>
+        <th style="width: 5%">Protocolo</th>
+        <th style="width: 20%">Assistido</th>
+        <th style="width: 20%">Requerido</th>
+        <th style="width: 10%">Data | Hora</th>
+        <th style="width: 10%">Status</th>
+        <th style="width: 35%">Assunto</th>
     </tr>
 
     <?php
-    $nomeID = $_SESSION['usuarioID'];
-    $sql = "SELECT * FROM atendimento_defensoria WHERE Usuario_idUsuario = '$nomeID' LIMIT $inicio, $maximo";
-    $stmt = mysql_query($sql);
+    $linha=0;
+    $query_qtd=$conn->prepare("
+    SELECT DISTINCT
+        atend_npj.data_atend, atend_npj.id_status, atend_npj.proc_num, cliente.nome, situacao.status_atual, assuntos.assunto, 
+        (SELECT nome FROM cliente c WHERE c.id_pessoas = cliente_npj.id_cliente_requer) as REQUERIDO 
+        FROM 
+        atend_npj, cliente, cliente_npj, situacao, assuntos 
+        WHERE 
+        cliente_npj.id_cliente_assist = cliente.id_pessoas 
+        AND 
+        cliente_npj.id_atend_npj = atend_npj.id_atend_npj 
+        AND
+        atend_npj.id_assunto = assuntos.id_assunto
+        AND
+        situacao.id_status = atend_npj.id_status
+        ORDER BY 
+        cliente_npj.id_cliente_npj LIMIT $inicio, $maximo");//COLOCAR WHERE COM ID DO ALUNO
+    $query_qtd->execute();
 
-    while ($resultado = mysql_fetch_array($stmt)) {
-        //PEGA O NOME DO ASSISTIDO NA TABELA ASSISTIDODEFENSORIA, COM O ID
-        $assistido = $resultado['Assistido_Defensoria_idAssistidoDefensoria'];
-        $query = "SELECT nome FROM pessoas, assistido_defensoria WHERE assistido_defensoria.pessoas_idPessoa = idPessoa AND assistido_defensoria.idAssistidoDefensoria = $assistido";
-        //$query = "SELECT * FROM assistido_defensoria WHERE idAssistidoDefensoria = $assistido";
-        $assistido = mysql_fetch_array(mysql_query($query));
-
-        //pega o nome do requerido
-        $requerido = $resultado['Requerido_idRequerido'];
-        $query = "SELECT nome FROM pessoas, requerido WHERE requerido.pessoas_idPessoa = idPessoa AND requerido.idRequerido = $requerido";
-        //$query = "SELECT * FROM requerido WHERE idRequerido = $requerido";
-        $requerido = mysql_fetch_array(mysql_query($query));
-
-        $assunto = $resultado['Assunto_Atendimento_idAssunto_Atendimento'];
-        $query = "SELECT * FROM assunto_atendimento WHERE idAssunto_Atendimento = $assunto";
-        $assunto = mysql_fetch_array(mysql_query($query));
-
-
+    while($query=$query_qtd->fetch(PDO::FETCH_ASSOC)){
         ?>
+            <tr id="dados">
+                <td><?php echo $query['proc_num'] ?></td>
+                <td><?php echo $query['nome']; ?></td>
+                <td><?php echo $query['REQUERIDO']; ?></td>
+                <td><?php echo date('d/m/Y - h:m:s', strtotime($query['data_atend'])); ?></td>
+                <script type="text/javascript">
+                    var status = <?php echo $query['id_status']; ?>;
+                    if (status == 1) {
+                        document.getElementById("stats").setAttribute("class", "label label-primary");
+                        document.getElementById("stats").setAttribute("id", "class1");
+                    }
+                    if (status == 4) {
+                        document.getElementById("stats").setAttribute("class", "label label-success");
+                        document.getElementById("stats").setAttribute("id", "class2");
+                    }
+                    if (status == 3) {
+                        document.getElementById("stats").setAttribute("class", "label label-danger");
+                        document.getElementById("stats").setAttribute("id", "class3");
+                    }
+                    if (status == 2) {
+                        document.getElementById("stats").setAttribute("class", "label label-warning");
+                        document.getElementById("stats").setAttribute("id", "class4");
+                    }
+                </script>
+                <td>
+                    <span id="stats" class="label label-success"><?php echo $query['status_atual']; ?></span>
+                </td>
 
-        <tr id="dados">
-            <td><?php echo "" . $resultado['idAtendimento_Defensoria'] ?></td>
-            <td><?php echo "" . $assistido['nome'] ?></td>
-            <td><?php echo "" . $requerido['nome'] ?></td>
-            <td><?php echo date('d/m/Y', strtotime("".$resultado['data'])) ?></td>
-            <script type="text/javascript">
-                var status = "<?php echo "".$resultado['status_atendimento'] ?>";
-                if (status == "aberto") {
-                    document.getElementById("stats").setAttribute("class", "label label-primary");
-                    document.getElementById("stats").setAttribute("id", "class1");
-                }
-                if (status == "concluído") {
-                    document.getElementById("stats").setAttribute("class", "label label-success");
-                    document.getElementById("stats").setAttribute("id", "class2");
-                }
-                if (status == "Não Aprovado") {
-                    document.getElementById("stats").setAttribute("class", "label label-danger");
-                    document.getElementById("stats").setAttribute("id", "class3");
-                }
-                if (status == "esperando aprovacao") {
-                    document.getElementById("stats").setAttribute("class", "label label-warning");
-                    document.getElementById("stats").setAttribute("id", "class4");
-                }
-            </script>
-            <td>
-                <span id="stats" class="label label-success"><?php echo $resultado['status_atendimento'] ?></span>
-            </td>
-
-            <td>
-                <?php echo "" . $resultado['descricaoAtendimentoDefensoria'] ?>
-            </td>
-        </tr>
+                <td>
+                    <?php echo $query['assunto']; ?>
+                </td>
+            </tr>
         </tbody>
-    <?php }
-}else if($tipo=='contador'){
+    <?php
+
+    }
+}else if($tipo=='contador_def_pub'){
     $id=$_SESSION['usuarioID'];
-    $sql_res=mysql_query("SELECT * FROM atendimento_defensoria WHERE Usuario_idUsuario = '$id'"); //consulta no banco
-    $contador=mysql_num_rows($sql_res); //Pegando Quantidade de itens
+    $query_qtd=$conn->prepare("
+    SELECT DISTINCT
+        atend_npj.data_atend, atend_npj.id_status, atend_npj.proc_num, cliente.nome, situacao.status_atual, assuntos.assunto, 
+        (SELECT nome FROM cliente c WHERE c.id_pessoas = cliente_npj.id_cliente_requer) as REQUERIDO 
+        FROM 
+        atend_npj, cliente, cliente_npj, situacao, assuntos 
+        WHERE 
+        cliente_npj.id_cliente_assist = cliente.id_pessoas 
+        AND 
+        cliente_npj.id_atend_npj = atend_npj.id_atend_npj 
+        AND
+        atend_npj.id_assunto = assuntos.id_assunto
+        AND
+        situacao.id_status = atend_npj.id_status
+        ORDER BY 
+        cliente_npj.id_cliente_npj");//COLOCAR WHERE COM ID DO ALUNO
+    $query_qtd->execute();
+    $contador=$query_qtd->rowCount(); //Pegando Quantidade de itens
     echo $contador;
 }else{
     echo "Solicitação inválida";
 }
-?>

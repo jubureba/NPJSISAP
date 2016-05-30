@@ -1,10 +1,11 @@
 <?php
-require_once("pages/config/conn.php");
+require_once("pages/config/conn_pdo.php");
 ini_set('default_charset', 'UTF-8');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
 include("pages/login/seguranca.php"); // Inclui o arquivo com o sistema de segurança
 protegePagina(); // Chama a função que protege a página
+$conn=Conectar();
 ?>
 
 <!DOCTYPE html>
@@ -68,77 +69,92 @@ protegePagina(); // Chama a função que protege a página
             <!-- Small boxes (Stat box) -->
 
 
-                <div class="box box-primary col-md-10">
-                    <div class="box-header with-border">
+            <!-- CADASTRAR ASSUNTO ---------------------------------------------------->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Cadastrar Assunto</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
 
-                        <h3 class="box-title">Preencha o campo com o Novo assunto a ser cadastrado, e clique em Cadastrar</h3>
-                        <hr>
-                                                <!--###########  FORMULARIO DE CADASTRO -->
-
-                        <div class="col-md-12">
-
-                            <div class="form-group">
-                                <form class="contact_form"  method="post" action="pages/cadastro/assunto/cadastrar.php">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                        <input class="form-control" required name="novoAssunto" type="text" placeholder="Digite um Novo Assunto">
-                                    </div><br/>
-
-
+                                <div class="form-group">
+                                    <form class="contact_form"  method="post" action="pages/cadastro/assunto/cadastrar.php">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <input class="form-control" required name="novoAssunto" type="text" placeholder="Digite um Novo Assunto">
+                                        </div><br/>
                                 <span class="input-group-btn">
                                     <button type="submit" name="submit" class="btn btn-primary">Cadastrar</button>
                                 </span>
-                                </form>
+                                    </form>
+                                </div>
+                                <!-- ########### FIM FORMULARIO DE CADASTRO -->
                             </div>
-                            <!-- ########### FIM FORMULARIO DE CADASTRO -->
-                        </div>
-                    </div>
-                </div><!-- /.row (main row) -->
+
+                        </div><!-- /.box-body -->
+                        <div id="loading_identificacao"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
 
 
-                <div class="box box-primary col-md-10">
-                <div class="box-header with-border">
+            <!-- EXCLUIR ASSUNTO -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary box-solid">
+                        <div id="box-id" class="box-header with-border">
+                            <div align="center"> <h3 class="box-title">Excluir Assunto</h3></div>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i id="identificacao_button" class="fa fa-minus"></i></button>
+                            </div><!-- /.box-tools -->
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="col-md-12">
 
-                    <h3 class="box-title">Escolha na Lista, o Assunto que deseja Apagar</h3>
-                    <hr>
-                    <!--###########  FORMULARIO DE CADASTRO -->
+                                <div class="form-group">
+                                    <form class="contact_form"  method="post" action="pages/cadastro/assunto/excluir.php">
 
-                    <div class="col-md-12">
+                                        <?php
+                                        $consulta = $conn->query("SELECT * FROM assuntos");
 
-                        <div class="form-group">
-                            <form class="contact_form"  method="post" action="pages/cadastro/assunto/excluir.php">
+                                        //$query = mysql_query("SELECT idAssunto_Atendimento, descricao FROM assunto_atendimento")
+                                        ?>
+                                        <!--assunto-->
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                            <select class="form-control select2" title="Assuntos"  name="AssuntosCadastrados" style="width: 100%;">
+                                                <option selected="selected" disabled="disabled">Selecione um Assunto</option>
+                                                <?php
+                                                while($linha = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
+                                                    <option value="<?php echo $linha['id_assunto'] ?>"><?php echo $linha['assunto'] ?></option>
+                                                <?php } ?>
 
-                                <?php
-                                $query = mysql_query("SELECT idAssunto_Atendimento, descricao FROM assunto_atendimento")
-                                ?>
-                                <!--assunto-->
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <select class="form-control select2" title="Assuntos"  name="AssuntosCadastrados" style="width: 100%;">
-                                        <option selected="selected" disabled="disabled">Selecione um Assunto</option>
-                                        <?php while($result = mysql_fetch_array($query)) { ?>
-                                            <option value="<?php echo $result['idAssunto_Atendimento'] ?>"><?php echo $result['descricao'] ?></option>
-                                        <?php } ?>
+                                            </select>
 
-                                    </select>
-
-                                </div><br/>
+                                        </div><br/>
 
                                 <span class="input-group-btn">
                                     <button type="submit" name="submit" class="btn btn-primary">Excluir</button>
                                 </span>
-                            </form>
-                        </div>
-                        <!-- ########### FIM FORMULARIO DE CADASTRO -->
-                    </div>
-                </div>
-            </div><!-- /.row (main row) -->
-
-
+                                    </form>
+                                </div>
+                                <!-- ########### FIM FORMULARIO DE CADASTRO -->
+                            </div>
+                        </div><!-- /.box-body -->
+                        <div id="loading_identificacao"></div>
+                    </div><!-- /.box -->
+                </div><!-- /.col -->
+            </div>
+            
 
         </section><!-- /.content -->
         <!-- FIM DO MENU - PARTE DO MEIO  -->

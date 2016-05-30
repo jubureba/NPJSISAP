@@ -102,27 +102,6 @@ $conn = Conectar();
                                     <br/>
                                 </div>
 
-                                <script type="text/javascript">
-                                        function teste(teste) {
-                                            var $nome = $("input[name='nome']");
-                                            var $nomeMenor = $("input[name='NomeMenor']");
-
-                                            $nome.val('Carregando...');
-                                            $nomeMenor.val('Carregando...');
-
-                                            $.getJSON(
-                                                'function.php',
-                                                {nome:  $(this).val()},
-                                                function (json) {
-
-                                                    $nome.val(json.nome);
-                                                    $nomeMenor.val(json.nomeMenor);
-                                                }
-                                            );
-                                        }
-
-                                </script>
-
                                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 
                                 <script type="text/javascript">
@@ -171,7 +150,6 @@ $conn = Conectar();
                                                     $city_residencial.val(json.cidade);
                                                     $end_residencial_bairro.val(json.bairro);
                                                     $end_residencial_rua.val(json.rua);
-
                                                 }
                                             );
 
@@ -203,9 +181,6 @@ $conn = Conectar();
                         </div>
                     </div>
                 </div>
-
-
-
 
                 <script>
 
@@ -279,12 +254,6 @@ $conn = Conectar();
                         </div><!-- /.box -->
                     </div><!-- /.col -->
                 </div>
-
-
-
-
-
-
 
 
 
@@ -642,6 +611,27 @@ $conn = Conectar();
                     </div><!-- /.col -->
                 </div>
 
+                <input type="text" id="cpf_real" name="cpf_real" hidden/>
+                <input type="text" id="rg_real" name="rg_real" hidden/>
+                <input type="text" id="ctps_real" name="ctps_real" hidden/>
+                <input type="text" id="cert_nasc_real" name="cert_nasc_real" hidden/>
+
+                <script>
+                    function cpf_real(valor) {
+                        $("#cpf_real").val(""+valor);
+                    }
+                    function rg_real(valor) {
+                        $("#rg_real").val(""+valor);
+                    }
+                    function ctps_real(valor) {
+                        $("#ctps_real").val(""+valor);
+                    }
+                    function cert_nasc_real(valor) {
+                        $("#cert_nasc_real").val(""+valor);
+                    }
+
+                </script>
+                
             </form>
 
 
@@ -683,12 +673,7 @@ $conn = Conectar();
                                 </button>
 
                             </span>
-
-
-
-
-
-
+                            
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col -->

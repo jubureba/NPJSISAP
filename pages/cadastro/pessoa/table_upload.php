@@ -58,7 +58,7 @@ $imgUpON = "dist/img/upload-icon.ico";
                     <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <input class="form-control" id="valor-cpf" onblur="validarCPF(this.value)" required name="valorCPF" type="text"
+                    <input class="form-control" id="valor-cpf"   onblur="validarCPF(this.value); cpf_real(this.value);" required name="valorCPF" type="text"
                            placeholder="CPF (Somente Números)" disabled>
                 </div>
             </td>
@@ -133,7 +133,7 @@ $imgUpON = "dist/img/upload-icon.ico";
                     <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <input class="form-control" id="valor-rg" required name="valorRG" type="text"
+                    <input class="form-control" onblur="rg_real(this.value);" id="valor-rg" required name="valorRG" type="text"
                            placeholder="Documento de identidade" disabled>
                 </div>
             </td>
@@ -206,7 +206,7 @@ $imgUpON = "dist/img/upload-icon.ico";
                     <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <input class="form-control" id="valor-ctps" required name="valorCTPS" type="text"
+                    <input class="form-control" id="valor-ctps" onblur="ctps_real(this.value);" required name="valorCTPS" type="text"
                            placeholder="Carteira de Trabalho" disabled>
                 </div>
             </td>
@@ -413,7 +413,7 @@ $imgUpON = "dist/img/upload-icon.ico";
                     <div class="input-group-addon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <input class="form-control" id="valor-nascimento" required name="valorNASCIMENTO" type="text"
+                    <input class="form-control" onblur="cert_nasc_real(this.value);" id="valor-nascimento" required name="valorNASCIMENTO" type="text"
                            placeholder="Certidão de Nascimento" disabled>
                 </div>
             </td>

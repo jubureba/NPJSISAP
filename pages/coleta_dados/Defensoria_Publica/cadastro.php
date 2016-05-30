@@ -1,9 +1,30 @@
 <?php
-require_once("../../../pages/config/conn.php");
-session_start();
+require_once("../../../pages/config/conn_pdo.php");
+$conn=Conectar();
+
+$assunto = $_POST['assunto'];
+$aluno = $_POST['aluno'];
+$obs = $_POST['observacao'];
+$loginDef = $_POST['loginDefensoria'];
+
+$gravar=$conn->prepare("INSERT INTO atend_def_publica (id_status, id_usuario, id_assunto, obs, login_def) 
+VALUES ('1','$aluno','$assunto', '$obs', '$loginDef')");
+$gravar->execute();
+$ultimoId = $conn->lastInsertId();
+
+$count = 1;
+while($_POST["assistido_".$count] || $_POST["requerido_".$count]) {
+    $assistido = $_POST["assistido_".$count];
+    $requerido = $_POST["requerido_".$count];
+    $gravar=$conn->prepare("INSERT INTO cliente_def_publica (id_atend_def_publica, id_cliente_assist, id_cliente_requer) 
+    VALUES ('$ultimoId', '$assistido', '$requerido' )");
+    $gravar->execute();
+    $count=$count+1;
+}
+
 
 //VARI�VEIS PARA RECEBER OS DADOS DO POST
-
+/*
 $nomeAssistido = $_POST['nomeAssistido'];
 $telefoneAssistido = $_POST['telefoneAssistido'];
 $enderecoAssistido = $_POST['enderecoAssistido'];
@@ -20,6 +41,13 @@ $documentos = $_POST['documentos'];
 $observacao = $_POST['observacao'];
 $login = $_POST['loginDefensoria'];
 $aluno = $_POST['AlunoVinculo'];
+
+
+
+
+
+
+
 
 //VARI�VEL DE SESS�O, PARA ENVIAR PARA OUTRAS PAGINAS
 
@@ -76,6 +104,8 @@ $query = mysql_query("UPDATE assistido_defensoria SET Endereco_Assistido_idEnder
 $query = mysql_query("UPDATE requerido SET Endereco_Requerido_idEndereco_Requerido = '$idEndRequerido' WHERE idRequerido = '$idRequerido'");
 
 $query = mysql_query("INSERT INTO atendimento_defensoria (descricaoAtendimentoDefensoria, Assistido_Defensoria_idAssistidoDefensoria, Requerido_idRequerido, Usuario_idUsuario, Assunto_Atendimento_idAssunto_Atendimento, status) VALUES ('$observacao','$idAssistidoDef', '$idRequerido', '$idAluno', '$idAssunto', 'aberto')");
-
+*/
 header("location: ../../acompanhamento/acompanhamento.php");
+
+
 ?>
