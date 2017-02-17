@@ -10,31 +10,18 @@ function retorna( $nome )
     $bd_pessoa = $conn->prepare("SELECT * FROM pessoas WHERE nome = '$nome'");
     $bd_pessoa->execute();
 
-   // $sql = "SELECT * FROM `pessoas` WHERE `nome` = '{$nome}' ";
-    ////$query = $db->query( $sql );
-
     $arr = Array();
 
-    //if( $query->num_rows )
     if($bd_pessoa->rowCount()){
         while($dados=$bd_pessoa->fetch(PDO::FETCH_ASSOC)) {
-
-            // $dados = $query->fetch_object();
-
             $arr['idPessoa'] = $dados['idPessoa'];
             $arr['nome']= $dados['nome'];
             $arr['nomeMenor'] = $dados['nomeMenor'];
             $arr['nomePai'] = $dados['nomePai'];
             $arr['nomeMae'] = $dados['nomeMae'];
-           // $arr['idPessoa'] = $dados->idPessoa;
-           // $arr['nome'] = $dados->nome;
-           // $arr['nomeMenor'] = $dados->nomeMenor;
-           // $arr['nomePai'] = $dados->nomePai;
-           // $arr['nomeMae'] = $dados->nomeMae;
-            
-
         }
 
+        //PEGANDO PARTE DE ENDEREÇO-RESIDENCIAL
         $bd_pessoa = $conn->prepare("SELECT * FROM end_residencial WHERE pessoas_idPessoa = '{$arr['idPessoa']}'");
         $bd_pessoa->execute();
         $dados=$bd_pessoa->fetch(PDO::FETCH_ASSOC);
@@ -46,14 +33,20 @@ function retorna( $nome )
         $arr['bairro'] = $dados['bairro'];
         $arr['rua'] = $dados['rua'];
 
-    }
-    else{
+        //PEGANDO PARTE DE ENDEREÇO-DE-TRABALHO
+        $bd_pessoa = $conn->prepare("SELECT * FROM end_residencial WHERE pessoas_idPessoa = '{$arr['idPessoa']}'");
+        $bd_pessoa->execute();
+        $dados=$bd_pessoa->fetch(PDO::FETCH_ASSOC);
+
+        $arr['cep'] = $dados['cep'];
+        $arr['pais'] = $dados['pais'];
+        $arr['estado'] = $dados['estado'];
+        $arr['cidade'] = $dados['cidade'];
+        $arr['bairro'] = $dados['bairro'];
+        $arr['rua'] = $dados['rua'];
+
+    }else{
         $arr['nome'] = 'não encontrado';}
-
-
-
-
-
 
 
     return json_encode( $arr );

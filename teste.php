@@ -1,36 +1,29 @@
+
 <html>
 <head>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("input[name='nome']").blur(function(){
-                var $endereco = $("input[name='endereco']");
-                var $telefone = $("input[name='telefone']");
 
-                
-                
-                
-                $endereco.val('Carregando...');
-                $telefone.val('Carregando...');
-
-                $.getJSON(
-                    'function.php',
-                    { nome: $( this ).val() },
-                    function( json )
-                    {
-                        $endereco.val( json.nome );
-                        $telefone.val( json.nomeMenor );
-                    }
-                );
+            var input = '<label style="display: block">Nome: <input type="text" name="foto[]" /> <a href="#" class="remove">X</a></label>';
+            $("input[name='add']").click(function( e ){
+                $('#inputs_adicionais').append( input );
             });
+
+            $('#inputs_adicionais').delegate('a','click',function( e ){
+                e.preventDefault();
+                $( this ).parent('label').remove();
+            });
+
         });
     </script>
 </head>
 <body>
 <form action="" method="post">
-    <label>Nome: <input type="text" name="nome" /></label>
-    <label>Endereço: <input name="endereco" type="text" disabled="disabled" value="" /></label>
-    <label>Telefone: <input type="text" name="telefone" value="" /></label>
+    <label style="display: block"><input type="button" name="add" value="Add" /></label>
+    <label style="display: block">Nome: <input type="text" name="foto[]"></label>
+    <fieldset id="inputs_adicionais" style="border: none">
+    </fieldset>
 </form>
 </body>
 </html>

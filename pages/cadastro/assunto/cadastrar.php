@@ -13,11 +13,13 @@
 
 <?php
 
-require_once("../../../pages/config/conn.php");
+require_once("../../../pages/config/conn_pdo.php");
 
+$conn = Conectar();
 $novoAssunto = $_POST['novoAssunto'];
 
-$query = mysql_query("INSERT INTO assunto_atendimento (descricao) values ('$novoAssunto')");
+$stmt = $conn->prepare("INSERT INTO assuntos (assunto) values ('$novoAssunto')");
+$stmt->execute();
 
 echo "<script>loginsucessfully()</script>";
 ?>

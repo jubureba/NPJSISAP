@@ -1,6 +1,8 @@
 <?php
 
 require_once("pages/config/conn.php");
+require_once("pages/config/conn_pdo.php");
+$conn = Conectar();
 ini_set('default_charset', 'UTF-8');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
@@ -20,6 +22,7 @@ protegePagina(); // Chama a função que protege a página
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/ionicons-2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +36,6 @@ protegePagina(); // Chama a função que protege a página
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <link rel="stylesheet" href="plugins/iCheck/all.css">
     <link rel="stylesheet" href="plugins/colorpicker/bootstrap-colorpicker.min.css">
-
     <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
     <link rel="stylesheet" href="plugins/select2/select2.min.css">
     <link rel="stylesheet" href="dist/css/form_Style.css">
@@ -46,38 +48,12 @@ protegePagina(); // Chama a função que protege a página
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
-
     <script type="text/javascript" src="js/paginador-tab-proc.js"></script>
     <script type="text/javascript" src="js/paginador-tab-new-proc.js"></script>
     <script type="text/javascript" src="js/mensagens.js"></script>
     <script type="text/javascript" src="js/delete-msg.js"></script>
     <script type="text/javascript" src="js/popover.js"></script>
-
-
     <script type="text/javascript" language="javascript" src="plugins/jQuery/jquery-1.3.2.js"></script>
-    <!--  <script type="text/javascript">
-          $(document).ready(function () {
-             $("#novo_usuario").click(function (evt) {
-                 evt.preventDefault();
-                 var href =  $(this).attr('href');
-                 $.ajax({
-
-                      type: "POST",
-                      url: href,
-                      //data: "",
-                      beforeSend: function () {
-
-                      },
-                      success: function (data) {
-
-                          $("#principal").html(data);
-
-                      }
-
-                 });
-             });
-          });
-      </script> -->
 
     <script>
         function cadastrarEducacao() {
@@ -104,6 +80,7 @@ protegePagina(); // Chama a função que protege a página
             }
         }
     </script>
+
 
     <script>
         function novaHabilidade(valor1) {
@@ -173,14 +150,25 @@ protegePagina(); // Chama a função que protege a página
                 <!--***************************************************
                 *******************************************************
                 *******************************************************
-                ***********************TABELA**************************
+                ***********************TABELA NPJ**************************
+                *******************************************************
+                *******************************************************
+                *******************************************************
+
+                -->
+
+
+                <?php include ("pages/mediacao/tabela_npj.php");?>
+
+                <!--***************************************************
+                *******************************************************
+                *******************************************************
+                ***********************TABELA DEF PUBLICA**************
                 *******************************************************
                 *******************************************************
                 *******************************************************
                 -->
-                <?php include("pages/config/tab-processos-index.php"); ?>
-
-               
+                <?php include ("pages/mediacao/tabela_def_pub.php");?>
 
                 <!--***************************************************
                 *******************************************************
@@ -194,12 +182,13 @@ protegePagina(); // Chama a função que protege a página
 
                 <?php include("pages/config/mensagens-index.php"); ?>
                 <?php include("pages/config/tab-new-processos.php"); ?>
-                <?php include("pages/config/slider.php"); ?>
+
 
                 </div>
 
             </section>
         </div>
+
 
 
         <!-- /.content -->
@@ -213,6 +202,7 @@ protegePagina(); // Chama a função que protege a página
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
+        <!-----> 
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
             <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
@@ -456,7 +446,7 @@ protegePagina(); // Chama a função que protege a página
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="plugins/fastclick/fastclick.min.js"></script>
 <script src="dist/js/app.min.js"></script>
-<script src="dist/js/pages/dashboard.js"></script>
+
 <script src="js/pesquisar-tabela.js"></script>
 <script src="dist/js/demo.js"></script>
 <script language='JavaScript'>
@@ -495,6 +485,24 @@ protegePagina(); // Chama a função que protege a página
             return false;
         });
     }
+</script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $("#tab_new_proc").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true
+        });
+    });
+
 </script>
 
 

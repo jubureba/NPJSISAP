@@ -13,14 +13,14 @@ function getitens(pag, maximo){
 	url:'pages/config/getitens.php',
    	success: function(retorno){
     	$('#conteudo').html(retorno); 
-        	contador() //Chamando função que conta os itens e chama o paginador
+        	contador() //Chamando função que conta os itens e chama o paginador_def_pub
      	}
     })
 }
 function contador(){
 	$.ajax({
       	type: 'GET',
-      	data: 'tipo=contador',
+      	data: 'tipo=contador_def_pub',
       	url:'pages/config/getitens.php',
    		success: function(retorno_pg){
         	paginador(retorno_pg)
@@ -29,14 +29,14 @@ function contador(){
 }
 function paginador(cont){
 	if(cont<=numitens){
-		$('#paginador').html('<li><a href="#"> Apenas uma Página</a></li>')
+		$('#paginador_def_pub').html('<li><a href="#"> Apenas uma Página</a></li>')
 	}else{
-		$('#paginador').html('<li></li>');
+		$('#paginador_def_pub').html('<li></li>');
 		if(pagina!=1){
 			document.getElementById("loading").setAttribute("class", "overlay");
 			document.getElementById("loading").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
 			setTimeout(function() {
-				$('#paginador').append('<li><a href="#" onclick="getitens('+(pagina-1)+', '+numitens+')">«</a></li>');
+				$('#paginador_def_pub').append('<li><a href="#" onclick="getitens_def_pub('+(pagina-1)+', '+numitens+')">«</a></li>');
 				document.getElementById("loading").setAttribute("class", "");
 				document.getElementById("loading").innerHTML="<i class=''></i>";
 			}, 500);
@@ -45,16 +45,16 @@ function paginador(cont){
 		var qtdpaginas=Math.ceil(cont/numitens)
 		for(var i=1;i<=qtdpaginas;i++){
 			if(pagina==i){
-				$('#paginador').append('<li><a href="#" onclick="getitens('+i+', '+numitens+')">'+i+'</a></li>')
+				$('#paginador_def_pub').append('<li><a href="#" onclick="getitens_def_pub('+i+', '+numitens+')">'+i+'</a></li>')
 			}else{
-				$('#paginador').append('<li><a href="#" onclick="getitens('+i+', '+numitens+')">'+i+'</a></li>')
+				$('#paginador_def_pub').append('<li><a href="#" onclick="getitens_def_pub('+i+', '+numitens+')">'+i+'</a></li>')
 				}
 		}
 		if(pagina!=qtdpaginas){
 			document.getElementById("loading").setAttribute("class", "overlay");
 			document.getElementById("loading").innerHTML="<i class='fa fa-refresh fa-spin'></i>";
 			setTimeout(function() {
-				$('#paginador').append('<li><a href="#" onclick="getitens('+(pagina+1)+', '+numitens+')">»</a></li>');
+				$('#paginador_def_pub').append('<li><a href="#" onclick="getitens_def_pub('+(pagina+1)+', '+numitens+')">»</a></li>');
 				document.getElementById("loading").setAttribute("class", "");
 				document.getElementById("loading").innerHTML="<i class=''></i>";
 			}, 500);

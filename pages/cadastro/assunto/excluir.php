@@ -12,10 +12,11 @@
 <body>
 
 <?php
-    require_once("../../../pages/config/conn.php");
+    require_once("../../../pages/config/conn_pdo.php");
+    $conn = Conectar();
     $dadosExcluir = $_POST['AssuntosCadastrados'];
-    $query = mysql_query("DELETE FROM assunto_atendimento WHERE idAssunto_Atendimento = $dadosExcluir");
-
+    $stmt=$conn->prepare("DELETE FROM assuntos WHERE id_assunto = $dadosExcluir");
+    $stmt->execute();
 
 echo "<script>exclusaosucessfully()</script>";
 ?>

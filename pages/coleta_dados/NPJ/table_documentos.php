@@ -17,7 +17,7 @@
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><span class="upload-wrapper">
-                                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange=""/>
+                                    <input class="upload-file" type="file" name="file" id="upload-ctps"  onchange=""/>
                                         <img class="upload-button" alt="title=" style="height: 16px; width: 16px;"
                                              src="dist/img/upload-icon.ico"/>
                                 </span></div>
@@ -33,7 +33,7 @@
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><span class="upload-wrapper">
-                                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange=""/>
+                                    <input class="upload-file" type="file" name="file" id="upload-ctps"  onchange=""/>
                                     <img class="upload-button" alt="title=" style="height: 16px; width: 16px;"
                                          src="dist/img/upload-icon.ico"/>
                                 </span></div>
@@ -49,7 +49,7 @@
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><span class="upload-wrapper">
-                                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange=""/>
+                                    <input class="upload-file" type="file" name="file" id="upload-ctps"  onchange=""/>
                                     <img class="upload-button" alt="title=" style="height: 16px; width: 16px;"
                                          src="dist/img/upload-icon.ico"/>
                                 </span></div>
@@ -65,7 +65,7 @@
         </td>
         <td> <!-- Validação Ausente/Presente do Documento -->
             <div align="center"><span class="upload-wrapper">
-                                    <input class="upload-file" type="file" name="file" id="upload-ctps" required onchange=""/>
+                                    <input class="upload-file" type="file" name="file" id="upload-ctps"  onchange=""/>
                                     <img class="upload-button" alt="title=" style="height: 16px; width: 16px;"
                                          src="dist/img/upload-icon.ico"/>
                                 </span></div>

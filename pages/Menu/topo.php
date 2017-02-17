@@ -17,18 +17,14 @@
             <ul class="nav navbar-nav">
                 <!-- NOTIFICAÇÃO DE NOVO VINCULO -->
                 <li class="dropdown notifications-menu">
-                    <?php
-                    $idUsuario = $_SESSION['usuarioID'];
-                    $sql = mysql_query("SELECT * FROM atendimento_defensoria WHERE Usuario_idUsuario = $idUsuario");
-                    $total = mysql_num_rows($sql);
-                    ?>
+
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-bell-o"></i>
-                        <span class="label label-danger"><?php echo $total ?> </span>
+                        <span class="label label-danger">6 </span>
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li class="header"><?php echo "Voce tem " . $total . " Notificações" ?></li>
+                        <li class="header"><?php echo "Voce tem 6 Notificações" ?></li>
                         <li>
                             <!-- inner menu: contains the actual data -->
                             <ul class="menu">

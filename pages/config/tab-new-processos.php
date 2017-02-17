@@ -2,45 +2,54 @@
     <div class="col-md-6">
         <div class="box box-primary box-solid">
             <div class="box-header with-border">
-                <div align="center"> <h3 class="box-title">Novos Cadastros</h3></div>
+                <div align="center"> <h3 class="box-title">
+                        Todos os Processos - NPJ</h3></div>
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                 </div><!-- /.box-tools -->
 
-                <!-- /.search form -->
-                <div class="input-group input-group-sm" style="width: 150px; position: absolute; top: 13%;">
-                    <input id="pesquisar-tab1" type="text" name="table_search" class="form-control pull-right" placeholder="Pesquisar">
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                    </div>
-                </div>
+
+
 
             </div><!-- /.box-header -->
             <div class="box-body">
-                <div class="box-body">
-                    <table id="conteudo_new_proc"  class="table table-bordered"></table>
-                </div><!-- /.box-body -->
+                <table id="tab_new_proc" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th style="width: 5%"></th>
+                        <th style="width: 20%">Nome</th>
+                        <th style="width: 5%">Editar</th>
 
-                <div class="col-md-6 no-margin pull-right">
-                    <div class="box-footer clearfix"><!--paginador -->
-                        <ul id="paginador_new_proc" class="pagination pagination-sm no-margin pull-right"></ul>
-                    </div>
-                </div>
+                    </tr>
+                    </thead>
 
-                <div class="col-md-6">
-                    <select class="form-control select2" style="width: 140px" id="tab-qtd" onchange="getitens_new_proc(1,this.value);" data-placeholder="itens por página" >
-                        <option selected disabled>itens por página</option>
-                        <option value="3">3</option>
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
-                
+                    <tbody>
+
+                    <?php
+
+                    $query=$conn->prepare("SELECT nome FROM cliente");//COLOCAR WHERE COM ID DO ALUNO
+                    $query->execute();
+                    while($query_tab_npj=$query->fetch(PDO::FETCH_ASSOC)){
+                        ?>
+                        <tr id="dados">
+                            <td width="16px" align="center"><img src="dist/icons/png/512/new.gif"/> </td>
+                            <td ><?php echo $query_tab_npj['nome']; ?></td>
+                            <td width="16px" align="center"><img src="dist/icons/png/512/edit_property.png" height="16px" width="16px"/></td>
+
+                        </tr>
+                        <?php
+                    }
+
+                    ?>
+
+
+                    </tbody>
+
+                </table>
             </div><!-- /.box-body -->
 
-            <div id="loading_new_proc"></div>
+            <div id="loading"></div>
             <!--loading
               <div class="overlay">
                 <i class="fa fa-refresh fa-spin"></i>
@@ -48,6 +57,4 @@
             -->
         </div><!-- /.box -->
     </div><!-- /.col -->
-
-
 

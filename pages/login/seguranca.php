@@ -21,14 +21,11 @@ $_SG['caseSensitive'] = false;     // Usar case-sensitive? Onde 'thiago' ï¿½ 
 
 $_SG['validaSempre'] = true;       // Deseja validar o usuï¿½rio e a senha a cada carregamento de pï¿½gina?
 // Evita que, ao mudar os dados do usuï¿½rio no banco de dado o mesmo contiue logado.
-
 $_SG['servidor'] = 'localhost';    // Servidor MySQL
 $_SG['usuario'] = 'root';          // Usuï¿½rio MySQL
 $_SG['senha'] = '';                // Senha MySQL
-$_SG['banco'] = 'npjdb';            // Banco de dados MySQL
-
+$_SG['banco'] = 'npj';            // Banco de dados MySQL
 $_SG['paginaLogin'] = 'index.php'; // Pï¿½gina de login
-
 $_SG['tabela'] = 'usuario';       // Nome da tabela onde os usuï¿½rios sï¿½o salvos
 // ==============================
 
@@ -64,7 +61,7 @@ function validaUsuario($login, $senha) {
 
     // Usa a funï¿½ï¿½o addslashes para escapar as aspas
     $nlogin = addslashes($login);
-    $nsenha = addslashes($senha);
+    $nsenha = addslashes(MD5($senha));
 
     // Monta uma consulta SQL (query) para procurar um usuï¿½rio
     $sql = "SELECT * FROM `".$_SG['tabela']."` WHERE ".$cS." `login` = '".$nlogin."' AND ".$cS." `senha` = '".$nsenha."' LIMIT 1";
@@ -77,19 +74,11 @@ function validaUsuario($login, $senha) {
         return false;
     } else {
         // Definimos dois valores na sessï¿½o com os dados do usuï¿½rio
-        $_SESSION['usuarioID'] = $resultado['idUsuario']; // Pega o valor da coluna 'id do registro encontrado no MySQL
+        $_SESSION['usuarioID'] = $resultado['id_usuario']; // Pega o valor da coluna 'id do registro encontrado no MySQL
         $_SESSION['usuarioNome'] = $resultado['nome']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
         $_SESSION['permissaoUser'] = $resultado['permissao'];
 		$_SESSION['imagem'] = $resultado['foto'];
 		$_SESSION['email'] = $resultado['email'];
-        $_SESSION['educacao'] = $resultado['ideducacao'];
-        $_SESSION['cidade'] = $resultado['Cidade'];
-        $_SESSION['estado'] = $resultado['Estado'];
-        $_SESSION['nota'] = $resultado['Nota'];
-        $_SESSION['chat'] = $resultado['Chat'];
-        $_SESSION['UsuarioHabilidade'] = $resultado['idHabilidade'];
-        $_SESSION['UsuarioEducacao'] = $resultado['ideducacao'];
-
         // Verifica a opï¿½ï¿½o se sempre validar o login
         if ($_SG['validaSempre'] == true) {
             // Definimos dois valores na sessï¿½o com os dados do login

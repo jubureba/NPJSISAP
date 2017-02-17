@@ -1,7 +1,10 @@
 <?php
     session_start();
     require ("conn.php");
+
+   // $query=$conn->prepare("SELECT * FROM mensagens ORDER BY id DESC ");
     $query = mysql_query("SELECT * FROM mensagens ORDER BY id DESC ");
+
     $sqlData = "SELECT date_format(dataHora, '%d/%m/%Y às %H:%i') AS dataHora FROM mensagens ORDER BY id DESC";
     $todosDados = "SELECT * FROM mensagens ORDER BY id DESC";
     $consultaData = mysql_query($sqlData) or die(mysql_error());
