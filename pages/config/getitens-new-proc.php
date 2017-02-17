@@ -1,5 +1,6 @@
 <?php
-require_once("conn.php");
+require_once("conn_pdo.php");
+$conn=Conectar();
 ini_set('default_charset', 'UTF-8');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 session_start();
@@ -18,14 +19,16 @@ if($tipo=='listagem'){
 
     <?php
     $nomeID = $_SESSION['usuarioID'];
-    $sql = "SELECT nome FROM pessoas LIMIT $inicio, $maximo";
-    $stmt = mysql_query($sql);
+    $sql=$conn->prepare("SELECT nome FROM cliente LIMIT $inicio, $maximo");
+    //$sql = "SELECT nome FROM pessoas LIMIT $inicio, $maximo";
+    $sql->execute();
+    //$stmt = mysql_query($sql);
 
-    while ($resultado = mysql_fetch_array($stmt)) {
+    while($resultado=$sql->fetch(PDO::FETCH_ASSOC)){
+    //while ($resultado = mysql_fetch_array($stmt)) {
         //PEGA O NOME DO ASSISTIDO NA TABELA ASSISTIDODEFENSORIA, COM O ID
 
         ?>
-
         <tr id="dados1">
             <td width="16px" align="center"><img src="dist/icons/png/512/new.gif"/> </td>
             <td><?php echo "" . $resultado['nome'] ?></td>
@@ -36,6 +39,7 @@ if($tipo=='listagem'){
     <?php }
 }else if($tipo=='contador_def_pub'){
     $id=$_SESSION['usuarioID'];
+    
     $sql_res=mysql_query("SELECT * FROM nome WHERE idUsuario = '$id'"); //consulta no banco
     $contador=mysql_num_rows($sql_res); //Pegando Quantidade de itens
     echo $contador;
