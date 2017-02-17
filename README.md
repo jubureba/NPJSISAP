@@ -4,7 +4,8 @@ NPJ - Projeto privado desenvolvido por alunos do curso de Análise e Desenvolvim
 
 # Alunos envolvidos até agora:
 
-Anderson Thiago - Developer Leader; Maria Maxelen - Soft Engineer; Matheus Rangel - DBA/Developer; Tais Cristina - Modeler; João Neto - Modeler/Tester; Suyanne Magalhães - Modeler
+Anderson Thiago - Developer Leader; 
+Maria Maxelen - Soft Engineer; Matheus Rangel - DBA/Developer; Tais Cristina - Modeler; João Neto - Modeler/Tester; Suyanne Magalhães - Modeler
 
 
 # O sistema 
